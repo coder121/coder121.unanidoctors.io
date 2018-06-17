@@ -1,0 +1,638 @@
+/* -----------------------------------------------------------------------------
+
+    Mackbeth
+    v 1.0
+    by ShakespeareThemes
+    shakespearethemes@gmail.com
+
+----------------------------------------------------------------------------- */
+
+
+/* -----------------------------------------------------------------------------
+
+    TABLE OF CONTENT
+
+    1.) General
+    2.) Typography
+    3.) Components
+    4.) Header
+    5.) Main Slider
+    6.) Homepage
+    7.) Page Types
+    8.) Sidebar
+    9.) Twitter Feed
+    10.) Bottom
+    11.) Footer
+    12.) Responsive
+    13.) HiDPI graphics
+
+----------------------------------------------------------------------------- */
+
+
+/* -----------------------------------------------------------------------------
+
+    1.) GENERAL
+
+----------------------------------------------------------------------------- */
+
+body { color: #99a4aa; background: #3c4346; }
+a { color: #0084ff; }
+a:hover { color: #99a4aa; }
+
+
+/* -----------------------------------------------------------------------------
+
+    2.) TYPOGRAPHY
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        HEADINGS
+    ---------------------------------- */
+
+    .various-content h1, .various-content h2,
+    .various-content h3, .various-content h4,
+    .various-content h5, .various-content h6 { color: #667279; }
+
+    /* ----------------------------------
+        LISTS
+    ---------------------------------- */
+
+    ul.default-list,
+    ul.check-list { color: #667279; }
+    ul.check-list .icon-ok { color: #7cc576; }
+    ul.check-list .icon-remove { color: #FF004E; }
+    ol { color: #667279; }
+
+    /* ----------------------------------
+        TABLE
+    ---------------------------------- */
+
+    .various-content table th { color: #667279; background: #f3f3f3; }
+    .various-content table td,
+    .various-content table th { border-color: #dce3e6; }
+
+
+/* -----------------------------------------------------------------------------
+
+    3.) COMPONENTS
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        ACCORDION
+    ---------------------------------- */
+
+    .accordion .accordion-item { background: #f3f3f3; border-color: #e8e8e8; }
+    .accordion .accordion-item.opened,
+    .accordion .accordion-item.active { background: none; }
+    .accordion .accordion-toggle { color: #667279; }
+
+    /* ----------------------------------
+        ALERT MESSAGES
+    ---------------------------------- */
+
+    p.alert.warning { color: #d40041; background: #ffdfe0; border-color: #ffa5c1; }
+    p.alert.success { color: #499143; background: #d4fbd3; border-color: #bcdcb9; }
+    p.alert.info { color: #0084ff; background: #d3effb; border-color: #b9d2ed; }
+    p.alert.notification { color: #f68e56; background: #fffbd7; border-color: #f7dfd2; }
+
+    /* ----------------------------------
+        AUDIO PLAYER
+    ---------------------------------- */
+
+    .audio-player-inner { background: #ededed; }
+    .audio-player .ico { background: #0084ff; }
+    .audio-player .ico i { color: #FFF; }
+    .audio-player button { color: #afbbc1; }
+    .audio-player button:hover i { color: #667279; }
+    .audio-player button:active i { color: #afbbc1; }
+    .audio-player .progbar { background: #afbbc1; }
+    .audio-player .progbar div { background: #FFF; }
+
+    /* ----------------------------------
+        BUTTON PAGINATION
+    ---------------------------------- */
+
+    .button-pagination a { color: #FFF; background: #afbbc1; }
+    .button-pagination a.loading,
+    .button-pagination a:hover { background: #99a4aa; }
+    .button-pagination a:active { background: #afbbc1; }
+
+    /* ----------------------------------
+        BUTTONS
+    ---------------------------------- */
+
+    .button.color1 { color: #FFF; background: #ff004e; }
+    .button.color1:hover { background: #232c31; }
+    .button.color2 { color: #FFF; background: #7cc576; }
+    .button.color2:hover { background: #232c31; }
+    .button.color3 { color: #FFF; background: #0084ff; }
+    .button.color3:hover { background: #232c31; }
+    .button.color4 { color: #FFF; background: #f68e56; }
+    .button.color4:hover { background: #232c31; }
+    .button.color5 { color: #FFF; background: #99a4aa; }
+    .button.color5:hover { background: #232c31; }
+    .button.color6 { color: #FFF; background: #2f3639; }
+    .button.color6:hover { background: #3c4346; }
+    .button.color7 { color: #FFF; background: #c0003b; }
+    .button.color7:hover { background: #3c4346; }
+    .button.color8 { color: #9BA5AA; background: #FFF; }
+    .button.color8:hover { background: #ededed; }
+
+    /* ----------------------------------
+        CTA MESSAGE
+    ---------------------------------- */
+
+    .cta-message { color: #FFF; background: #afbbc1; }
+    .cta-message h2,
+    .cta-message a { color: #FFF; }
+
+    /* ----------------------------------
+        LIST SLIDER
+    ---------------------------------- */
+
+    .list-slider-nav button { background: #afbbc1; }
+    .list-slider-nav button.disabled { background: #ededed; }
+    .list-slider-nav button i { background: url('../img/gfx.default.png') 0 0 no-repeat; }
+    .list-slider-nav button.prev i { background-position: -150px -30px; }
+    .list-slider-nav button.next i { background-position: -180px -30px; }
+
+    /* ----------------------------------
+        LOADING ANIMATION
+    ---------------------------------- */
+
+    .loading-anim i { background: url('../img/gfx.default.png') -30px -30px no-repeat; }
+    .loading-anim.dark i { background-position: -60px -30px; }
+    .loading-anim.small span i { background-position: -240px -30px; }
+    .loading-anim.small.dark span i { background-position: -270px -30px; }
+
+    /* ----------------------------------
+        PAGINATION
+    ---------------------------------- */
+
+    .pagination li a { color: #afbbc1; }
+    .pagination li a:hover { color: #FFF; background: #afbbc1; }
+    .pagination li.active a { color: #FFF; background: #ff004e; }
+
+    /* ----------------------------------
+        PROGRESS BARS
+    ---------------------------------- */
+
+    .progressbar { color: #FFF; background: #ededed; }
+    .progressbar.color1 .inner { background: #0084ff; }
+    .progressbar.color2 .inner { background: #f68e56; }
+    .progressbar.color3 .inner { background: #7cc576; }
+    .progressbar.color4 .inner { background: #ff004e; }
+
+    /* ----------------------------------
+        PROJECT PREVIEW
+    ---------------------------------- */
+
+    .project-preview { border-color: #ededed; }
+    .project-preview .thumb .overlay { background: #000; background: rgba(0,0,0,.8); }
+    .project-preview .thumb .overlay .lightbox { color: #FFF; background: #ff004e; }
+    .project-preview .thumb .overlay .link { color: #99a4aa; background: #FFF; }
+    .project-preview h3 a { color: #afbbc1; }
+    .project-preview h3 a:hover { color: #545d61; }
+    .project-preview .date { color: #afbbc1; }
+
+    /* ----------------------------------
+        SECTION TITLE
+    ---------------------------------- */
+
+    h2.section-title { color: #667279; }
+    h2.section-title strong { color: #afbbc1; }
+
+    /* ----------------------------------
+        TABS
+    ---------------------------------- */
+
+    .tabs .tab { color: #667279; background: #f3f3f3; border-color: #e8e8e8; }
+    .tabs .tab.active { background: none; border-bottom-color: #FFF; }
+    .tab-content .item { border-color: #e8e8e8; }
+
+
+/* -----------------------------------------------------------------------------
+
+    4.) HEADER
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        TOPBAR
+    ---------------------------------- */
+
+    #topbar { background: #2f3639; }
+
+    /* SOCIAL ICONS */
+
+    #topbar .social-icons li a { background: #282e31; }
+    #topbar .social-icons li a:hover { background: #ff004e; }
+    #topbar .social-icons li a i { background: url('../img/gfx.default.png') 0 0 no-repeat; }
+    #topbar .social-icons li.twitter i { background-position: 0 0; }
+    #topbar .social-icons li.facebook i { background-position: -30px 0; }
+    #topbar .social-icons li.dribbble i { background-position: -60px 0; }
+    #topbar .social-icons li.googleplus i { background-position: -90px 0; }
+    #topbar .social-icons li.linkedin i { background-position: -120px 0; }
+
+    /* SEARCH */
+
+    #topbar .search-form input { color: #99a4aa; }
+    #topbar .search-form .input button { color: #FFF; background: #232C31; }
+    #topbar .search-form .input button:hover { background: #ff004e; }
+    #topbar .search-form button.submit { color: #99a4aa; background: #282e31; }
+    #topbar .search-form button.submit.active,
+    #topbar .search-form button.submit:hover { color: #feffff; background: #ff004e; }
+
+    /* RESPONSIVE CONTROLS */
+
+    .responsive-controls button { color: #99a4aa; background: #282e31; }
+    .responsive-controls button.active { color: #FFF; background: #ff004e; }
+
+    /* ----------------------------------
+        NAVBAR
+    ---------------------------------- */
+
+    /* MAIN NAV */
+
+    nav.main > button { color: #99a4aa; background: #282e31; }
+    nav.main > button.active { color: #FFF; background: #ff004e; }
+    nav.main .indicator { background: #ff004e; }
+    /* lvl 1 */
+    nav.main > ul > li > a { color: #FFF; }
+    nav.main > ul > li > a span { color: #afbbc1; }
+    nav.main > ul > li > .arrow i { background: url('../img/gfx.default.png') -8px -38px no-repeat; }
+    /* lvl 2 */
+    nav.main > ul > li > ul { background: #FFF; }
+    nav.main > ul > li > ul li { border-color: #ededed;}
+    nav.main > ul > li > ul a { color: #99a4aa; }
+    nav.main > ul > li > ul a:hover { color: #FFF; background: #afbbc1; }
+
+
+/* -----------------------------------------------------------------------------
+
+    5.) MAIN SLIDER
+
+----------------------------------------------------------------------------- */
+
+#slider { background: #2f3639; }
+
+    /* ----------------------------------
+        ITEMS
+    ---------------------------------- */
+
+    #slider .carousel-inner .item h2 { color: #FFF; }
+    #slider .carousel-inner .item p { color: #FFF; }
+
+    /* ----------------------------------
+        CONTROLS
+    ---------------------------------- */
+
+    #slider .nav button,
+    #slider button.pause { color: #FFF; background: #3c4346; background: rgba(47,54,57,.8); }
+    #slider .nav button:hover { background: rgba(0,0,0,.75); }
+    #slider .nav button i { background: url('../img/gfx.default.png') 0 0 no-repeat; }
+    #slider .nav.prev button i { background-position: -90px -30px; }
+    #slider .nav.next button i { background-position: -120px -30px; }
+    #slider button.pause:hover { background: #3c4346; background: rgba(0,0,0,.75); }
+    #slider button.pause.paused { background: #dc114b; }
+
+    /* ----------------------------------
+        INDICATOR
+    ---------------------------------- */
+
+    #slider .indicator { background: rgba(0,0,0,.3); }
+    #slider .indicator .progressbar { background: #ff004e; }
+
+
+/* -----------------------------------------------------------------------------
+
+    6.) HOMEPAGE
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        WELCOME
+    ---------------------------------- */
+
+    #welcome { color: #c7d4db; background: #9db1ba; }
+    #welcome h1 span { color: #FFF; }
+    #welcome a { color: #FFF; }
+    #welcome a:hover { color: #c7d4db; }
+
+    /* ----------------------------------
+        HOME SERVICES
+    ---------------------------------- */
+
+    #home-services { color: #99a4aa; background: #f5f5f5; }
+    #home-services .service.hover { background: #ffffff; }
+    #home-services .ico { background: #FFF; }
+    #home-services .service h2 { color: #58666e; }
+
+    /* ----------------------------------
+        HOMEPAGE CORE
+    ---------------------------------- */
+
+    #homepage-core { color: #99a4aa; background: #FFF; }
+
+    /* ----------------------------------
+        BOTTOM BANNERS
+    ---------------------------------- */
+
+    .home-page .bottom-banners { border-color: #ededed; }
+
+    /* ----------------------------------
+        RECENT ARTICLES
+    ---------------------------------- */
+
+    .home-page .recent-articles .article .ico i { color: #FFF; }
+    .home-page .recent-articles .article .title { border-color: #ededed; }
+    .home-page .recent-articles .article h3 a { color: #667279; }
+    .home-page .recent-articles .article h3 a:hover { color: #545d61; }
+    .home-page .recent-articles .article .date { color: #afbbc1; }
+
+    /* IMAGE ARTICLE */
+
+    .home-page .recent-articles .article.image .ico { background: #ff004e; }
+
+    /* VIDEO ARTICLE */
+
+    .home-page .recent-articles .article.video .ico { background: #f68e56; }
+
+
+/* -----------------------------------------------------------------------------
+
+    7.) PAGE TYPES
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        PAGE TITLE
+    ---------------------------------- */
+
+    #page-title { color: #FFF; background: #9db1ba; }
+
+    /* ----------------------------------
+        PAGE CORE
+    ---------------------------------- */
+
+    #page-core { color: #99a4aa; background: #FFF; }
+
+    /* ----------------------------------
+        ABOUT PAGE
+    ---------------------------------- */
+
+    /* ABOUT TEAM */
+
+    .about-page .team-member { border-color: #ededed; }
+    .about-page .team-member .thumb .overlay { background: #000; background: rgba(0,0,0,.8); }
+    .about-page .team-member .thumb a i { background: url('../img/gfx.default.png') 0 0 no-repeat; }
+    .about-page .team-member .thumb .twitter { background: #0084ff; }
+    .about-page .team-member .thumb .twitter i { background-position: 0 0; }
+    .about-page .team-member .thumb .facebook { background: #004ae0; }
+    .about-page .team-member .thumb .facebook i { background-position: -30px 0; }
+    .about-page .team-member .thumb .gplus { background: #ff004e; }
+    .about-page .team-member .thumb .gplus i { background-position: -150px 0; }
+    .about-page .team-member .thumb .linkedin { background: #5674b9; }
+    .about-page .team-member .thumb .linkedin i { background-position: -120px 0; }
+
+    .about-page .team-member h3 { color: #ff004e; }
+    .about-page .team-member h4 { color: #afbbc1; }
+
+    /* ----------------------------------
+        BLOG PAGE
+    ---------------------------------- */
+
+    /* ARTICLE LIST */
+
+    .blog-page .article-list .article-content { border-color: #e5e5e5; }
+
+    /* ARTICLE TITLE */
+
+    .blog-page .article-title { border-color: #e5e5e5; }
+    .blog-page .article-title .date { color: #afbbc1; }
+    .blog-page .article-title h2,
+    .blog-page .article-title h2 a { color: #667279; }
+    .blog-page .article-title h2 a:hover { color: #99a4aa; }
+
+    /* ARTICLE LINK */
+
+    .blog-page .article-link { background: #ededed; }
+    .blog-page .article-link .ico { color: #FFF; background: #7cc576; }
+    .blog-page .article-link a { color: #667279; }
+
+    /* IMAGE ARTICLE */
+
+    .blog-page article.image .article-image .ico { color: #FFF; background: #ff004e; }
+
+    /* VIDEO ARTICLE */
+
+    .blog-page article.video .article-image .ico { color: #FFF; background: #f68e56; }
+
+
+    /* ----------------------------------
+        CONTACT PAGE
+    ---------------------------------- */
+
+    /* CONTACT FORM */
+
+    .contact-page .contact-form { background: #ededed; border-color: #FFF; }
+    .contact-page .contact-form h2.section-title { color: #667279; }
+    .contact-page .contact-form h2.section-title strong { color: #afbbc1; }
+    .contact-page .contact-form input,
+    .contact-page .contact-form textarea { color: #667279; background: #FFF; }
+    .contact-page .contact-form button.submit { color: #FFF; background: #ff004e; }
+    .contact-page .contact-form button.submit:hover { background: #232c31; }
+
+    /* CONTACT BOTTOM */
+
+    .contact-page .contact-info li .ico,
+    .contact-page .contact-info li h3 { color: #3c4346; }
+
+    /* ----------------------------------
+        PORTFOLIO PAGE
+    ---------------------------------- */
+
+    .portfolio-page .project-description .info { border-color: #e5e5e5; }
+    .portfolio-page .project-description .info h3 { color: #667279; }
+    .portfolio-page .project-nav a { background: #afbbc1;  }
+    .portfolio-page .project-nav span { background: #ededed;  }
+    .portfolio-page .project-nav i { background: url('../img/gfx.default.png') 0 0 no-repeat; }
+    .portfolio-page .project-nav .prev i { background-position: -150px -30px; }
+    .portfolio-page .project-nav .next i { background-position: -180px -30px; }
+
+    /* ----------------------------------
+        SEARCH RESULTS PAGE
+    ---------------------------------- */
+
+    .search-results-page .search-results > li { border-color: #e5e5e5; }
+    .search-results-page h2,
+    .search-results-page h2 a { color: #667279; }
+    .search-results-page .various-content .string { color: #99a4aa; background: #ebf1f4; }
+
+    /* ----------------------------------
+        SERVICES PAGE
+    ---------------------------------- */
+
+    /* SERVICES INTRO */
+
+    .services-page .services-intro { border-color: #e5e5e5; }
+
+    /* SERVICES LIST */
+
+    .services-page .services-list .service { border-color: #ededed; }
+    .services-page .services-list .service .ico { color: #FFF; }
+    .services-page .services-list .service1 .ico { background: #ff004e; }
+    .services-page .services-list .service2 .ico { background: #0084ff; }
+    .services-page .services-list .service3 .ico { background: #f68e56; }
+    .services-page .services-list .service4 .ico { background: #7cc576; }
+    .services-page .services-list .service h2 { color: #232c31 }
+
+    /* SERVICES FEATURES */
+
+    .services-page .feature .ico { background: #ff004e; }
+    .services-page .feature .ico i { color: #FFF; }
+    .services-page .feature h3 { color: #667279; }
+
+
+/* -----------------------------------------------------------------------------
+
+    8.) SIDEBAR
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        WIDGETS
+    ---------------------------------- */
+
+    #sidebar .widget h3 { color: #667279; }
+
+    /* SEARCH WIDGET */
+
+    #sidebar .widget.search .input { background: #eaf1f4; }
+    #sidebar .widget.search input { color: #99a4aa; }
+    #sidebar .widget.search button i { color: #99a4aa; }
+
+    /* CATEGORIES WIDGET */
+
+    #sidebar .widget.categories a { color: #9db1ba; border-bottom: 1px solid #e5e5e5; }
+    #sidebar .widget.categories a:hover { color: #FFF; background: #9db1ba; }
+
+
+/* -----------------------------------------------------------------------------
+
+    9.) TWITTER FEED
+
+----------------------------------------------------------------------------- */
+
+#twitter-feed { color: #FFF; background: #0084ff; }
+#twitter-feed a { color: #FFF; }
+
+
+/* -----------------------------------------------------------------------------
+
+    10.) BOTTOM
+
+----------------------------------------------------------------------------- */
+
+#bottom { color: #afbbc1; background: #2f3639; }
+#bottom a { color: #FFF; }
+#bottom a:hover { color: #afbbc1; }
+
+    /* ----------------------------------
+        WIDGETS
+    ---------------------------------- */
+
+    #bottom .widget h3 { color: #FFF; border-color: #595e61; }
+    #bottom .widget h3 i { background: #ff004e; }
+
+    /* ARTICLES WIDGET */
+
+    #bottom .widget.articles li { border-color: #595e61; }
+
+    /* TAGS WIDGET */
+
+    #bottom .widget.tags a { border-color: #444a4d; }
+    #bottom .widget.tags a:hover { color: #FFF; border-color: #6e7375; }
+    #bottom .widget.tags a:active { border-color: #444a4d; }
+
+    /* IMAGES WIDGET */
+
+    #bottom .widget.images li { background: #FFF; }
+
+
+/* -----------------------------------------------------------------------------
+
+    11.) FOOTER
+
+----------------------------------------------------------------------------- */
+
+footer { color: #b0b0b0; }
+
+    /* ----------------------------------
+        COPYRIGHT
+    ---------------------------------- */
+
+    footer .copyright a { color: #FFF; }
+    footer .copyright a:hover { color: #b0b0b0; }
+
+    /* ----------------------------------
+        FOOTER NAV
+    ---------------------------------- */
+
+    nav.footer { color: #292f31; }
+    nav.footer a { color: #b0b0b0; }
+    nav.footer .active a,
+    nav.footer a:hover { color: #FFF; }
+
+
+/* -----------------------------------------------------------------------------
+
+    12.) RESPONSIVE
+
+----------------------------------------------------------------------------- */
+
+    /* ----------------------------------
+        LARGE TABLET
+    ---------------------------------- */
+
+    @media (max-width: 979px) {
+
+    /* HEADER */
+
+    /* topbar*/
+    #topbar .search-form { background: #282e31; }
+    #topbar .search-form button.submit { color: #FFF; background: #282e31; }
+
+    /* navbar */
+    nav.main > ul > li { border-color: #505659; }
+    nav.main > ul > li.active > a { color: #FF004E; }
+    nav.main > ul > li .arrow i { background-position: -210px -30px; }
+    nav.main > ul > li > ul { background: none; }
+    nav.main > ul > li > ul a { color: #99a4aa; background: none; }
+    nav.main > ul > li > ul a:hover { color: #FFF; background: none; }
+
+    }
+
+
+/* -----------------------------------------------------------------------------
+
+    13.) HiDPI GRAPHICS
+
+----------------------------------------------------------------------------- */
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+    .list-slider-nav button i,
+    .loading-anim i,
+    #topbar .social-icons li a i,
+    nav.main > ul > li > .arrow i,
+    #slider .nav button i,
+    .about-page .team-member .thumb a i,
+    .portfolio-page .project-nav i { background-image: url('../img/gfx.default.2x.png'); background-size: 300px 60px; }
+
+}

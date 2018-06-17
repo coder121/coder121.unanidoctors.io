@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>Error 404 Not Found</title>
+</head>
+<body>
+<font size=4>
+<div style="margin:200px auto 20px; width:0; height:0; padding:227px 0 0 681px; overflow:hidden; background: url('dummies/404.jpg')">
+</div>
+<p align="center">Sorry! The page you are looking for could not be located</p>
+
+	<script type="text/javascript">
+		setTimeout('Redirect()',3000);
+		function Redirect(){
+		  location.href = 'http://unanidoctors.com';
+		}
+	</script>
+</body></html>

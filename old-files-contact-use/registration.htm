@@ -1,0 +1,731 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Registration</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function fun_reset()
+{
+ document.registration.reset();
+} 
+
+function validate()
+{
+		
+		if(document.registration.fname.value=="")
+		{
+		alert("Please Specify your First Name !")
+		document.registration.fname.focus()
+		return false
+		}
+		
+		if(isNaN(document.registration.fname.value)==false)
+		{
+		alert("Please Specify valid Name... Only Aphabets are Accepted !")
+		document.registration.fname.value=""
+		document.registration.fname.focus()
+		return false
+		}
+		
+		if(document.registration.lname.value=="")
+		{
+		alert("Please Specify your Last Name !")
+		document.registration.lname.focus()
+		return false
+		}
+		
+		if(isNaN(document.registration.lname.value)==false)
+		{
+		alert("Please Specify valid Name... Only Aphabets are Accepted !")
+		document.registration.lname.value=""
+		document.registration.lname.focus()
+		return false
+		}
+		
+		if(document.registration.address.value=="")
+		{
+		alert("Please Specify your Address !")
+		document.registration.address.focus()
+		return false
+		}
+		
+		if(isNaN(document.registration.address.value)==false)
+		{
+		alert("Please Specify valid Address... Should start with Aphabets !")
+		document.registration.address.value=""
+		document.registration.address.focus()
+		return false
+		}
+		
+		if(document.registration.city.value=="")
+  {
+  alert("Please specify the City ! ")
+  document.registration.city.focus()
+  return false
+  }
+  
+  if(isNaN(document.registration.city.value)==false)
+	{
+	alert("Please Specify valid City Name... Only Aphabets are Accepted !")
+	document.registration.city.value=""
+	document.registration.city.focus()
+	return false
+	}
+  
+  if(document.registration.state.selectedIndex=="0")
+  {
+  alert("Please specify the State ! ")
+  document.registration.state.focus()
+  return false
+  }
+  
+  if(document.registration.zip.value=="")
+  {
+  alert("Please specify the Zip Code ! ")
+  document.registration.zip.focus()
+  return false
+  }
+  
+  if(isNaN(document.registration.zip.value)==true)
+	{
+	alert("Please Specify valid Zip Code... Only Numerics are Accepted !")
+	document.registration.zip.value=""
+	document.registration.zip.focus()
+	return false
+	}
+	
+	if(document.registration.country.selectedIndex=="0")
+  {
+  alert("Please specify the Country ! ")
+  document.registration.country.focus()
+  return false
+  }
+	
+	
+		if (document.registration.email.value=="") {
+		alert("Please Provide a Valid E-Mail Address!!")
+		document.registration.email.focus()
+		return false
+		}
+		var emailPat=/^(.+)@(.+)$/
+
+		var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"
+
+		var validChars="\[^\\s" + specialChars + "\]"
+
+		var firstChars=validChars
+
+		var quotedUser="(\"[^\"]*\")"
+
+		var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/
+
+		var atom="(" + firstChars + validChars + "*" + ")"
+
+		var word="(" + atom + "|" + quotedUser + ")"
+
+		var userPat=new RegExp("^" + word + "(\\." + word + ")*$")
+
+		var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$")
+
+		var matchArray=document.registration.email.value.match(emailPat)
+		if (matchArray==null) {
+		  
+		        alert("Provided Address is Invalid !! Please Check @ and .'s")
+		        document.registration.email.focus()
+		        return false
+		}
+		var user=matchArray[1]
+		var domain=matchArray[2]
+
+
+		if (user.match(userPat)==null) {
+
+		    alert("Provided User Name is not valid. Please Check Again")
+		    document.registration.email.focus()
+		    return false
+		}
+
+		var IPArray=domain.match(ipDomainPat)
+		if (IPArray!=null) {
+
+		          for (var i=1;i<=4;i++) {
+		            if (IPArray[i]>255) {
+		                alert("Destination IP address is invalid!")
+		                document.registration.email.focus()
+		                return false
+		            }
+		    }
+		    return true
+		}
+
+
+		var domainArray=domain.match(domainPat)
+		if (domainArray==null) {
+		        alert("The domain name Provided is not valid.")
+		        document.registration.email.focus()
+		    return false
+		}
+
+		var atomPat=new RegExp(atom,"g")
+		var domArr=domain.match(atomPat)
+		var len=domArr.length
+		if (domArr[domArr.length-1].length<2 || 
+		    domArr[domArr.length-1].length>3) {
+
+		   alert("The address Specified must end in a three-letter domain, or two letter country.")
+		   document.registration.email.focus()
+		   return false
+		}
+
+		if (domArr[domArr.length-1].length==2 && len<3) {
+		   var errStr="This address ends in two characters, which is a country"
+		   errStr+=" code.  Country codes must be preceded by "
+		   errStr+="a hostname and category (like com, co, pub, pu, etc.)"
+		   alert(errStr)
+		   document.registration.email.focus()
+		   return false
+		}
+
+		if (domArr[domArr.length-1].length==3 && len<2) {
+		   var errStr="The address specified Doesn't Have a Proper Hostname Specified!"
+		   alert(errStr)
+		   document.registration.email.focus()
+		   return false
+		}
+return 
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//--></script>
+</head>
+
+<body leftmargin="0" topmargin="0" onload="MM_preloadImages('images/unanimedicineon.gif','images/listofunanidoctorson.gif','images/listofhakimson.gif','images/onlinetreatmenton.gif','images/contacton.gif','images/homeon.gif','images/unani-malayalam-off.gif')">
+<div align="center"><center>
+
+<table border="0" width="780" cellspacing="0" cellpadding="0" height="70" bgcolor="#BF2C2D">
+  <tr>
+    <td width="289" valign="middle"><img src="images/01.gif" webstripperlinkwas="images/01.gif" width="289" height="57"></td>
+    <td width="491" valign="middle"><p align="right"><img src="images/anim.gif" webstripperlinkwas="images/anim.gif" width="352" height="62">&nbsp; </td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="0" width="780" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><img src="images/bg_3.gif" webstripperlinkwas="images/bg_3.gif" width="3" height="3"></td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="0" cellpadding="0" width="780" cellspacing="0">
+  <tr>
+    <td width="3" valign="top"><img src="images/bg_3.gif" webstripperlinkwas="images/bg_3.gif" alt="bg_3.gif (45 bytes)" width="3" height="9"></td>
+    <td width="142" valign="top" bgcolor="#D97C0C">
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+            <tr> 
+              <td width="100%" valign="top"><img src="images/in_01.gif" webstripperlinkwas="images/in_01.gif" width="142" height="80"></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top" height="22">&nbsp; </td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="unanimedicine.htm" webstripperlinkwas="unanimedicine.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','images/unanimedicineon.gif',1)"><img src="images/unanimedicineof.gif" webstripperlinkwas="images/unanimedicineof.gif" name="Image25" border="0" width="142" height="26"></a></td>
+            </tr>
+            <tr>
+              <td width="100%" valign="top"><a href="unani-malayalam.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Unani Malayalam','','images/unani-malayalam-off.gif',1)"><img name="Unani Malayalam" border="0" src="images/unani-malayalam-on.gif" width="142" height="36"></a></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="listofunanidoctors.htm" webstripperlinkwas="listofunanidoctors.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image26','','images/listofunanidoctorson.gif',1)"><img src="images/listofunanidoctorsof.gif" webstripperlinkwas="images/listofunanidoctorsof.gif" name="Image26" border="0" width="142" height="26"></a></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="listofhakims.htm" webstripperlinkwas="listofhakims.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','images/listofhakimson.gif',1)"><img src="images/listofhakimsof.gif" webstripperlinkwas="images/listofhakimsof.gif" name="Image27" border="0" width="142" height="26"></a></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="registration.htm" webstripperlinkwas="registration.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','images/regon.gif',1)"><img src="images/regof.gif" webstripperlinkwas="images/regof.gif" name="Image22" border="0" width="142" height="26"></a></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="onlinetreatment.htm" webstripperlinkwas="onlinetreatment.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','images/onlinetreatmenton.gif',1)"><img src="images/onlinetreatmentof.gif" webstripperlinkwas="images/onlinetreatmentof.gif" name="Image28" border="0" width="142" height="26"></a></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="contactus.htm" webstripperlinkwas="contactus.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image29','','images/contacton.gif',1)"><img src="images/contactof.gif" webstripperlinkwas="images/contactof.gif" name="Image29" border="0" width="142" height="26"></a></td>
+            </tr>
+            <tr> 
+              <td width="100%" valign="top"><a href="default.htm" webstripperlinkwas="default.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','images/homeon.gif',1)"><img src="images/homeof.gif" webstripperlinkwas="images/homeof.gif" name="Image30" border="0" width="142" height="26"></a></td>
+            </tr>
+          </table>
+    </td>
+    <td width="4" valign="top"><img src="images/bg_4.gif" webstripperlinkwas="images/bg_4.gif" width="4" height="9"></td>
+    <td width="628" valign="top" bgcolor="#BFD1E4"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%" valign="top"><img src="images/in_04.gif" webstripperlinkwas="images/in_04.gif" width="628" height="19"></td>
+      </tr>
+      <tr>
+        <td width="100%" valign="middle" height="44">
+                <p align="right"><img src="images/head-registration.gif" webstripperlinkwas="images/t_online.gif" width="308" height="31">
+              </td>
+      </tr>
+      <tr>
+        <td width="100%" valign="top"><div align="center"><center><table border="0" width="90%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%" valign="top" height="22"></td>
+          </tr>
+          <tr>
+            <td width="100%" valign="top"><div align="center"><center><table border="0" width="80%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%" valign="top"><p align="justify"><strong><font face="Arial" size="2">Practitioner
+                Registration Form.</font></strong></td>
+              </tr>
+              <tr>
+                <td width="100%" valign="top"><font face="Arial" size="2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                </strong></font></td>
+              </tr>
+              <tr>
+                <td width="100%" valign="top"><font face="Arial" size="2" color="#FF0000"><strong>* -
+                Required fields. </strong></font></td>
+              </tr>
+            </table>
+            </center></div></td>
+          </tr>
+          <tr>
+            <td width="100%" valign="top" height="22"></td>
+          </tr>
+          <tr>
+            <td width="100%" valign="top"><div align="center"><center><table border="0" cellpadding="4" cellspacing="1" width="90%">
+			<form name="registration" method="post" action="registration.asp" onsubmit="return validate()">
+              <tr>
+                <td width="374" align="right" bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><img src="images/appoint2.jpg" webstripperlinkwas="images/appoint2.jpg" width="119" height="91"></font></td>
+                <td bgcolor="#FBF7C8"></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><b><font face="Arial" size="2" color="#000000">First Name* <b>:</b></font></b></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><input type="text" name="fname" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td height="33" width="374" bgcolor="#FBF7C8" align="right"><font face="Arial" size="2" color="#000000"><b>Last Name* <b>:</b></b> </font></td>
+                <td height="33" bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><input type="text" name="lname" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>Health Center :</b> <b><br>
+                </b>(If practicing from any specific center) </font></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><input type="text" name="hcn" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#FBF7C8" align="right"><b><font face="Arial" size="2" color="#000000">Street Address* <b>:</b></font></b></td>
+                <td bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><input type="text" name="address" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>City*</b> <b>:</b></font></td>
+                <td bgcolor="#DCE6BD"><p align="left"><font face="Arial" size="2" color="#000000"><input type="text" name="city" size="20"></font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#FBF7C8" align="right"><font face="Arial" size="2" color="#000000"><b>State*&nbsp;</b> <b>:</b></font></td>
+                <td bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><select name="state" size="1">
+                  <option selected value="Select a State">Select a State</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Alabama">Alabama</option>
+                  <option value="Alaska">Alaska</option>
+                  <option value="Arizona">Arizona</option>
+                  <option value="Arkansas">Arkansas</option>
+                  <option value="California">California</option>
+                  <option value="Colorado">Colorado</option>
+                  <option value="Connecticut">Connecticut</option>
+                  <option value="Delaware">Delaware</option>
+                  <option value="District of Columbia">District of Columbia</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Hawaii">Hawaii</option>
+                  <option value="Idaho">Idaho</option>
+                  <option value="Illinois">Illinois</option>
+                  <option value="Indiana">Indiana</option>
+                  <option value="Iowa">Iowa</option>
+                  <option value="Kansas">Kansas</option>
+                  <option value="Kentucky">Kentucky</option>
+                  <option value="Louisiana">Louisiana</option>
+                  <option value="Maine">Maine</option>
+                  <option value="Maryland">Maryland</option>
+                  <option value="Massachusetts">Massachusetts</option>
+                  <option value="Michigan">Michigan</option>
+                  <option value="Minnesota">Minnesota</option>
+                  <option value="Mississippi">Mississippi</option>
+                  <option value="Missouri">Missouri</option>
+                  <option value="Montana">Montana</option>
+                  <option value="Nebraska">Nebraska</option>
+                  <option value="Nevada">Nevada</option>
+                  <option value="New Hampshire">New Hampshire</option>
+                  <option value="New Jersey">New Jersey</option>
+                  <option value="New Mexico">New Mexico</option>
+                  <option value="New York">New York</option>
+                  <option value="North Carolina">North Carolina</option>
+                  <option value="North Dakota">North Dakota</option>
+                  <option value="Ohio">Ohio</option>
+                  <option value="Oklahoma">Oklahoma</option>
+                  <option value="Oregon">Oregon</option>
+                  <option value="Pennsylvania">Pennsylvania</option>
+                  <option value="Rhode Island">Rhode Island</option>
+                  <option value="South Carolina">South Carolina</option>
+                  <option value="South Dakota">South Dakota</option>
+                  <option value="Tennessee">Tennessee</option>
+                  <option value="Texas">Texas</option>
+                  <option value="Utah">Utah</option>
+                  <option value="Vermont">Vermont</option>
+                  <option value="Virginia">Virginia</option>
+                  <option value="Washington">Washington</option>
+                  <option value="West Virginia">West Virginia</option>
+                  <option value="Wisconsin">Wisconsin</option>
+                  <option value="Wyoming">Wyoming</option>
+                </select> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>Zip Code*</b> <b>:</b><br>
+                (For U.S. residents only; otherwise fill in your postal code) </font></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><input type="text" maxlength="10" name="zip" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#FBF7C8" align="right"><b><font face="Arial" size="2" color="#000000">Country* <b>:</b></font></b></td>
+                <td bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><select name="country" size="1">
+                  <option selected value="Select a Country">Select a Country</option>
+                  <option value="USA">USA</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="Algeria">Algeria</option>
+                  <option value="American Samoa">American Samoa</option>
+                  <option value="Andorra">Andorra</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Anguilla">Anguilla</option>
+                  <option value="Antarctica">Antarctica</option>
+                  <option value="Antigua And Barbuda">Antigua And Barbuda</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Armenia">Armenia</option>
+                  <option value="Aruba">Aruba</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Azerbaijan">Azerbaijan</option>
+                  <option value="Bahamas">Bahamas</option>
+                  <option value="Bahrain">Bahrain</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Barbados">Barbados</option>
+                  <option value="Belarus">Belarus</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Belize">Belize</option>
+                  <option value="Benin">Benin</option>
+                  <option value="Bermuda">Bermuda</option>
+                  <option value="Bhutan">Bhutan</option>
+                  <option value="Bolivia">Bolivia</option>
+                  <option value="Bosnia And Herzegowina">Bosnia And Herzegowina</option>
+                  <option value="Botswana">Botswana</option>
+                  <option value="Bouvet Island">Bouvet Island</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                  <option value="Brunei Darussalam">Brunei Darussalam</option>
+                  <option value="Bulgaria">Bulgaria</option>
+                  <option value="Burkina Faso">Burkina Faso</option>
+                  <option value="Burundi">Burundi</option>
+                  <option value="Cambodia">Cambodia</option>
+                  <option value="Cameroon">Cameroon</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Cape Verde">Cape Verde</option>
+                  <option value="Cayman Islands">Cayman Islands</option>
+                  <option value="Central African Republic">Central African Republic</option>
+                  <option value="Chad">Chad</option>
+                  <option value="Chile">Chile</option>
+                  <option value="China">China</option>
+                  <option value="Christmas Island">Christmas Island</option>
+                  <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Comoros">Comoros</option>
+                  <option value="Congo">Congo</option>
+                  <option value="Cook Islands">Cook Islands</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Cote D Ivoire">Cote D Ivoire</option>
+                  <option value="Croatia">Croatia</option>
+                  <option value="Cuba">Cuba</option>
+                  <option value="Cyprus">Cyprus</option>
+                  <option value="Czech Republic">Czech Republic</option>
+                  <option value="Denmark">Denmark</option>
+                  <option value="Djibouti">Djibouti</option>
+                  <option value="Dominica">Dominica</option>
+                  <option value="Dominican Republic">Dominican Republic</option>
+                  <option value="East Timor">East Timor</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Egypt">Egypt</option>
+                  <option value="El Salvador">El Salvador</option>
+                  <option value="Equatorial Guinea">Equatorial Guinea</option>
+                  <option value="Eritrea">Eritrea</option>
+                  <option value="Estonia">Estonia</option>
+                  <option value="Ethiopia">Ethiopia</option>
+                  <option value="Falkland Islands">Falkland Islands</option>
+                  <option value="Faroe Islands">Faroe Islands</option>
+                  <option value="Fiji">Fiji</option>
+                  <option value="Finland">Finland</option>
+                  <option value="France">France</option>
+                  <option value="France, Metropolitan ">France, Metropolitan</option>
+                  <option value="French Guiana">French Guiana</option>
+                  <option value="French Polynesia">French Polynesia</option>
+                  <option value="French Southern Territories">French Southern Territories</option>
+                  <option value="Gabon">Gabon</option>
+                  <option value="Gambia">Gambia</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Gibraltar">Gibraltar</option>
+                  <option value="Greece">Greece</option>
+                  <option value="Greenland">Greenland</option>
+                  <option value="Grenada">Grenada</option>
+                  <option value="Guadeloupe">Guadeloupe</option>
+                  <option value="Guam">Guam</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="Guinea">Guinea</option>
+                  <option value="Guinea-Bissau">Guinea-Bissau</option>
+                  <option value="Guyana">Guyana</option>
+                  <option value="Haiti">Haiti</option>
+                  <option value="Heard And Mc Donald Islands">Heard And Mc Donald Islands</option>
+                  <option value="Honduras">Honduras</option>
+                  <option value="Hong Kong">Hong Kong</option>
+                  <option value="Hungary">Hungary</option>
+                  <option value="Iceland">Iceland</option>
+                  <option value="India">India</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Iraq">Iraq</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="Israel">Israel</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Jamaica">Jamaica</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Jordan">Jordan</option>
+                  <option value="Kazakhstan">Kazakhstan</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="Kiribati">Kiribati</option>
+                  <option value="North Korea">North Korea</option>
+                  <option value="South Korea">South Korea</option>
+                  <option value="Kuwait">Kuwait</option>
+                  <option value="Kyrgyzstan">Kyrgyzstan</option>
+                  <option value="Lao Peoples Republic">Lao Peoples Republic</option>
+                  <option value="Latvia">Latvia</option>
+                  <option value="Lebanon">Lebanon</option>
+                  <option value="Lesotho">Lesotho</option>
+                  <option value="Liberia">Liberia</option>
+                  <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                  <option value="Liechtenstein">Liechtenstein</option>
+                  <option value="Lithuania">Lithuania</option>
+                  <option value="Luxembourg">Luxembourg</option>
+                  <option value="Macau">Macau</option>
+                  <option value="Macedonia">Macedonia</option>
+                  <option value="Madagascar">Madagascar</option>
+                  <option value="Malawi">Malawi</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Maldives">Maldives</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Marshall Islands">Marshall Islands</option>
+                  <option value="Martinique">Martinique</option>
+                  <option value="Mauritania">Mauritania</option>
+                  <option value="Mauritius">Mauritius</option>
+                  <option value="Mayotte">Mayotte</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="Micronesia">Micronesia</option>
+                  <option value="Moldova">Moldova</option>
+                  <option value="Monaco">Monaco</option>
+                  <option value="Mongolia">Mongolia</option>
+                  <option value="Montserrat">Montserrat</option>
+                  <option value="Morocco">Morocco</option>
+                  <option value="Mozambique">Mozambique</option>
+                  <option value="Myanmar">Myanmar</option>
+                  <option value="Namibia">Namibia</option>
+                  <option value="Nauru">Nauru</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="Netherlands Antilles">Netherlands Antilles</option>
+                  <option value="New Caledonia">New Caledonia</option>
+                  <option value="New Zealand">New Zealand</option>
+                  <option value="Nicaragua">Nicaragua</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Niue">Niue</option>
+                  <option value="Norfolk Island">Norfolk Island</option>
+                  <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                  <option value="Norway">Norway</option>
+                  <option value="Oman">Oman</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Palau">Palau</option>
+                  <option value="Palestinian Territory">Palestinian Territory</option>
+                  <option value="Panama">Panama</option>
+                  <option value="Papua New Guinea">Papua New Guinea</option>
+                  <option value="Paraguay">Paraguay</option>
+                  <option value="Peru">Peru</option>
+                  <option value="Philippines">Philippines</option>
+                  <option value="Pitcairn">Pitcairn</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Puerto Rico">Puerto Rico</option>
+                  <option value="Qatar">Qatar</option>
+                  <option value="Reunion">Reunion</option>
+                  <option value="Romania">Romania</option>
+                  <option value="Russian Federation">Russian Federation</option>
+                  <option value="Rwanda">Rwanda</option>
+                  <option value="Saint Kitts And Nevis">Saint Kitts And Nevis</option>
+                  <option value="Saint Lucia">Saint Lucia</option>
+                  <option value="Saint Vincent And The Grenadines">Saint Vincent/Grenadines</option>
+                  <option value="Samoa">Samoa</option>
+                  <option value="San Marino">San Marino</option>
+                  <option value="Sao Tome And Principe">Sao Tome And Principe</option>
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                  <option value="Senegal">Senegal</option>
+                  <option value="Seychelles">Seychelles</option>
+                  <option value="Sierra Leone">Sierra Leone</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Slovakia">Slovakia</option>
+                  <option value="Slovenia">Slovenia</option>
+                  <option value="Solomon Islands">Solomon Islands</option>
+                  <option value="Somalia">Somalia</option>
+                  <option value="South Africa">South Africa</option>
+                  <option value="South Georgia">South Georgia</option>
+                  <option value="The South Sandwich Islands">The South Sandwich Islands</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="St Helena">St Helena</option>
+                  <option value="St Pierre and Miquelon">St Pierre and Miquelon</option>
+                  <option value="Sudan">Sudan</option>
+                  <option value="Suriname">Suriname</option>
+                  <option value="Svalbard And Jan Mayen Islands">Svalbard/Jan Mayen Islands</option>
+                  <option value="Swaziland">Swaziland</option>
+                  <option value="Sweden">Sweden</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                  <option value="Taiwan">Taiwan</option>
+                  <option value="Tajikistan">Tajikistan</option>
+                  <option value="Tanzania">Tanzania</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Togo">Togo</option>
+                  <option value="Tokelau">Tokelau</option>
+                  <option value="Tonga">Tonga</option>
+                  <option value="Trinidad And Tobago">Trinidad And Tobago</option>
+                  <option value="Tunisia">Tunisia</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Turkmenistan">Turkmenistan</option>
+                  <option value="Turks And Caicos Islands">Turks And Caicos Islands</option>
+                  <option value="Tuvalu">Tuvalu</option>
+                  <option value="Uganda">Uganda</option>
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="United Arab Emirates">United Arab Emirates</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="US Minor Outlying Islands">US Minor Outlying Islands</option>
+                  <option value="Uruguay">Uruguay</option>
+                  <option value="Uzbekistan">Uzbekistan</option>
+                  <option value="Vanuatu">Vanuatu</option>
+                  <option value="Vatican City State">Vatican City State</option>
+                  <option value="Venezuela">Venezuela</option>
+                  <option value="Viet Nam">Viet Nam</option>
+                  <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                  <option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
+                  <option value="Wallis And Futuna Islands">Wallis And Futuna Islands</option>
+                  <option value="Western Sahara">Western Sahara</option>
+                  <option value="Yemen">Yemen</option>
+                  <option value="Yugoslavia">Yugoslavia</option>
+                  <option value="Zaire">Zaire</option>
+                  <option value="Zambia">Zambia</option>
+                  <option value="Zimbabwe">Zimbabwe</option>
+                </select> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>Specialty</b> <b>:</b> <br>
+                (Max 40 characters)</font></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000">
+                                      <textarea name="specialty" cols="25" rows="2"></textarea>
+                                       </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#FBF7C8" align="right"><font face="Arial" size="2" color="#000000"><b>Services Provided</b> <b>:</b><br>
+                (Details of all therapies provided)</font></td>
+                <td bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000">
+                                      <textarea name="sp" rows="1" cols="25"></textarea>
+                                       </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>Phone :</b><br>
+                (US only) </font></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><input type="text" maxlength="3" name="phone1" size="3"> <input type="text" maxlength="3" name="phone2" size="3"> <input type="text" maxlength="4" name="phone3" size="8"> </font></td>
+              </tr>
+              <tr>
+                <td height="31" width="374" bgcolor="#FBF7C8" align="right"><font face="Arial" size="2" color="#000000"><b>Phone :</b><br>
+                (Non US only, please prefix relevant country code) </font></td>
+                <td height="31" bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><input type="text" name="ph" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>Fax</b> <b>:</b></font></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><input type="text" name="fax" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#FBF7C8" align="right"><b><font face="Arial" size="2" color="#000000">Email* :</font></b></td>
+                <td bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000"><input type="text" name="email" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td width="374" bgcolor="#DCE6BD" align="right"><font face="Arial" size="2" color="#000000"><b>Website</b> <b>:</b></font></td>
+                <td bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><input type="text" name="website" size="20"> </font></td>
+              </tr>
+              <tr>
+                <td valign="top" width="374" bgcolor="#FBF7C8" align="right"><font face="Arial" size="2" color="#000000"><b>Notes</b> <b>:</b><br>
+                (If you wish to add any further information) </font></td>
+                <td bgcolor="#FBF7C8"><font face="Arial" size="2" color="#000000">
+                                      <textarea name="notes" cols="25" rows="2"></textarea>
+                                       </font></td>
+              </tr>
+              <tr>
+                <td valign="top" width="374" bgcolor="#DCE6BD"><font face="Arial" size="2" color="#000000"><br>
+                </font></td>
+                <td width="501" bgcolor="#DCE6BD">
+                <font face="Arial" size="2" color="#000000">&nbsp;
+                <input type="submit" value="Submit">&nbsp; 
+                <input type="reset" value="Reset" onclick="javascript:fun_reset()"></font></td>
+              </tr>
+			</form>
+            </table>
+            </center></div></td>
+          </tr>
+        </table>
+        </center></div></td>
+      </tr>
+      <tr>
+        <td width="100%" valign="top" height="33"></td>
+      </tr>
+    </table>
+    </td>
+    <td width="3" valign="top"><img src="images/bg_3.gif" webstripperlinkwas="images/bg_3.gif" alt="bg_3.gif (45 bytes)" width="3" height="9"></td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="0" cellpadding="0" width="780" cellspacing="0">
+  <tr>
+    <td width="3" valign="top"><img src="images/bg_3.gif" webstripperlinkwas="images/bg_3.gif" alt="bg_3.gif (45 bytes)" width="3" height="9"></td>
+    <td width="142" valign="top"><img src="images/in_1a.gif" webstripperlinkwas="images/in_1a.gif" width="142" height="18"></td>
+    <td width="4" valign="top"><img src="images/bg_4.gif" webstripperlinkwas="images/bg_4.gif" width="4" height="9"></td>
+    <td width="628" valign="top"><img src="images/in_04a.gif" webstripperlinkwas="images/in_04a.gif" width="628" height="19"></td>
+    <td width="3" valign="top"><img src="images/bg_3.gif" webstripperlinkwas="images/bg_3.gif" alt="bg_3.gif (45 bytes)" width="3" height="9"></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>
