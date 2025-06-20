@@ -1,2467 +1,2369 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>List Of Unani Doctors | Unanidoctors.com</title>
-        <link rel="shortcut icon" href="dummies/favicon.png">
-		<meta name="description" content="This list comprise of all the qualified unani doctors with a minimum qualification of Bachelors in unani medicine and surgery (B.U.M.S).">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:type" content="article">
-		<meta property="og:title" content="List Of Unani Doctors | Unanidoctors.com">
-		<meta property="og:description" content="This list comprise of all the qualified unani doctors with a minimum qualification of Bachelors in unani medicine and surgery (B.U.M.S).">
-		<meta property="og:url" content="/unani-doctors.html">
-		<meta property="og:site_name" content="Unanidoctors.com">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List Of Unani Doctors | Unanidoctors.com</title>
+  <meta name="description" content="This list comprises all the qualified Unani doctors with a minimum qualification of B.U.M.S.">
+  <meta property="og:title" content="List Of Unani Doctors | Unanidoctors.com">
+  <meta property="og:description" content="This list comprises all the qualified Unani doctors with a minimum qualification of B.U.M.S.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/unani-doctors.html">
+  <meta property="og:site_name" content="Unanidoctors.com">
+  <link rel="icon" href="dummies/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1976d2;
+      --secondary: #43a047;
+      --background: #f8fafc;
+      --surface: #fff;
+      --text: #222;
+      --text-light: #666;
+      --accent: #e3f2fd;
+      --border: #e0e0e0;
+      --radius: 10px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    .button {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75em 1.5em;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+      margin-top: 0.5em;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      font-family: inherit;
+      font-size: 1em;
+    }
+    .button:hover, .button:focus {
+      background: var(--secondary);
+      outline: none;
+    }
+    header {
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1em 2em;
+    }
+    .navbar-logo img {
+      height: 48px;
+      vertical-align: middle;
+    }
+    nav ul {
+      display: flex;
+      gap: 2em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      font-weight: 600;
+      color: var(--text);
+      padding: 0.5em 0;
+      transition: color 0.2s;
+    }
+    nav a:hover, nav .active > a { color: var(--primary); }
+    .nav-toggle { display: none; }
+    @media (max-width: 900px) {
+      .navbar { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; width: 100%; display: none; }
+      nav ul.open { display: flex; }
+      .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2em;
+        margin-left: auto;
+        color: var(--primary);
+      }
+    }
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3em 2em;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1.5em;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .doctors-table-wrap {
+      overflow-x: auto;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5em 1em;
+      margin-top: 2em;
+    }
+    table.doctors-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    .doctors-table th, .doctors-table td {
+      padding: 0.75em 1em;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      font-size: 1em;
+    }
+    .doctors-table th {
+      background: var(--accent);
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .doctors-table tr:last-child td {
+      border-bottom: none;
+    }
+    .doctors-table td {
+      color: var(--text-light);
+    }
+    @media (max-width: 700px) {
+      .navbar { padding: 1em; }
+      .section { padding: 2em 1em; }
+      .doctors-table th, .doctors-table td { padding: 0.5em 0.5em; font-size: 0.95em; }
+      .doctors-table-wrap { padding: 1em 0.2em; }
+    }
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5em 2em;
+      margin-top: 3em;
+    }
+    footer a { color: #fff; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="navbar-logo" aria-label="Unanidoctors Home">
+        <img src="dummies/logo.png" alt="Unanidoctors.com Logo">
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about-drasad.html">Dr. Asaduddin Ahmed</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="active"><a href="unani-doctors.html">Unani Doctors</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- STYLESHEETS : begin -->
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/skin.default.css" id="css-skin">
-        <!--[if lte IE 8]>
-            <script src="assets/js/html5.js" type="text/javascript"></script>
-            <link rel="stylesheet" type="text/css" href="assets/css/oldie.css">
-        <![endif]-->
-        <!-- STYLESHEETS : end -->
-
-    </head>
-    <body id="top">
-
-        <!-- HEADER : begin -->
-        <header>
-
-            <!-- TOPBAR : begin -->
-            <div id="topbar">
-                <div class="container">
-                    <div class="topbar-inner clearfix">
-
-                        <!-- RESPONSIVE CONTROLS : begin -->
-                        <div class="responsive-controls clearfix">
-                            <button class="social"><i class="icon-link"></i></button>
-                            <button class="search"><i class="icon-search"></i></button>
-                        </div>
-                        <!-- RESPONSIVE CONTROLS : end -->
-
-                        <!-- SOCIAL ICONS : begin -->
-                        <div class="social-icons">
-                            <ul class="clearfix">
-                                <li class="twitter"><a href="http://hostchef.in/unanidoctors/"><i></i></a></li>
-                                <li class="facebook"><a href="http://www.facebook.com/pages/unanidoctorscom/118956844786091"><i></i></a></li>
-                                <li class="googleplus"><a href="https://plus.google.com/107102985828094417583/posts"><i></i></a></li>
-                                <li class="linkedin"><a href="http://www.linkedin.com/groups/unanidoctors-group-4658666"><i></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- SOCIAL ICONS : end -->
-
-                        <!-- SEARCH FORM : begin -->
-                        <div class="search-form">
-                            <form action="/search_results.html">
-                                <div class="input">
-                                    <button class="close"><i class="icon-remove"></i></button>
-                                    <input value="What are you looking for? You can search it here" data-placeholder="What are you looking for? You can search it here">
-                                </div>
-                                <button class="submit"><i class="icon-search"></i></button>
-                            </form>
-                        </div>
-                        <!-- SEARCH FORM : end -->
-
-                    </div>
-                </div>
-            </div>
-            <!-- TOPBAR : end -->
-
-            <!-- NAVBAR : begin -->
-            <div id="navbar">
-                <div class="container">
-                    <div class="navbar-inner clearfix">
-
-                        <!-- BRANDING : begin -->
-                        <a href="index.html" id="branding"><img src="dummies/logo.png" 	alt="Unanidoctors.Com"></a>
-                        <!-- BRANDING : end -->
-
-                        <!-- MAIN NAV : begin -->
-                        <nav class="main">
-                            <button><i class="icon-reorder"></i></button>
-                            <ul>
-                                <li class="active">
-                                    <a href="index.html"><strong>Home</strong><span>Unani Medicine</span></a>
-                                    <span class="arrow"><i></i></span>
-									<ul>
-                                    <li><a href="about.html">All About Unani</a></li>
-                                    </ul>									
-                                 </li>
-                                <li>
-                                    <a href="#"><strong>Unani Doctors</strong><span>Specialized Doctors</span></a>
-                                    <span class="arrow"><i></i></span>
-                                    <ul>
-                                        <li><a href="unani-doctors.html">List Of Unani Doctors</a></li>
-                                        <li><a href="unani-hakims.html">List Of Unani Hakims</a></li>
-                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="contact.html"><strong>Contact</strong><span>Get in touch</span></a>
-									<span class="arrow"><i></i></span>
-                                    <ul>
-									    <li><a href="online-treatment.html">Patient Online Registration</a></li>
-                                        <li><a href="practitioner-registration.html">Practitioner Registration</a></li>                                        
-                                     </ul>
-                                </li>                                
-								<li class="last">
-								    <a href="gallery.html"><strong>Gallery</strong><span>Satisfied Patients</span></a>
-									<span class="arrow"><i></i></span>
-                                    <ul>
-                                        <li><a href="videos.html">Videos</a></li>
-                                    </ul>										
-                                </li>
-                            </ul>
-                            <span class="indicator"></span>
-                        </nav>
-                        <!-- MAIN NAV : end -->
-                    </div>
-                </div>
-            </div>
-            <!-- NAVBAR : begin -->
-
-        </header>
-        <!-- HEADER : end -->
-
-        <!-- PORTFOLIO PAGE : begin -->
-        <div class="portfolio-page">
-
-            <!-- PAGE TITLE : begin -->
-            <div id="page-title">
-                <div class="container">
-                    <div class="page-title-inner">
-                        <h1>List Of Unani Doctors</h1>
-                    </div>
-                </div>
-            </div>
-            <!-- PAGE TITLE : end -->
-
-            <!-- PAGE CORE : begin -->
-            <div id="page-core">
-                <div class="container">
-				 <section class="about-intro">
-                        <div class="row">
-                            <div class="span">
-                               <p>This list comprise of all the qualified unani doctors with a minimum qualification of Bachelors in unani medicine and surgery (B.U.M.S). The specialists with added qualification of MD have been specified as specialist on there individual profile.</p> 
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Table : begin -->
-                    <div class="row">
-					<table width="630" border="1" align="center" cellspacing="0" cellpadding="0">
-<tbody>
-<tr align="center" valign="top">
-<td width="164"><b>REGISTRATION NO’S</b></td>
-<td width="239"><b>NAMES</b></td>
-<td width="209"><b>YEAR OF COMPLETION</b></td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">001</td>
-<td width="239">Dr. Md Mudassier,<br><br>
-S/o Md Yaseen</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">002</td>
-<td width="239">Dr. Khaja Ahmed Abdul Lateef,<br><br>
-S/o Md Jahangir Ali</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">003</td>
-<td width="239">Dr. Tayyaba Mohamodi,<br><br>
-D/o Syed Nazeer Mohamadi</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">004</td>
-<td width="239">Dr. Najma Sultana,<br><br>
-D/o Dilavar Khan</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">005</td>
-<td width="239">Dr. Ghouseunnisa,<br><br>
-D/o M A Hameed</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">006</td>
-<td width="239">Dr.Khusheedunnisa Begum,<br><br>
-D/o Md Fazur Rahman</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">007</td>
-<td width="239">Dr. Md Fareeduddin,<br><br>
-S/o Md Basheeruddin</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">008</td>
-<td width="239">Dr. Md Wajeed,<br><br>
-S/o Md Salar</td>
-<td width="209">1977</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">009</td>
-<td width="239">Dr. Altaf Taweed,<br><br>
-S/o Abbas Ali</td>
-<td width="209">1978</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">010</td>
-<td width="239">Dr. Chand Sultana,<br><br>
-D/o Syed Abdul Nayeem</td>
-<td width="209">1978</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">011</td>
-<td width="239">Dr. Kishwar Sultana,<br><br>
-D/o Md Ishaqul</td>
-<td width="209">1978</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">012</td>
-<td width="239">Dre. Sabiha waheed,<br><br>
-D/o Md Ghouse</td>
-<td width="209">1978</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">013</td>
-<td width="239">Dr. Naseem sultana,<br><br>
-D/o Md Ismail</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">014</td>
-<td width="239">Dr. Mehmooda,<br><br>
-D/o Md Hyder Ali</td>
-<td width="209">1079</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">015</td>
-<td width="239">Dr. Md Fathima,<br><br>
-D/o Md Abdul Raheem</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">016</td>
-<td width="239">Dr. M A Wajeed,<br><br>
-S/o M A Wajid</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">017</td>
-<td width="239">Dr. Aziz unnisa,<br><br>
-D/o Syed Abdul Rahman</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">018</td>
-<td width="239">Dr. Najamunnisa,<br><br>
-D/o Syed Hameeduddin</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">019</td>
-<td width="239">Dr. Syeedinnisa Begum,<br><br>
-D/o Gulam Ghouse</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">020</td>
-<td width="239">Dr. Asma Sultana,<br><br>
-D/o Md Abdul Quadeer</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">021</td>
-<td width="239">Dr. Fakruddin Md Abdul Samed,<br><br>
-S/o Md Abdul Quadeer</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">022</td>
-<td width="239">Dr. Mahoob Jehan,<br><br>
-S/o M A Rahman</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">023</td>
-<td width="239">Dr.Md Abdul Waheed,<br><br>
-S/o M A Gaffar</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">024</td>
-<td width="239">Dr. Mir Yakub Ali Khan,<br><br>
-S/o Mir Md Farooq Ali Khan</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">025</td>
-<td width="239">Dr. Rasheedunnisa Begum,<br><br>
-D/o Aziz Khan</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">026</td>
-<td width="239">Dr. Md Abdul Haq,<br><br>
-S/o Md Jahanagar</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">027</td>
-<td width="239">Dr. Tahera Begum,<br><br>
-D/o Syed azeemuddin</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">028</td>
-<td width="239">Dr. Sabira,<br><br>
-D/o M A shukoor</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">029</td>
-<td width="239">Dr. Jameel Fatima,<br><br>
-D/o S A Jabbar</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">030</td>
-<td width="239">Dr. Gusia Begum,<br><br>
-D/o M A Raheem</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">031</td>
-<td width="239">Dr. Mahboobunnisa,<br><br>
-D/o S A Kahman</td>
-<td width="209">1979</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">032</td>
-<td width="239">Dr. Sogra Sultana,<br><br>
-D/o M A Khader</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">033</td>
-<td width="239">Dr. Basheer Ahmed,<br><br>
-S/o Kamal Ahmed</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">034</td>
-<td width="239">Dr.M A Rub Siddiqui,<br><br>
-S/o M A Aziz Siddiqui</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">035</td>
-<td width="239">Dr. Raofunnisa,<br><br>
-D/o Md Vazeer Shareef</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">036</td>
-<td width="239">Dr. Talat Durdana,<br><br>
-D/o Md Ikram Ali</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">037</td>
-<td width="239">Dr. Qaiser Shaheen,<br><br>
-D/o Md obaidullah</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">038</td>
-<td width="239">Dr. Quiser Begum,<br><br>
-D/o M A Kareem</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">039</td>
-<td width="239">Dr. Kaleemulla Khan,<br><br>
-S/o Fazal-e-yaseen Khan</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">040</td>
-<td width="239">Dr. Md Abdul Raheem Rafeq,<br><br>
-S/o Md Abdul Hafeez</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">041</td>
-<td width="239">Dr. Firasatunnisa,<br><br>
-D/o Syed Nooruddin</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">042</td>
-<td width="239">Dr. Khatija Begum,<br><br>
-D/o Fakir Moahmed</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">043</td>
-<td width="239">Dr. Shameem Ghoher,<br><br>
-D/o Md Gowher Ali</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">044</td>
-<td width="239">Dr. Kousar Begum,<br><br>
-D/o Syed Anwaruddin</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">045</td>
-<td width="239">Dr. Syed Faiz Ahmed,<br><br>
-S/o Ismail Shah Quadri</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">046</td>
-<td width="239">Dr. Aysha Qadri,<br><br>
-D/o Syed Mustafa Hassan Qadri</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">047</td>
-<td width="239">Dr. Amtul kareem,<br><br>
-D/o Mir mehboob Ali</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">048</td>
-<td width="239">Dr Khaja Barauddin Ansari,<br><br>
-S/o Khaja Kareemuddin Ansari</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">049</td>
-<td width="239">DR. Rashid Ali Khan,<br><br>
-S/o M A Rahman Khan</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">050</td>
-<td width="239">Dr. Md Mujeeb-ur Rahman,<br><br>
-S/o Md Yaseen</td>
-<td width="209">1980</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">051</td>
-<td width="239">Dr.Abu Yusuf Waseem Siddiqui,<br><br>
-S/o M&nbsp; A Raheem Siddiqui</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">052</td>
-<td width="239">Dr. Md Kamaluddin,<br><br>
-S/o Md Badruddin</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">053</td>
-<td width="239">Dr. MdKhaja Badaruddin Siddiqui,<br><br>
-S/o Md Khaja Moinuddin Siddiqui</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">054</td>
-<td width="239">Dr. Khatija Sultana,<br><br>
-D/o M A Kareem</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">055</td>
-<td width="239">Dr. Waseem Rizwana,<br><br>
-D/o Md Younus</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">056</td>
-<td width="239">Dr. Aneesa Begum,<br><br>
-D/o M A Qadeer</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">057</td>
-<td width="239">Dr. Ahmedi&nbsp; begum,<br><br>
-D/o Shaik Gulam Ahmed</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">058</td>
-<td width="239">Dr. Anmatus Salam,<br><br>
-D/o Md Yaseen Khan</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">059</td>
-<td width="239">Dr. Amatum Noor,<br><br>
-D/o MD Yaseen Khan</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">060</td>
-<td width="239">Dr. Syed Arifuddin,<br><br>
-S/o Syed Gohhouse-e-Sahel</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">061</td>
-<td width="239">Dr. Zubaida Begum,<br><br>
-D/o Zainuddin</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">062</td>
-<td width="239">Dr. Ahmed Abdul Haleem,<br><br>
-S/o Md Abdul Kareem</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">063</td>
-<td width="239">Dr. Khaja Sultana,<br><br>
-D/o Lal Mohammed</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">064</td>
-<td width="239">Dr. Razia Begum,<br><br>
-D/o Yakula Ali</td>
-<td width="209">1981</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">065</td>
-<td width="239">Dr. Syed Mahmood Zahid,<br><br>
-S/o Syed Ali</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">066</td>
-<td width="239">Dr. Md Abdul Raheem,<br><br>
-S/o M A Kareem</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">067</td>
-<td width="239">Dr. Md Rafi Ahmed,<br><br>
-S/o Md Taqui</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">068</td>
-<td width="239">Dr. Gahur Sultana,<br><br>
-D/o Syed Md Zaheer Alam</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">069</td>
-<td width="239">Dr. Touqeer Ilahi,<br><br>
-D/o M A Razzak</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">070</td>
-<td width="239">Dr. Hashmat unnisa,<br><br>
-D/o Abdulla bin Sayeed</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">071</td>
-<td width="239">Dr. Wasia Naveed,<br><br>
-D/o Md Muzaffer Ali</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">072</td>
-<td width="239">Dr. Sabiha Khatoon,<br><br>
-D/o Mahaboob Khan</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">073</td>
-<td width="239">Dr. Razia Begum,<br><br>
-D/o Ziauddin Khan</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">074</td>
-<td width="239">Dr. Md Asif uddin Mufti,<br><br>
-S/o Md Qutubuddin Mufti</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">075</td>
-<td width="239">Dr. Md Abid Ali,<br><br>
-S/o Md Iqbal Ali</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">076</td>
-<td width="239">Dr. Amtul Zainab Yaseen Ali</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">077</td>
-<td width="239">Dr. Md Moinuddin Ahmed,<br><br>
-S/o Md Nasir uddin Ahmed</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">078</td>
-<td width="239">Dr. Viquarunnisa,<br><br>
-D/o Md Hyder Quraishi</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">079</td>
-<td width="239">Dr. Aziz Khatoon,<br><br>
-D/o Md Sardar Khan</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">080</td>
-<td width="239">Dr. Mirza Abdul Wahab Baig,<br><br>
-S/o Mirza Rahman</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">081</td>
-<td width="239">Dr. Khaja Ibrahim Siddiqui,<br><br>
-S/o Khaja Fazwa Rahim Siddiqui</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">082</td>
-<td width="239">Dr. Syed Abdul quader,<br><br>
-S/o Syed Feroz Ali</td>
-<td width="209">1982</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">083</td>
-<td width="239">Dr. Md Aslam,<br><br>
-S/o Alladin Rahani</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">084</td>
-<td width="239">Dr. Syed Afzal Bani,<br><br>
-S/o Syed Jahangir</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">085</td>
-<td width="239">Dr. Md Gouse Mohiuddin,<br><br>
-S/o Md Shareefuddin</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">086</td>
-<td width="239">Dr. Masood Vakil Qureshi,<br><br>
-S/o Md Ismail Qureshi</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">087</td>
-<td width="239">Dr. Ameenunnisa,<br><br>
-D/o Masood Ahmed Ansari</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">088</td>
-<td width="239">Dr. Farhat Jabeen,<br><br>
-D/o Md Abdul Baseer</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">089</td>
-<td width="239">Dr. Fazalunnisa Begum,<br><br>
-D/o Syed Moinuddin</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">090</td>
-<td width="239">Dr. Awheela Sultana,<br><br>
-D/o Md Ali</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">091</td>
-<td width="239">Dr Md Ehteshman Ali Askari,<br><br>
-S/o Md Mahaboob Ali Askari</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">092</td>
-<td width="239">Dr. Farhat Siddiqui,<br><br>
-D/o Md Itrath Hussain Siddiqui</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">093</td>
-<td width="239">Dr. Aleemunnisa,<br><br>
-D/o Abdul Rahman</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">094</td>
-<td width="239">Dr. Md Moinuddin,<br><br>
-S/o Md Qumaruddin</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">095</td>
-<td width="239">Dr. Safia Amtus Alam Imagrabi,<br><br>
-D/o Syed Hasanuddin Imagrabi</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">096</td>
-<td width="239">Dr. Syed Naseemuddin,<br><br>
-S/o Syed Lateefuddin</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">097</td>
-<td width="239">Dr. Mahamooda Begum,<br><br>
-D/o Md Muqeem</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">098</td>
-<td width="239">Dr. Laeequnnisa,<br><br>
-D/o Md Yousef Shareef</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">099</td>
-<td width="239">Dr. Subhani Begum,<br><br>
-D/o Md osman</td>
-<td width="209">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">100</td>
-<td width="239" height="37">Dr. Kaiser Rehana,<br><br>
-D/o Shaik Ahmed</td>
-<td width="209" height="37">1983</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">299</td>
-<td width="239">Dr. Md Abdul Rahman,<br><br>
-S/o M D Hussain</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">300</td>
-<td width="239">Dr. Md Misbah uddin,<br><br>
-S/o M D Faiyaz uddin</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">301</td>
-<td width="239">Dr. Masood Hussain Siddiqui,<br><br>
-S/o Mahmood Hussain Siddiqui</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">302</td>
-<td width="239">Dr. Md Abdul Ghaffar,<br><br>
-S/o Md Abdul Qayyum</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">303</td>
-<td width="239">Dr. Md Abdul Faeem,<br><br>
-S/o Md Abdul Saleem</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">304</td>
-<td width="239">Dr. Syeda Sameena Najmus ,<br><br>
-D/o Syed Mahmood Ali</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">307</td>
-<td width="239">Dr Md Shabbir Ahmed,<br><br>
-S/o Md Yataub</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">308</td>
-<td width="239">Dr. Md Abdul Basith Sarwari,<br><br>
-S/o Md Noorul Atquiq Sarwari</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">309</td>
-<td width="239">Dr. Azizunnisa Begum,<br><br>
-D/o Md Mahood</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">310</td>
-<td width="239">Dr. Naseem Sultana,<br><br>
-S/o Syed Yaqub</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">311</td>
-<td width="239">Dr. Akbaruddin Ahmed,<br><br>
-S/o H K Baharuddin</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">312</td>
-<td width="239">Dr. M D Rasheed Ahmed Khan,<br><br>
-S/o Md Ibrahim Khan</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">313</td>
-<td width="239">Dr Zahida,<br><br>
-D/o Md Murtuza</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">314</td>
-<td width="239">Dr. Nikhat Farzana Begum,<br><br>
-D/o M A Raham</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">315</td>
-<td width="239">Dr. Munawar Jahan,<br><br>
-D/o Abu Naim Md Hamid Siddiqui</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">316</td>
-<td width="239">Dr. Ruksana Parveen,<br><br>
-D/o Md Nizamuddin</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">315</td>
-<td width="239">Dr. S Mahamood Naveed-ul-Huda,<br><br>
-S/o S Mahamood Ehtasham-ul-Huda</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">316</td>
-<td width="239">Dr. S Zainullah Biddin Khan,<br><br>
-S/o S Qadar Ali Khan</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">317</td>
-<td width="239">Dr. Md Zaheer Ahmed,<br><br>
-S/o Md Ahmed</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">318</td>
-<td width="239">Dr. Md Mujeeb,<br><br>
-S/o Md Ghouse</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">319</td>
-<td width="239">Dr.Abdul Rahman,<br><br>
-S/o M A Razzaq</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">320</td>
-<td width="239">Dr. MD Ali Hyder,<br><br>
-S/o Ali Bin Abdullah Yamani</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">321</td>
-<td width="239">Dr. Md Shakeel Ahmed,<br><br>
-S/o Basheer Ahmed</td>
-<td width="209">1990</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">328</td>
-<td width="239">Dr. Ameena&nbsp; Nuzhat,<br><br>
-D/o Md Maseruddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">329</td>
-<td width="239">Dr. Adeeba Sultana,<br><br>
-D/o M A Qayyam Hazari</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">330</td>
-<td width="239">Dr. Md Azhar Hussain,<br><br>
-S/o Md Ahmed Hussain</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">331</td>
-<td width="239">Dr. Fareed unnisa,<br><br>
-D/o Shaiuk Bahadur Hussain</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">332</td>
-<td width="239">Dr. Hameeduddin,<br><br>
-S/o Md Sharfiuddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">333</td>
-<td width="239">Dr. Tahniath Jahan,<br><br>
-S/o M D Khasim Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">322</td>
-<td width="239">DR Ahmed Minhajuddin,<br><br>
-S/o Ahmed Moinuddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">323</td>
-<td width="239">Dr. Ahmed Abdul Qasim Irfani,<br><br>
-S/o Md Amav Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">324</td>
-<td width="239">DR. Md Abdul Razzaq,<br><br>
-S/o Md Abdul Quader</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">325</td>
-<td width="239">Dr. Nayeemuddin Ansari,<br><br>
-S/o Jaan Mahamood</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">326</td>
-<td width="239">Dr. Tanveer Altaf,<br><br>
-S/o Md Altaf Hussain</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">327</td>
-<td width="239">Dr. Zainab Fatima,<br><br>
-D/o Khaja Allauddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">334</td>
-<td width="239">Dr. Asma Zaib,<br><br>
-D/o M D Qasim Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">335</td>
-<td width="239">Dr. Salma Shireen,<br><br>
-D/o Md Abdul Hai Ansari</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">336</td>
-<td width="239">Dr. Nuzhat Sultana,<br><br>
-D/o Abdul Ali Hashmi</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">337</td>
-<td width="239">Dr. syila Fatima,<br><br>
-D/o Syed Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">338</td>
-<td width="239">Dr. Syade Sagra,<br><br>
-D/o Syed Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">339</td>
-<td width="239">DR. Md Abdul Jaleel,<br><br>
-S/o Md Abdul Wahab</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">340</td>
-<td width="239">Dr. MD Abdul Rahman Ayaz,<br><br>
-S/o Md Ibrahim</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">341</td>
-<td width="239">Dr. Najeeb Kausar,<br><br>
-D/o S M H Hashmi</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">342</td>
-<td width="239">Dr. Kareez Ameena,<br><br>
-D/o Hafeez Aziz Baig</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">343</td>
-<td width="239">Dr. Syeda Zia Fatima,<br><br>
-D/o Roaf Qadri</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="33">344</td>
-<td width="239" height="33">Dr. Md&nbsp; Khallilur Rahman,<br><br>
-S/o Md Abdul Rahman</td>
-<td width="209" height="33">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">345</td>
-<td width="239">DR. Syeda Nasreen Sultana,<br><br>
-D/o Syed Mir Riyasat Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">346</td>
-<td width="239">Dr. Syed Abdul Wahab,<br><br>
-S/o Syed Abdul Raoof</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">347</td>
-<td width="239">Dr. Md Abdul Nayeem,<br><br>
-S/o Md Abdul Hameed</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">348</td>
-<td width="239">Dr. Md Khaja Shafiuddin,<br><br>
-S/o Md Khaja Moinuddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">349</td>
-<td width="239">Dr. MD Ashraf Ahmed,<br><br>
-S/o Md Abdul Raoof</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">350</td>
-<td width="239">Dr. Syed Iqbal Ahmed,<br><br>
-S/o Sulaiman</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">351</td>
-<td width="239">Dr. Md Jaher ali,<br><br>
-S/o Md Jafer Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">352</td>
-<td width="239">DR. S Abar ullah Hashmi,<br><br>
-S/o S Anwarulla Hashmi</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">353</td>
-<td width="239">Dr. M D Saifuddin,<br><br>
-S/o M D Qumaisa</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">354</td>
-<td width="239">Dr. Mir Jafar ali,<br><br>
-S/o Mir Ahmed Ali</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">355</td>
-<td width="239">Dr. Md Anwar Ali Khan,<br><br>
-S/o Md Ali Khan</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">356</td>
-<td width="239">Dr. Munawar Fatima Afzal,<br><br>
-D/oMd Khalil-ur-Rahman</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">357</td>
-<td width="239">Dr. Azmath Sultana,<br><br>
-D/o Md Yousuf</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">358</td>
-<td width="239">Dr Athar Parveen,<br><br>
-D/o Md Mazaruddin Khan</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">579</td>
-<td width="239">Dr. Asra Sultana,<br><br>
-S/o Hasam Mohammad</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">359</td>
-<td width="239">Dr. Mujeebunnisa Begum,<br><br>
-D/o Md Masinuddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">360</td>
-<td width="239">Dr. Khalil Gulam Moinuddin,<br><br>
-S/o Gulam Dastur</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">361</td>
-<td width="239">Dr Kauser Fatima,<br><br>
-D/o M D Sardaruddin</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">362</td>
-<td width="239">Dr. Roohi Afroz,<br><br>
-D/o Ahmed Maqbool Ali Khan</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">363</td>
-<td width="239">Dr Amina&nbsp; Durilana,<br><br>
-D/o M A Wahab</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">364</td>
-<td width="239">Dr. Rizwana Sultana,<br><br>
-D/o Syed Ahmed Hussain</td>
-<td width="209">1991</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">365</td>
-<td width="239">Dr. Md Naqi,<br><br>
-S/o Md Mastan</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">366</td>
-<td width="239">Dr. Md Sultanuddin,<br><br>
-S/o Md Ghouse Moinuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">367</td>
-<td width="239">Dr. Md Khaja,<br><br>
-S/o Janimiya</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">368</td>
-<td width="239">Dr. Md Abdul Raheem,<br><br>
-D/o Md Kareem</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">369</td>
-<td width="239">Dr. S Nematulla,<br><br>
-S/o S Kulrathulla</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">371</td>
-<td width="239">Dr. Syed Shoeb Shakeel,<br><br>
-S/o Syed Mahmood Nozmi</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">372</td>
-<td width="239">Dr. Md Anwal-ul-haq,<br><br>
-S/o Md Fazlur Rahman</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">373</td>
-<td width="239">Dr. Md Abdul Subhan,<br><br>
-S/o Md osman</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">374</td>
-<td width="239">Dr. Md Abdul Razzak,<br><br>
-S/o Md Quasim</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">375</td>
-<td width="239">Dr. Md Habeebuddin,<br><br>
-S/o Rasheeduddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">376</td>
-<td width="239">Dr. S Shah Qumaruddin Quadari,<br><br>
-S/o Syed zaheeruddin Quadri</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">376</td>
-<td width="239">Dr. Khaja Niyamuddin,<br><br>
-S/o Khaja Qutubuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">377</td>
-<td width="239">Dr. Md Fareeduddin,<br><br>
-S/o Md Hasanuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">378</td>
-<td width="239">Dr. Shaik Fathe Ahmed,<br><br>
-S/o Shaik Abdul Khader</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">379</td>
-<td width="239">Dr. Khaja Moizuddin,<br><br>
-S/o Khaja Moinuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">380</td>
-<td width="239">Dr. Abdul Moid&nbsp; Ansari,<br><br>
-S/o abdul dabeer Ansari</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">381</td>
-<td width="239">Dr. Md Maqbool Hussaini,<br><br>
-S/o Md Ahmed Hussaini</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">382</td>
-<td width="239">Dr. Syeda Ghousia Begum,<br><br>
-D/o Gulam Ahmed</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">383</td>
-<td width="239">Dr. Shamsunnisa Begum,<br><br>
-D/o Md Gause Moinuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">384</td>
-<td width="239">Dr. Parveen Begum,<br><br>
-S/o Khazi Shafiuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">385</td>
-<td width="239">Dr. Md Abdul Waheed,<br><br>
-S/o&nbsp; M A Malik</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">386</td>
-<td width="239">Dr. Md Masiuddfin,<br><br>
-S/o Md Ghouseuddin</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">387</td>
-<td width="239">Dr. s Ghouse Moinuddin Quadri,<br><br>
-S/o S Mahoboob Quadri</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">388</td>
-<td width="239">Dr. S Akbar Ilyas,<br><br>
-S/o S Abdul Wahab</td>
-<td width="209">1992</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">576</td>
-<td width="239">Dr. Peonderm Srinivas,<br><br>
-S/o P Jeedikal</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">580</td>
-<td width="239">Dr. Uzma Noor Quareshi,<br><br>
-D/o Md Azeemuddin</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">581</td>
-<td width="239">Dr. Arifa Begum,<br><br>
-D/o Md Yousef</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">582</td>
-<td width="239">Dr. Md Mir Ali Fasi,<br><br>
-S/o Md Mahoboob Ali</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">583</td>
-<td width="239">Dr. Md Farooq Ali,<br><br>
-S/o Md Sadiq ali</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">584</td>
-<td width="239">Dr. Shaik Ashfaq Rasool,<br><br>
-S/o shaik Altaf Rasool</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">585</td>
-<td width="239">Dr. Md Bin Mahafooz,<br><br>
-S/o Md Mazher Bin Mahafooz</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">586</td>
-<td width="239">Dr. Masinuddin Ahmed,<br><br>
-S/o Waheeduddin ahmed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">587</td>
-<td width="239">Dr. Md Ayub Khan,<br><br>
-S/o Ahmed Khan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">587</td>
-<td width="239">Dr. Md Abdul sayeed,<br><br>
-S/o Md Abdul Jabbar</td>
-<td width="209">1996</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">588</td>
-<td width="239">Dr. A Salita,<br><br>
-D/o A Balakrishana</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">589</td>
-<td width="239">Dr. Mohd Abdul Hadri,<br><br>
-S/o Md Abdul Hameed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">590</td>
-<td width="239">Dr. Aliya Tahseen,<br><br>
-D/o Md Quteruddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">591</td>
-<td width="239">Dr. Asma&nbsp; Nujhat,<br><br>
-D/o Md Yaqoob Ali Khan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">592</td>
-<td width="239">Dr. Nayyar Farozan,<br><br>
-D/o Syed Farooq Aziz</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">593</td>
-<td width="239">Dr. Irfara Tasneem,<br><br>
-D/o M A Aziz Khan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">594</td>
-<td width="239">Dr. Shabeer Begum,<br><br>
-D/o M A Razzak</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">595</td>
-<td width="239">Dr. Rubeena Jabeer,<br><br>
-D/o Sarfuddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">596</td>
-<td width="239">Dr. Md Abdul Bari,<br><br>
-S/o Md Abdul Baaser</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">597</td>
-<td width="239">Dr. Anjum Nazmah,<br><br>
-D/o Syed Gulam Subhane</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="39">598</td>
-<td width="239" height="39">Dr. Kauser Nahid,<br><br>
-D/o Mumtaz Ali</td>
-<td width="209" height="39">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">599</td>
-<td width="239">&nbsp;Dr. Md Bharuddin,<br><br>
-S/o Gulam Murtuza</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">600</td>
-<td width="239">Dr. Anzar Main Sajida,<br><br>
-D/o Khwaja Moinuddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">601</td>
-<td width="239">Dr. Asra Fatima,<br><br>
-D/o Md Aliuddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">602</td>
-<td width="239">Dr. Abdul Noor,<br><br>
-S/o Aftab Ahmed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">603</td>
-<td width="239">Dr. Md Minhajuddin Khan,<br><br>
-S/o Md Siraj Uddin Khan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">604</td>
-<td width="239">Dr. Md Wahajuddin Khan,<br><br>
-S/o Md Sirajuddin Kjhan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">605</td>
-<td width="239">Dr. Ghousia Fatima,<br><br>
-D/o Md Maqsood Ahmed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">606</td>
-<td width="239">Dr. Wajid Ali,<br><br>
-S/o Mir Himayath Ali</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">607</td>
-<td width="239">Dr. Sd Moinuddin Hussaini,<br><br>
-S/o Sd Abdul Rahaman Hussaini</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">608</td>
-<td width="239">Dr. Zahra Jabeen,<br><br>
-D/o Mirza Burhar Baig</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">609</td>
-<td width="239">Dr. Fareeduddin,<br><br>
-S/o Md Hafeezuddin,</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">610</td>
-<td width="239">Dr. Md. Kaleem Zafar,<br><br>
-S/o B S Chand</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">611</td>
-<td width="239">Dr. Md Abdul Malik lhsan,<br><br>
-S/o Md Abdul Jabeeb Noor&nbsp; Abasi</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">612</td>
-<td width="239">Dr. Ahmed Nutasser Khan,<br><br>
-S/o Ahmed Mustafashah Khan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">613</td>
-<td width="239">Dr. Vadlakonda Maruthi,<br><br>
-S/o V Gangaram</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">614</td>
-<td width="239">Dr. Md Burhanuddin,<br><br>
-S/o Md Lqbaluddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">615</td>
-<td width="239">Dr Shaik Khaleel Ahmed,<br><br>
-S/o Shaik Hasan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">616</td>
-<td width="239">Dr. Atiya Farzana Noorani,<br><br>
-D/o M A Khader Noorani</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">617</td>
-<td width="239">Dr. Md Abdul Majid,<br><br>
-S/o Dr. Abdul Basith</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">618</td>
-<td width="239">Dr. Asma Afrooz,<br><br>
-D/o Md Ammeruddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">619</td>
-<td width="239">Dr. M&nbsp; L Vasundhara,<br><br>
-D/o M Gopalaiah</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">620</td>
-<td width="239">Dr. M Sunitha,<br><br>
-D/o M Visunadhan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">621</td>
-<td width="239">Dr. Fatima Asra,<br><br>
-D/o Md Rafiuddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">622</td>
-<td width="239">Dr. Asima Asra,<br><br>
-D/o Md Rafiuddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">623</td>
-<td width="239">Dr. Shabana Aziz,<br><br>
-D/o M A Aziz</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">624</td>
-<td width="239">Dr. Aishia Khatoon,<br><br>
-D/o Md Ali</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">625</td>
-<td width="239">Dr Azamath Unnisa,<br><br>
-D/o Shaik Md. Aziz</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">626</td>
-<td width="239">Dr. Mateen&nbsp; Shabana,<br><br>
-D/o Yawar Ali</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">627</td>
-<td width="239">Dr.Ikaramullaha,<br><br>
-S/o Md. Ahmed Moinuddin</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">628</td>
-<td width="239">Dr. Younus Nazarul Haq,<br><br>
-S/o M A Quayum</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">629</td>
-<td width="239">Dr. Poorachandra Rao Pathudir,<br><br>
-S/o&nbsp; Narasimha Roa</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">630</td>
-<td width="239">Dr. Md Aqeel Ahmed,<br><br>
-S/o Md&nbsp; Khaleel Ahmed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">631</td>
-<td width="239">Dr. Md Imtiza Ahmed,<br><br>
-S/o Md osman Ahmed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">632</td>
-<td width="239">Dr Waheeda Begum,<br><br>
-D/o Fakir Mohammad</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">633</td>
-<td width="239">Dr. Suhasimi,<br><br>
-D/o D Styanarayana</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">634</td>
-<td width="239">Dr. Sayada&nbsp; Rashida&nbsp; Begum,<br><br>
-D/o late S A&nbsp; Wahab</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">635</td>
-<td width="239">Dr. Atiya Jabeen,<br><br>
-D/o Gulam&nbsp; Hyder Khan</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">636</td>
-<td width="239">Dr. Umme-Kulsum,<br><br>
-D/o Mohd Ghori</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">637</td>
-<td width="239">Dr. Md Jamaduddin,<br><br>
-S/o Shafiuddin Ahmed</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">638</td>
-<td width="239">Dr. Khairunnisa,<br><br>
-D/o Md Abdul Sattar</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">639</td>
-<td width="239">Dr. Karchakatla Lalitha Bai,<br><br>
-D/o Rama Murti</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">640</td>
-<td width="239">Dr. Abdul Wajid Hajari,<br><br>
-S/o Mohd Abdul Aleem Hajari</td>
-<td width="209">1997</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">642</td>
-<td width="239">Dr. Mohd Faizuddin Ahmed,<br><br>
-S/o M A Mohiuddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">643</td>
-<td width="239">Dr. Shahoor,<br><br>
-D/o M Moinuddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">644</td>
-<td width="239">Dr. Nussath Yasmun,<br><br>
-D/o Iqbal Moinuddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">645</td>
-<td width="239">Dr. Ather&nbsp; Main Rashida,<br><br>
-S/o Mohd Khaja Moinuddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">646</td>
-<td width="239">Dr. Tahmiyath Habibi,<br><br>
-D/o Sam&nbsp; Habibi</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">647</td>
-<td width="239">Dr. Zubeda Naseem,<br><br>
-D/o MKH Shamsuddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">648</td>
-<td width="239">Dr. Rafeeq Banu,<br><br>
-D/o Md Habeeb-ur-Rahaman</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">649</td>
-<td width="239">Dr. Fatima Siddiqua,<br><br>
-D/o Md Asfaq Ahmed uddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">650</td>
-<td width="239">Dr. Syed Amanullla Hussain,<br><br>
-S/o Syed Noorulla Hussain</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">651</td>
-<td width="239">Dr. Amtul Naseer,<br><br>
-D/o Aftab Ahmed</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">652</td>
-<td width="239">Dr. Asim Md Abdul Rafee,<br><br>
-S/o Abdul Azeem Qureshi</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">653</td>
-<td width="239">Dr. Sajeed Unnisa,<br><br>
-D/o Syed Mujeeebullah Shah</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">654</td>
-<td width="239">Dr. Gulam Mustafa Qureshi,<br><br>
-S/o Gulam Murtuza Qureshi</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">655</td>
-<td width="239">Dr. Mohd Karrar Hussain Khan,<br><br>
-S/o Shouleath Hussain Khan</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">656</td>
-<td width="239">Dr. Zainab Lateef,<br><br>
-D/o Mohd Abdul Lateef</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">657</td>
-<td width="239">Dr. Nazneen&nbsp; Banu,<br><br>
-D/o&nbsp; Syed Noorulla</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">658</td>
-<td width="239">Dr. Shila Tarannum,<br><br>
-D/o Md Abdul Mateen</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">659</td>
-<td width="239">Dr.Seema Begum,<br><br>
-D/o Syed Vazeer uddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">660</td>
-<td width="239">Dr. Esra Unnisa,<br><br>
-D/o Fasiuddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">661</td>
-<td width="239">Dr. Syed Ghouse Sardari,<br><br>
-S/o Syed Ghouse Sardari</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">662</td>
-<td width="239">Dr. Syed Zakiuddin,<br><br>
-S/o Syed Basheruddin</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">663</td>
-<td width="239">Dr. Umme Amara Begum,<br><br>
-D/o Md obedullah</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">664</td>
-<td width="239">Dr. Amlhus Subor Shadam,<br><br>
-D/o Md Sana-ul-Haq</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">665</td>
-<td width="239">Dr Rehana Sultana,<br><br>
-D/o Abdul Nabi</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">666</td>
-<td width="239">Dr. Ahmed Abdul Qadeer Jabeer,<br><br>
-S/o Md Abdul Waheed</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">667</td>
-<td width="239">Dr. Sharieff Afzal,<br><br>
-S/o Shaik Kalesha</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">668</td>
-<td width="239">Dr. Mohammed Murtuza,<br><br>
-S/o Nabi Shareefi</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">669</td>
-<td width="239">Dr. Ehetesham Junaidi,<br><br>
-S/o Jaher Hussain Junaidi</td>
-<td width="209">1998</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">670</td>
-<td width="239">Dr. Luft Ali Siddiqui,<br><br>
-S/o Gulam&nbsp; Mahabood Siddiqui</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">671</td>
-<td width="239">Dr.Farmeda Kauser,<br><br>
-D/o Mohd Abdul Jabbar</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">672</td>
-<td width="239">Dr Ziaunissa Firdose,<br><br>
-D/o Syed Wahed Mohiuddin</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">673</td>
-<td width="239">Dr Bushra Fatima,<br><br>
-D/o Mohd Moizuddin Ahmed Khan</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">674</td>
-<td width="239">Dr Zohra Jabeen,<br><br>
-D/o Md Ibrahim Ali</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">675</td>
-<td width="239">Dr Sadeqa Begum,<br><br>
-D/o Gulam Quarim</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">676</td>
-<td width="239">Dr Ayesha Fatima,<br><br>
-D/o,Shaik osman Ali</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">677</td>
-<td width="239">Dr Atif Tarjum Yousufi,<br><br>
-D/o Md Ali Yousufi</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">678</td>
-<td width="239">Dr Dawarunissa,<br><br>
-D/o Mir Mohd Azam Ali</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">679</td>
-<td width="239">Dr Fatima Zohra,<br><br>
-D/o Syed Yaqoob,</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">680</td>
-<td width="239">Dr Mohd Khalid Saifullah,<br><br>
-S/o Mohd Waseem</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">681</td>
-<td width="239">Dr Muzzamil Affat,<br><br>
-D/o M.A Mannan</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">690</td>
-<td width="239">Dr. Abdul Kaliq,<br><br>
-S/o Abdul Jabbar</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">691</td>
-<td width="239">Dr. Joher Jahan,<br><br>
-D/osyed khaleeluddin</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">692</td>
-<td width="239">Dr. Gazzi Venkatesher,<br><br>
-S/o G Laxminarasaiah</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">693</td>
-<td width="239">Dr. Md Yaseen Ahmed,<br><br>
-S/o Gulam Ahmed</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">694</td>
-<td width="239">Dr. Ummul Khair Bushra,<br><br>
-D/o Md Mahaboob Shareef</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">695</td>
-<td width="239">Dr. Syeda Safia&nbsp; Nikhat,<br><br>
-D/o S Mahmood Moizuddin</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">696</td>
-<td width="239">Dr. Mohd Shakeel Ahmed,<br><br>
-S/o Mhod Abdul Waheed</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">697</td>
-<td width="239">Dr. Ayesha Sultana,<br><br>
-D/o Mohd Abbas</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">698</td>
-<td width="239">Dr. Naoshaba Anjkum,<br><br>
-S/o S Ali Amjad</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">699</td>
-<td width="239">Dr. Syeda Sohaila,<br><br>
-D/o Syed Zahenuddin</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">700</td>
-<td width="239">Dr. Mohd Amjad Ali,<br><br>
-S/o Mohd Hasham Ali</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">701</td>
-<td width="239" height="37">Dr. Syed Khaiser Pasha,<br><br>
-S/o Syed Anwar Pasha</td>
-<td width="209" height="37">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="41">702</td>
-<td width="239" height="41">Dr. Mohd Samiullah Khan,<br><br>
-S/o Asadulla Khan</td>
-<td width="209" height="41">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="33">703</td>
-<td width="239" height="33">Dr. Mohd Like Ali Khan,<br><br>
-S/o Waris Ali Khan</td>
-<td width="209" height="33">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="41">704</td>
-<td width="239" height="41">Dr. Arshia Nishath,<br><br>
-D/o Maqsood Ali Qureshi</td>
-<td width="209" height="41">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">705</td>
-<td width="239">Dr. Nikhat Sultana,<br><br>
-D/o Md Abdul Raheem</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="33">706</td>
-<td width="239" height="33">Dr. Asfia Tarannum,<br><br>
-D/o Shaik Chand</td>
-<td width="209" height="33">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="33">707</td>
-<td width="239" height="33">Dr. Arshi Sultana,<br><br>
-D/o Mohd Sarwar</td>
-<td width="209" height="33">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="41">708</td>
-<td width="239" height="41">Dr. Syeda Shabana Mehar,<br><br>
-D/o Syed Moosa Kazim</td>
-<td width="209" height="41">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">709</td>
-<td width="239" height="37">Dr. Najeeb Jahan,<br><br>
-D/o Md&nbsp; Iqbaluddin</td>
-<td width="209" height="37">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="33">710</td>
-<td width="239" height="33">Dr. Qusheedunnissa,<br><br>
-D/o Mohd Zainuddin</td>
-<td width="209" height="33">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="39">711</td>
-<td width="239" height="39">Dr. Anees Fatima,<br><br>
-D/o Md Kaleemuddin</td>
-<td width="209" height="39">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">712</td>
-<td width="239" height="37">Dr. Nazeem Bano,<br><br>
-D/o Syed Jalal</td>
-<td width="209" height="37">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">713</td>
-<td width="239" height="37">Dr. Masarath Sultana,<br><br>
-D/o Mohd Saber Ali</td>
-<td width="209" height="37">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="40">714</td>
-<td width="239" height="40">Dr. Mhod&nbsp; ozair Ali,<br><br>
-S/o Mohd. Khaja Ali</td>
-<td width="209" height="40">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">715</td>
-<td width="239" height="35">Dr. Shameem Sultana,<br><br>
-D/o Faqeen Mohd</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">716</td>
-<td width="239" height="35">Dr Asra Mohammadi,<br><br>
-D/o Md. Saleemuddin</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">717</td>
-<td width="239">Dr. kulsum peer mohd,</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="36">718</td>
-<td width="239" height="36">Dr. mohd Abdul Gani,<br><br>
-S/o Md. Abdul Haq</td>
-<td width="209" height="36">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="34">719</td>
-<td width="239" height="34">Dr. Javeria Iqbal,<br><br>
-D/o Md. Naimuddin</td>
-<td width="209" height="34">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">720</td>
-<td width="239" height="35">Dr. M A Aziz,<br><br>
-S/o&nbsp; M A Rahim</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="39">721</td>
-<td width="239" height="39">Dr. Mohd Shafeeq,<br><br>
-S/o Mohd Siddiqui</td>
-<td width="209" height="39">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">722</td>
-<td width="239" height="37">Dr. Firdose Jabeen,<br><br>
-D/o M A Mubeen</td>
-<td width="209" height="37">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="36">723</td>
-<td width="239" height="36">Dr. Zubair Hussain,<br><br>
-S/o Akthar Hussain</td>
-<td width="209" height="36">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="40">724</td>
-<td width="239" height="40">Dr. Shahava Begum,<br><br>
-Sri Mohd Azam</td>
-<td width="209" height="40">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="42">725</td>
-<td width="239" height="42">Dr. Rafia Sultana,<br><br>
-D/o MKB Navaz</td>
-<td width="209" height="42">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="36">726</td>
-<td width="239" height="36">Dr. Mohd. Naveed Ahmed Khan,<br><br>
-S/o Mohd Hussain Khan</td>
-<td width="209" height="36">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="36">727</td>
-<td width="239" height="36">Dr. Talat Sultana,<br><br>
-D/o Mhod&nbsp; Basheeruddin</td>
-<td width="209" height="36">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">728</td>
-<td width="239" height="35">Dr Mohd&nbsp; Adeeel Ab Khan,<br><br>
-S/o Aqueel Ab Khan</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">729</td>
-<td width="239" height="35">Dr. Mohd Abdul Samad,<br><br>
-S/o Abdul Waheed</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">730</td>
-<td width="239" height="35">Dr. Shajahar Begum,<br><br>
-D/o Mohd Safi</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="31">731</td>
-<td width="239" height="31">Dr. Amera Begum,<br><br>
-D/o M A Waheed</td>
-<td width="209" height="31">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="36">732</td>
-<td width="239" height="36">Dr Mohd Ikram Ahmed,<br><br>
-S/o Mohd Iqbal Ahmed</td>
-<td width="209" height="36">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="36">733</td>
-<td width="239" height="36">Dr Husna Sultana,<br><br>
-D/o Ahmedullah Khan</td>
-<td width="209" height="36">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="37">734</td>
-<td width="239" height="37">Dr Syed Basheeruddin,<br><br>
-S/o Syed Hassainmiah</td>
-<td width="209" height="37">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164" height="35">735</td>
-<td width="239" height="35">Dr Nasreen Sultana,<br><br>
-D/o Ahmed Mohiuddin</td>
-<td width="209" height="35">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">736</td>
-<td width="239">Dr Syeda Sameena Nehri,<br><br>
-D/o Syed Badruddin Nehri</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">737</td>
-<td width="239">Dr Mohd Sadat Rasool,<br><br>
-S/o Mohd Amanath Rasool</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">738</td>
-<td width="239">Dr Farozan Iqbal,<br><br>
-D/o Faizuddin Iqbal Khan</td>
-<td width="209">1999</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">750</td>
-<td width="239">Dr Fatima Nishat,<br><br>
-D/o Mohd Ali</td>
-<td width="209">2000</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">764</td>
-<td width="239">Dr Asif Masood Abdul Mujeeb,<br><br>
-S/o Abdul Mujeeb</td>
-<td width="209">2000</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">765</td>
-<td width="239">Dr Habeebunnisa Begum,<br><br>
-D/o&nbsp; Md Abdul Kareem</td>
-<td width="209">2000</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">811</td>
-<td width="239">Dr Ahsanullah,<br><br>
-S/o&nbsp; Sardar jaleel Ahmed</td>
-<td width="209">2001</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">812</td>
-<td width="239">Dr Rubina Begum,<br><br>
-D/o&nbsp; Mohd Moinuddin</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">813</td>
-<td width="239">Dr S.M Mohiuddin Quadri,<br><br>
-S/o Syed Qamarpeer Quadri</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">814</td>
-<td width="239">Dr Khadija Rumana,<br><br>
-D/o Syed Lateef Hussain</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">819</td>
-<td width="239">Dr Syed Sadiq Mohiuddin Ahmed,<br><br>
-S/o&nbsp; Syed Ghouse Ali</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">843</td>
-<td width="239">Dr Razia Sultana,<br><br>
-D/o Haroon Rashid</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">844</td>
-<td width="239">Dr Mohd Khayamuddin</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">875</td>
-<td width="239">Dr Syed Laiq quadri,<br><br>
-S/o Syed Quddoos&nbsp; Mohiuddin</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">903</td>
-<td width="239">Dr Sabina Fatima,<br><br>
-D/o&nbsp; S. Basharat Ali</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">905</td>
-<td width="239">Dr Meraj ul haq soharwardi,<br><br>
-S/o Abdul haq&nbsp; soharwardi</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">907</td>
-<td width="239">Dr Mohd Barkatullah,<br><br>
-S/o Mohd Nazoorullah</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">908</td>
-<td width="239">Dr Syed Abdul Rehman,<br><br>
-S/o&nbsp; Syed Abdul Majeed</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">909</td>
-<td width="239">Dr Syed Nazeeruddin,<br><br>
-S/o&nbsp; Syed sirajuddin</td>
-<td width="209">2002</td>
-</tr>
-<tr align="center" valign="top">
-<td width="164">918</td>
-<td width="239">Dr Abdul Hakeem Mohd,<br><br>
-S/o Mohd Abdul Hameed</td>
-<td width="209">
-<p>2002</p>
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-					</div>
-                                    <!-- Table 4 : end -->
-                </div>
-            </div>
-            <!-- PAGE CORE : end -->
-
-        </div>
-        <!-- PORTFOLIO PAGE : end -->
-      
-        <!-- BOTTOM : begin -->
-        <div id="bottom">
-            <div class="container">
-                <div class="bottom-inner">
-
-                    <div class="row">
-                        <div class="span3">
-
-                            <!-- TEXT WIDGET : begin -->
-                            <div class="widget text">
-                               <!-- <h3>ABOUT Website<i></i></h3>
-                                <div class="widget-content">
-                                    <p>The website unanidoctors.com  is the brain child of  DR. SYED ASADUDDIN AHMED  s/o Syed Nehaluddin Ahmed. He completed unani medicine from Govt.Nizamia Tibbi College, Charminar, Hyderabad, India in the year 1997. He is the first unani doctor from Hyderabad to pass ministry of Health, U.A.E exam to practice unani medicine in U.A.E apart from India.</p>  -->                                  
-                                </div>
-                            </div>
-                            <!-- TEXT WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- ARTICLES WIDGET : begin -->
-                            <div class="widget articles">
-                                <h3>Follow Us<i></i></h3>
-                                <div class="widget-content">
-                                 <!-- AddThis Follow BEGIN -->
-<div class="addthis_toolbox addthis_32x32_style addthis_vertical_style">
-<a class="addthis_button_facebook_follow" addthis:userid="pages/unanidoctorscom/118956844786091"></a>
-<a class="addthis_button_twitter_follow" addthis:userid="unanidoctors"></a>
-<a class="addthis_button_youtube_follow" addthis:userid="unanidoctor"></a>
-</div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51a737b4776a2575"></script>
-<!-- AddThis Follow END -->   
-                                </div>
-                            </div>
-                            <!-- ARTICLES WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- TAGS WIDGET : begin -->
-                            <div class="widget tags">
-                                <h3>Our Address<i></i></h3>
-                                <div class="widget-content">
-                                     <!--  <h2>U.A.E</h2>
-									<p>Derma Health International Medical Centre,<br>Naif Road, Deira, DUBAI.</p>
-									<h3>Phone: 009714-2243786<br>Mobile: 0097150-7243620<br>Fax: 009714-2237717</h3>-->
-									<p><a href="contact.html" class="button color1">Click Here</a></p>
-							</div>
-                            </div>
-                            <!-- TAGS WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- DRIBBBLE WIDGET : begin -->
-                            <div class="widget images dribbble loading" data-id="BillSKenney" data-limit="8">
-                                <h3>Like Us<i></i></h3>
-                                <div class="widget-content">
-                                    <div id="fb-root"></div>
-										<script>(function(d, s, id) {
-										  var js, fjs = d.getElementsByTagName(s)[0];
-										  if (d.getElementById(id)) return;
-										  js = d.createElement(s); js.id = id;
-										  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-										  fjs.parentNode.insertBefore(js, fjs);
-										}(document, 'script', 'facebook-jssdk'));</script>
-										<div class="fb-like-box" data-href="https://www.facebook.com/pages/unanidoctorscom/118956844786091" style="background-color:#ffffff" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>
-                                </div>
-                            </div>
-                            <!-- DRIBBBLE WIDGET : end -->
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- BOTTOM : end -->
-
-        <!-- FOOTER : begin -->
-        <footer>
-            <div class="container">
-                <div class="footer-inner clearfix">
-
-                    <!-- COPYRIGHT : begin -->
-                    <p class="copyright">&copy; Copyright 2013 <strong><a href="index.html">Unani Doctors</a></strong>. All Right Reserved. </p>
-                    <!-- COPYRIGHT : end -->
-               </div>
-            </div>
-        </footer>
-        <!-- FOOTER : end -->
-
-        <!-- SCREEN WIDTH : begin -->
-        <var id="screen-width"><span></span></var>
-        <!-- SCREEN WIDTH : end -->
-
-        <!-- SCRIPTS : begin -->
-        <script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="assets/js/modernizr.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- INSTAGRAM FEED SCRIPT : begin -->
-        <!-- if you are not using Instagram feed, delete this script -->
-        <script src="assets/js/jquery.embedagram.js" type="text/javascript"></script>
-        <!-- INSTAGRAM FEED SCRIPT : end -->
-        <!-- DRIBBBLE FEED SCRIPT : begin -->
-        <!-- if you are not using Dribbble feed, delete this script -->
-        <script src="assets/js/jquery.jribbble-1.0.1.min.js" type="text/javascript"></script>
-        <!-- DRIBBBLE FEED SCRIPT : end -->
-        <!-- LIGHTBOX SCRIPT : begin -->
-        <!-- this script needs to be loaded on all pages where the lightbox is present -->
-        <script src="assets/js/jquery.magnific-popup.js" type="text/javascript"></script>
-        <!-- LIGHTBOX SCRIPT : end -->
-        <!--[if lte IE 8]>
-            <script src="assets/js/css3pie.js" type="text/javascript"></script>
-            <script src="assets/js/css3pie_oldie.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="assets/js/scripts.js" type="text/javascript"></script>
-        <!-- SCRIPTS : end -->
-
-        <!-- DISQUS : begin -->
-        <!-- add this script to all pages where the Disqus functionality is present (e.g. article list and article detail) -->
-        <!-- replace "#DisqusShortname#" with your Disqus shortname -->
-        <script type="text/javascript">
-            var disqus_shortname = '#DisqusShortname#';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <!-- DISQUS : end -->
-
-    </body>
+  <!-- Doctor List Section -->
+  <section class="section">
+    <div class="section-title">List Of Unani Doctors</div>
+    <p style="text-align:center;max-width:700px;margin:0 auto 2em auto;color:var(--text-light);">
+      This list comprises all the qualified Unani doctors with a minimum qualification of Bachelors in Unani Medicine and Surgery (B.U.M.S). The specialists with added qualification of MD have been specified as specialist on their individual profile.
+    </p>
+    <div class="doctors-table-wrap">
+      <table class="doctors-table">
+        <thead>
+          <tr>
+            <th>Registration No</th>
+            <th>Name</th>
+            <th>Year of Completion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr align="center" valign="top">
+            <td width="164">001</td>
+            <td width="239">Dr. Md Mudassier,<br><br>
+            S/o Md Yaseen</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">002</td>
+            <td width="239">Dr. Khaja Ahmed Abdul Lateef,<br><br>
+            S/o Md Jahangir Ali</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">003</td>
+            <td width="239">Dr. Tayyaba Mohamodi,<br><br>
+            D/o Syed Nazeer Mohamadi</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">004</td>
+            <td width="239">Dr. Najma Sultana,<br><br>
+            D/o Dilavar Khan</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">005</td>
+            <td width="239">Dr. Ghouseunnisa,<br><br>
+            D/o M A Hameed</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">006</td>
+            <td width="239">Dr.Khusheedunnisa Begum,<br><br>
+            D/o Md Fazur Rahman</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">007</td>
+            <td width="239">Dr. Md Fareeduddin,<br><br>
+            S/o Md Basheeruddin</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">008</td>
+            <td width="239">Dr. Md Wajeed,<br><br>
+            S/o Md Salar</td>
+            <td width="209">1977</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">009</td>
+            <td width="239">Dr. Altaf Taweed,<br><br>
+            S/o Abbas Ali</td>
+            <td width="209">1978</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">010</td>
+            <td width="239">Dr. Chand Sultana,<br><br>
+            D/o Syed Abdul Nayeem</td>
+            <td width="209">1978</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">011</td>
+            <td width="239">Dr. Kishwar Sultana,<br><br>
+            D/o Md Ishaqul</td>
+            <td width="209">1978</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">012</td>
+            <td width="239">Dre. Sabiha waheed,<br><br>
+            D/o Md Ghouse</td>
+            <td width="209">1978</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">013</td>
+            <td width="239">Dr. Naseem sultana,<br><br>
+            D/o Md Ismail</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">014</td>
+            <td width="239">Dr. Mehmooda,<br><br>
+            D/o Md Hyder Ali</td>
+            <td width="209">1079</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">015</td>
+            <td width="239">Dr. Md Fathima,<br><br>
+            D/o Md Abdul Raheem</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">016</td>
+            <td width="239">Dr. M A Wajeed,<br><br>
+            S/o M A Wajid</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">017</td>
+            <td width="239">Dr. Aziz unnisa,<br><br>
+            D/o Syed Abdul Rahman</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">018</td>
+            <td width="239">Dr. Najamunnisa,<br><br>
+            D/o Syed Hameeduddin</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">019</td>
+            <td width="239">Dr. Syeedinnisa Begum,<br><br>
+            D/o Gulam Ghouse</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">020</td>
+            <td width="239">Dr. Asma Sultana,<br><br>
+            D/o Md Abdul Quadeer</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">021</td>
+            <td width="239">Dr. Fakruddin Md Abdul Samed,<br><br>
+            S/o Md Abdul Quadeer</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">022</td>
+            <td width="239">Dr. Mahoob Jehan,<br><br>
+            S/o M A Rahman</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">023</td>
+            <td width="239">Dr.Md Abdul Waheed,<br><br>
+            S/o M A Gaffar</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">024</td>
+            <td width="239">Dr. Mir Yakub Ali Khan,<br><br>
+            S/o Mir Md Farooq Ali Khan</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">025</td>
+            <td width="239">Dr. Rasheedunnisa Begum,<br><br>
+            D/o Aziz Khan</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">026</td>
+            <td width="239">Dr. Md Abdul Haq,<br><br>
+            S/o Md Jahanagar</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">027</td>
+            <td width="239">Dr. Tahera Begum,<br><br>
+            D/o Syed azeemuddin</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">028</td>
+            <td width="239">Dr. Sabira,<br><br>
+            D/o M A shukoor</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">029</td>
+            <td width="239">Dr. Jameel Fatima,<br><br>
+            D/o S A Jabbar</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">030</td>
+            <td width="239">Dr. Gusia Begum,<br><br>
+            D/o M A Raheem</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">031</td>
+            <td width="239">Dr. Mahboobunnisa,<br><br>
+            D/o S A Kahman</td>
+            <td width="209">1979</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">032</td>
+            <td width="239">Dr. Sogra Sultana,<br><br>
+            D/o M A Khader</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">033</td>
+            <td width="239">Dr. Basheer Ahmed,<br><br>
+            S/o Kamal Ahmed</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">034</td>
+            <td width="239">Dr.M A Rub Siddiqui,<br><br>
+            S/o M A Aziz Siddiqui</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">035</td>
+            <td width="239">Dr. Raofunnisa,<br><br>
+            D/o Md Vazeer Shareef</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">036</td>
+            <td width="239">Dr. Talat Durdana,<br><br>
+            D/o Md Ikram Ali</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">037</td>
+            <td width="239">Dr. Qaiser Shaheen,<br><br>
+            D/o Md obaidullah</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">038</td>
+            <td width="239">Dr. Quiser Begum,<br><br>
+            D/o M A Kareem</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">039</td>
+            <td width="239">Dr. Kaleemulla Khan,<br><br>
+            S/o Fazal-e-yaseen Khan</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">040</td>
+            <td width="239">Dr. Md Abdul Raheem Rafeq,<br><br>
+            S/o Md Abdul Hafeez</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">041</td>
+            <td width="239">Dr. Firasatunnisa,<br><br>
+            D/o Syed Nooruddin</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">042</td>
+            <td width="239">Dr. Khatija Begum,<br><br>
+            D/o Fakir Moahmed</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">043</td>
+            <td width="239">Dr. Shameem Ghoher,<br><br>
+            D/o Md Gowher Ali</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">044</td>
+            <td width="239">Dr. Kousar Begum,<br><br>
+            D/o Syed Anwaruddin</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">045</td>
+            <td width="239">Dr. Syed Faiz Ahmed,<br><br>
+            S/o Ismail Shah Quadri</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">046</td>
+            <td width="239">Dr. Aysha Qadri,<br><br>
+            D/o Syed Mustafa Hassan Qadri</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">047</td>
+            <td width="239">Dr. Amtul kareem,<br><br>
+            D/o Mir mehboob Ali</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">048</td>
+            <td width="239">Dr Khaja Barauddin Ansari,<br><br>
+            S/o Khaja Kareemuddin Ansari</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">049</td>
+            <td width="239">DR. Rashid Ali Khan,<br><br>
+            S/o M A Rahman Khan</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">050</td>
+            <td width="239">Dr. Md Mujeeb-ur Rahman,<br><br>
+            S/o Md Yaseen</td>
+            <td width="209">1980</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">051</td>
+            <td width="239">Dr.Abu Yusuf Waseem Siddiqui,<br><br>
+            S/o M&nbsp; A Raheem Siddiqui</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">052</td>
+            <td width="239">Dr. Md Kamaluddin,<br><br>
+            S/o Md Badruddin</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">053</td>
+            <td width="239">Dr. MdKhaja Badaruddin Siddiqui,<br><br>
+            S/o Md Khaja Moinuddin Siddiqui</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">054</td>
+            <td width="239">Dr. Khatija Sultana,<br><br>
+            D/o M A Kareem</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">055</td>
+            <td width="239">Dr. Waseem Rizwana,<br><br>
+            D/o Md Younus</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">056</td>
+            <td width="239">Dr. Aneesa Begum,<br><br>
+            D/o M A Qadeer</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">057</td>
+            <td width="239">Dr. Ahmedi&nbsp; begum,<br><br>
+            D/o Shaik Gulam Ahmed</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">058</td>
+            <td width="239">Dr. Anmatus Salam,<br><br>
+            D/o Md Yaseen Khan</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">059</td>
+            <td width="239">Dr. Amatum Noor,<br><br>
+            D/o MD Yaseen Khan</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">060</td>
+            <td width="239">Dr. Syed Arifuddin,<br><br>
+            S/o Syed Gohhouse-e-Sahel</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">061</td>
+            <td width="239">Dr. Zubaida Begum,<br><br>
+            D/o Zainuddin</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">062</td>
+            <td width="239">Dr. Ahmed Abdul Haleem,<br><br>
+            S/o Md Abdul Kareem</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">063</td>
+            <td width="239">Dr. Khaja Sultana,<br><br>
+            D/o Lal Mohammed</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">064</td>
+            <td width="239">Dr. Razia Begum,<br><br>
+            D/o Yakula Ali</td>
+            <td width="209">1981</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">065</td>
+            <td width="239">Dr. Syed Mahmood Zahid,<br><br>
+            S/o Syed Ali</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">066</td>
+            <td width="239">Dr. Md Abdul Raheem,<br><br>
+            S/o M A Kareem</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">067</td>
+            <td width="239">Dr. Md Rafi Ahmed,<br><br>
+            S/o Md Taqui</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">068</td>
+            <td width="239">Dr. Gahur Sultana,<br><br>
+            D/o Syed Md Zaheer Alam</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">069</td>
+            <td width="239">Dr. Touqeer Ilahi,<br><br>
+            D/o M A Razzak</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">070</td>
+            <td width="239">Dr. Hashmat unnisa,<br><br>
+            D/o Abdulla bin Sayeed</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">071</td>
+            <td width="239">Dr. Wasia Naveed,<br><br>
+            D/o Md Muzaffer Ali</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">072</td>
+            <td width="239">Dr. Sabiha Khatoon,<br><br>
+            D/o Mahaboob Khan</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">073</td>
+            <td width="239">Dr. Razia Begum,<br><br>
+            D/o Ziauddin Khan</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">074</td>
+            <td width="239">Dr. Md Asif uddin Mufti,<br><br>
+            S/o Md Qutubuddin Mufti</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">075</td>
+            <td width="239">Dr. Md Abid Ali,<br><br>
+            S/o Md Iqbal Ali</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">076</td>
+            <td width="239">Dr. Amtul Zainab Yaseen Ali</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">077</td>
+            <td width="239">Dr. Md Moinuddin Ahmed,<br><br>
+            S/o Md Nasir uddin Ahmed</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">078</td>
+            <td width="239">Dr. Viquarunnisa,<br><br>
+            D/o Md Hyder Quraishi</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">079</td>
+            <td width="239">Dr. Aziz Khatoon,<br><br>
+            D/o Md Sardar Khan</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">080</td>
+            <td width="239">Dr. Mirza Abdul Wahab Baig,<br><br>
+            S/o Mirza Rahman</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">081</td>
+            <td width="239">Dr. Khaja Ibrahim Siddiqui,<br><br>
+            S/o Khaja Fazwa Rahim Siddiqui</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">082</td>
+            <td width="239">Dr. Syed Abdul quader,<br><br>
+            S/o Syed Feroz Ali</td>
+            <td width="209">1982</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">083</td>
+            <td width="239">Dr. Md Aslam,<br><br>
+            S/o Alladin Rahani</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">084</td>
+            <td width="239">Dr. Syed Afzal Bani,<br><br>
+            S/o Syed Jahangir</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">085</td>
+            <td width="239">Dr. Md Gouse Mohiuddin,<br><br>
+            S/o Md Shareefuddin</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">086</td>
+            <td width="239">Dr. Masood Vakil Qureshi,<br><br>
+            S/o Md Ismail Qureshi</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">087</td>
+            <td width="239">Dr. Ameenunnisa,<br><br>
+            D/o Masood Ahmed Ansari</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">088</td>
+            <td width="239">Dr. Farhat Jabeen,<br><br>
+            D/o Md Abdul Baseer</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">089</td>
+            <td width="239">Dr. Fazalunnisa Begum,<br><br>
+            D/o Syed Moinuddin</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">090</td>
+            <td width="239">Dr. Awheela Sultana,<br><br>
+            D/o Md Ali</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">091</td>
+            <td width="239">Dr Md Ehteshman Ali Askari,<br><br>
+            S/o Md Mahaboob Ali Askari</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">092</td>
+            <td width="239">Dr. Farhat Siddiqui,<br><br>
+            D/o Md Itrath Hussain Siddiqui</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">093</td>
+            <td width="239">Dr. Aleemunnisa,<br><br>
+            D/o Abdul Rahman</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">094</td>
+            <td width="239">Dr. Md Moinuddin,<br><br>
+            S/o Md Qumaruddin</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">095</td>
+            <td width="239">Dr. Safia Amtus Alam Imagrabi,<br><br>
+            D/o Syed Hasanuddin Imagrabi</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">096</td>
+            <td width="239">Dr. Syed Naseemuddin,<br><br>
+            S/o Syed Lateefuddin</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">097</td>
+            <td width="239">Dr. Mahamooda Begum,<br><br>
+            D/o Md Muqeem</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">098</td>
+            <td width="239">Dr. Laeequnnisa,<br><br>
+            D/o Md Yousef Shareef</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">099</td>
+            <td width="239">Dr. Subhani Begum,<br><br>
+            D/o Md osman</td>
+            <td width="209">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">100</td>
+            <td width="239" height="37">Dr. Kaiser Rehana,<br><br>
+            D/o Shaik Ahmed</td>
+            <td width="209" height="37">1983</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">299</td>
+            <td width="239">Dr. Md Abdul Rahman,<br><br>
+            S/o M D Hussain</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">300</td>
+            <td width="239">Dr. Md Misbah uddin,<br><br>
+            S/o M D Faiyaz uddin</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">301</td>
+            <td width="239">Dr. Masood Hussain Siddiqui,<br><br>
+            S/o Mahmood Hussain Siddiqui</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">302</td>
+            <td width="239">Dr. Md Abdul Ghaffar,<br><br>
+            S/o Md Abdul Qayyum</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">303</td>
+            <td width="239">Dr. Md Abdul Faeem,<br><br>
+            S/o Md Abdul Saleem</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">304</td>
+            <td width="239">Dr. Syeda Sameena Najmus ,<br><br>
+            D/o Syed Mahmood Ali</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">307</td>
+            <td width="239">Dr Md Shabbir Ahmed,<br><br>
+            S/o Md Yataub</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">308</td>
+            <td width="239">Dr. Md Abdul Basith Sarwari,<br><br>
+            S/o Md Noorul Atquiq Sarwari</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">309</td>
+            <td width="239">Dr. Azizunnisa Begum,<br><br>
+            D/o Md Mahood</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">310</td>
+            <td width="239">Dr. Naseem Sultana,<br><br>
+            S/o Syed Yaqub</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">311</td>
+            <td width="239">Dr. Akbaruddin Ahmed,<br><br>
+            S/o H K Baharuddin</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">312</td>
+            <td width="239">Dr. M D Rasheed Ahmed Khan,<br><br>
+            S/o Md Ibrahim Khan</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">313</td>
+            <td width="239">Dr Zahida,<br><br>
+            D/o Md Murtuza</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">314</td>
+            <td width="239">Dr. Nikhat Farzana Begum,<br><br>
+            D/o M A Raham</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">315</td>
+            <td width="239">Dr. Munawar Jahan,<br><br>
+            D/o Abu Naim Md Hamid Siddiqui</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">316</td>
+            <td width="239">Dr. Ruksana Parveen,<br><br>
+            D/o Md Nizamuddin</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">315</td>
+            <td width="239">Dr. S Mahamood Naveed-ul-Huda,<br><br>
+            S/o S Mahamood Ehtasham-ul-Huda</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">316</td>
+            <td width="239">Dr. S Zainullah Biddin Khan,<br><br>
+            S/o S Qadar Ali Khan</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">317</td>
+            <td width="239">Dr. Md Zaheer Ahmed,<br><br>
+            S/o Md Ahmed</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">318</td>
+            <td width="239">Dr. Md Mujeeb,<br><br>
+            S/o Md Ghouse</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">319</td>
+            <td width="239">Dr.Abdul Rahman,<br><br>
+            S/o M A Razzaq</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">320</td>
+            <td width="239">Dr. MD Ali Hyder,<br><br>
+            S/o Ali Bin Abdullah Yamani</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">321</td>
+            <td width="239">Dr. Md Shakeel Ahmed,<br><br>
+            S/o Basheer Ahmed</td>
+            <td width="209">1990</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">328</td>
+            <td width="239">Dr. Ameena&nbsp; Nuzhat,<br><br>
+            D/o Md Maseruddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">329</td>
+            <td width="239">Dr. Adeeba Sultana,<br><br>
+            D/o M A Qayyam Hazari</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">330</td>
+            <td width="239">Dr. Md Azhar Hussain,<br><br>
+            S/o Md Ahmed Hussain</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">331</td>
+            <td width="239">Dr. Fareed unnisa,<br><br>
+            D/o Shaiuk Bahadur Hussain</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">332</td>
+            <td width="239">Dr. Hameeduddin,<br><br>
+            S/o Md Sharfiuddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">333</td>
+            <td width="239">Dr. Tahniath Jahan,<br><br>
+            S/o M D Khasim Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">322</td>
+            <td width="239">DR Ahmed Minhajuddin,<br><br>
+            S/o Ahmed Moinuddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">323</td>
+            <td width="239">Dr. Ahmed Abdul Qasim Irfani,<br><br>
+            S/o Md Amav Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">324</td>
+            <td width="239">DR. Md Abdul Razzaq,<br><br>
+            S/o Md Abdul Quader</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">325</td>
+            <td width="239">Dr. Nayeemuddin Ansari,<br><br>
+            S/o Jaan Mahamood</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">326</td>
+            <td width="239">Dr. Tanveer Altaf,<br><br>
+            S/o Md Altaf Hussain</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">327</td>
+            <td width="239">Dr. Zainab Fatima,<br><br>
+            D/o Khaja Allauddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">334</td>
+            <td width="239">Dr. Asma Zaib,<br><br>
+            D/o M D Qasim Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">335</td>
+            <td width="239">Dr. Salma Shireen,<br><br>
+            D/o Md Abdul Hai Ansari</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">336</td>
+            <td width="239">Dr. Nuzhat Sultana,<br><br>
+            D/o Abdul Ali Hashmi</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">337</td>
+            <td width="239">Dr. syila Fatima,<br><br>
+            D/o Syed Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">338</td>
+            <td width="239">Dr. Syade Sagra,<br><br>
+            D/o Syed Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">339</td>
+            <td width="239">DR. Md Abdul Jaleel,<br><br>
+            S/o Md Abdul Wahab</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">340</td>
+            <td width="239">Dr. MD Abdul Rahman Ayaz,<br><br>
+            S/o Md Ibrahim</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">341</td>
+            <td width="239">Dr. Najeeb Kausar,<br><br>
+            D/o S M H Hashmi</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">342</td>
+            <td width="239">Dr. Kareez Ameena,<br><br>
+            D/o Hafeez Aziz Baig</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">343</td>
+            <td width="239">Dr. Syeda Zia Fatima,<br><br>
+            D/o Roaf Qadri</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="33">344</td>
+            <td width="239" height="33">Dr. Md&nbsp; Khallilur Rahman,<br><br>
+            S/o Md Abdul Rahman</td>
+            <td width="209" height="33">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">345</td>
+            <td width="239">DR. Syeda Nasreen Sultana,<br><br>
+            D/o Syed Mir Riyasat Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">346</td>
+            <td width="239">Dr. Syed Abdul Wahab,<br><br>
+            S/o Syed Abdul Raoof</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">347</td>
+            <td width="239">Dr. Md Abdul Nayeem,<br><br>
+            S/o Md Abdul Hameed</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">348</td>
+            <td width="239">Dr. Md Khaja Shafiuddin,<br><br>
+            S/o Md Khaja Moinuddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">349</td>
+            <td width="239">Dr. MD Ashraf Ahmed,<br><br>
+            S/o Md Abdul Raoof</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">350</td>
+            <td width="239">Dr. Syed Iqbal Ahmed,<br><br>
+            S/o Sulaiman</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">351</td>
+            <td width="239">Dr. Md Jaher ali,<br><br>
+            S/o Md Jafer Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">352</td>
+            <td width="239">DR. S Abar ullah Hashmi,<br><br>
+            S/o S Anwarulla Hashmi</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">353</td>
+            <td width="239">Dr. M D Saifuddin,<br><br>
+            S/o M D Qumaisa</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">354</td>
+            <td width="239">Dr. Mir Jafar ali,<br><br>
+            S/o Mir Ahmed Ali</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">355</td>
+            <td width="239">Dr. Md Anwar Ali Khan,<br><br>
+            S/o Md Ali Khan</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">356</td>
+            <td width="239">Dr. Munawar Fatima Afzal,<br><br>
+            D/oMd Khalil-ur-Rahman</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">357</td>
+            <td width="239">Dr. Azmath Sultana,<br><br>
+            D/o Md Yousuf</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">358</td>
+            <td width="239">Dr Athar Parveen,<br><br>
+            D/o Md Mazaruddin Khan</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">579</td>
+            <td width="239">Dr. Asra Sultana,<br><br>
+            S/o Hasam Mohammad</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">359</td>
+            <td width="239">Dr. Mujeebunnisa Begum,<br><br>
+            D/o Md Masinuddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">360</td>
+            <td width="239">Dr. Khalil Gulam Moinuddin,<br><br>
+            S/o Gulam Dastur</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">361</td>
+            <td width="239">Dr Kauser Fatima,<br><br>
+            D/o M D Sardaruddin</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">362</td>
+            <td width="239">Dr. Roohi Afroz,<br><br>
+            D/o Ahmed Maqbool Ali Khan</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">363</td>
+            <td width="239">Dr Amina&nbsp; Durilana,<br><br>
+            D/o M A Wahab</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">364</td>
+            <td width="239">Dr. Rizwana Sultana,<br><br>
+            D/o Syed Ahmed Hussain</td>
+            <td width="209">1991</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">365</td>
+            <td width="239">Dr. Md Naqi,<br><br>
+            S/o Md Mastan</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">366</td>
+            <td width="239">Dr. Md Sultanuddin,<br><br>
+            S/o Md Ghouse Moinuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">367</td>
+            <td width="239">Dr. Md Khaja,<br><br>
+            S/o Janimiya</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">368</td>
+            <td width="239">Dr. Md Abdul Raheem,<br><br>
+            D/o Md Kareem</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">369</td>
+            <td width="239">Dr. S Nematulla,<br><br>
+            S/o S Kulrathulla</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">371</td>
+            <td width="239">Dr. Syed Shoeb Shakeel,<br><br>
+            S/o Syed Mahmood Nozmi</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">372</td>
+            <td width="239">Dr. Md Anwal-ul-haq,<br><br>
+            S/o Md Fazlur Rahman</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">373</td>
+            <td width="239">Dr. Md Abdul Subhan,<br><br>
+            S/o Md osman</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">374</td>
+            <td width="239">Dr. Md Abdul Razzak,<br><br>
+            S/o Md Quasim</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">375</td>
+            <td width="239">Dr. Md Habeebuddin,<br><br>
+            S/o Rasheeduddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">376</td>
+            <td width="239">Dr. S Shah Qumaruddin Quadari,<br><br>
+            S/o Syed zaheeruddin Quadri</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">376</td>
+            <td width="239">Dr. Khaja Niyamuddin,<br><br>
+            S/o Khaja Qutubuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">377</td>
+            <td width="239">Dr. Md Fareeduddin,<br><br>
+            S/o Md Hasanuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">378</td>
+            <td width="239">Dr. Shaik Fathe Ahmed,<br><br>
+            S/o Shaik Abdul Khader</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">379</td>
+            <td width="239">Dr. Khaja Moizuddin,<br><br>
+            S/o Khaja Moinuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">380</td>
+            <td width="239">Dr. Abdul Moid&nbsp; Ansari,<br><br>
+            S/o abdul dabeer Ansari</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">381</td>
+            <td width="239">Dr. Md Maqbool Hussaini,<br><br>
+            S/o Md Ahmed Hussaini</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">382</td>
+            <td width="239">Dr. Syeda Ghousia Begum,<br><br>
+            D/o Gulam Ahmed</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">383</td>
+            <td width="239">Dr. Shamsunnisa Begum,<br><br>
+            D/o Md Gause Moinuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">384</td>
+            <td width="239">Dr. Parveen Begum,<br><br>
+            S/o Khazi Shafiuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">385</td>
+            <td width="239">Dr. Md Abdul Waheed,<br><br>
+            S/o&nbsp; M A Malik</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">386</td>
+            <td width="239">Dr. Md Masiuddfin,<br><br>
+            S/o Md Ghouseuddin</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">387</td>
+            <td width="239">Dr. s Ghouse Moinuddin Quadri,<br><br>
+            S/o S Mahoboob Quadri</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">388</td>
+            <td width="239">Dr. S Akbar Ilyas,<br><br>
+            S/o S Abdul Wahab</td>
+            <td width="209">1992</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">576</td>
+            <td width="239">Dr. Peonderm Srinivas,<br><br>
+            S/o P Jeedikal</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">580</td>
+            <td width="239">Dr. Uzma Noor Quareshi,<br><br>
+            D/o Md Azeemuddin</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">581</td>
+            <td width="239">Dr. Arifa Begum,<br><br>
+            D/o Md Yousef</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">582</td>
+            <td width="239">Dr. Md Mir Ali Fasi,<br><br>
+            S/o Md Mahoboob Ali</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">583</td>
+            <td width="239">Dr. Md Farooq Ali,<br><br>
+            S/o Md Sadiq ali</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">584</td>
+            <td width="239">Dr. Shaik Ashfaq Rasool,<br><br>
+            S/o shaik Altaf Rasool</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">585</td>
+            <td width="239">Dr. Md Bin Mahafooz,<br><br>
+            S/o Md Mazher Bin Mahafooz</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">586</td>
+            <td width="239">Dr. Masinuddin Ahmed,<br><br>
+            S/o Waheeduddin ahmed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">587</td>
+            <td width="239">Dr. Md Ayub Khan,<br><br>
+            S/o Ahmed Khan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">587</td>
+            <td width="239">Dr. Md Abdul sayeed,<br><br>
+            S/o Md Abdul Jabbar</td>
+            <td width="209">1996</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">588</td>
+            <td width="239">Dr. A Salita,<br><br>
+            D/o A Balakrishana</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">589</td>
+            <td width="239">Dr. Mohd Abdul Hadri,<br><br>
+            S/o Md Abdul Hameed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">590</td>
+            <td width="239">Dr. Aliya Tahseen,<br><br>
+            D/o Md Quteruddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">591</td>
+            <td width="239">Dr. Asma&nbsp; Nujhat,<br><br>
+            D/o Md Yaqoob Ali Khan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">592</td>
+            <td width="239">Dr. Nayyar Farozan,<br><br>
+            D/o Syed Farooq Aziz</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">593</td>
+            <td width="239">Dr. Irfara Tasneem,<br><br>
+            D/o M A Aziz Khan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">594</td>
+            <td width="239">Dr. Shabeer Begum,<br><br>
+            D/o M A Razzak</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">595</td>
+            <td width="239">Dr. Rubeena Jabeer,<br><br>
+            D/o Sarfuddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">596</td>
+            <td width="239">Dr. Md Abdul Bari,<br><br>
+            S/o Md Abdul Baaser</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">597</td>
+            <td width="239">Dr. Anjum Nazmah,<br><br>
+            D/o Syed Gulam Subhane</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="39">598</td>
+            <td width="239" height="39">Dr. Kauser Nahid,<br><br>
+            D/o Mumtaz Ali</td>
+            <td width="209" height="39">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">599</td>
+            <td width="239">&nbsp;Dr. Md Bharuddin,<br><br>
+            S/o Gulam Murtuza</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">600</td>
+            <td width="239">Dr. Anzar Main Sajida,<br><br>
+            D/o Khwaja Moinuddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">601</td>
+            <td width="239">Dr. Asra Fatima,<br><br>
+            D/o Md Aliuddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">602</td>
+            <td width="239">Dr. Abdul Noor,<br><br>
+            S/o Aftab Ahmed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">603</td>
+            <td width="239">Dr. Md Minhajuddin Khan,<br><br>
+            S/o Md Siraj Uddin Khan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">604</td>
+            <td width="239">Dr. Md Wahajuddin Khan,<br><br>
+            S/o Md Sirajuddin Kjhan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">605</td>
+            <td width="239">Dr. Ghousia Fatima,<br><br>
+            D/o Md Maqsood Ahmed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">606</td>
+            <td width="239">Dr. Wajid Ali,<br><br>
+            S/o Mir Himayath Ali</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">607</td>
+            <td width="239">Dr. Sd Moinuddin Hussaini,<br><br>
+            S/o Sd Abdul Rahaman Hussaini</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">608</td>
+            <td width="239">Dr. Zahra Jabeen,<br><br>
+            D/o Mirza Burhar Baig</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">609</td>
+            <td width="239">Dr. Fareeduddin,<br><br>
+            S/o Md Hafeezuddin,</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">610</td>
+            <td width="239">Dr. Md. Kaleem Zafar,<br><br>
+            S/o B S Chand</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">611</td>
+            <td width="239">Dr. Md Abdul Malik lhsan,<br><br>
+            S/o Md Abdul Jabeeb Noor&nbsp; Abasi</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">612</td>
+            <td width="239">Dr. Ahmed Nutasser Khan,<br><br>
+            S/o Ahmed Mustafashah Khan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">613</td>
+            <td width="239">Dr. Vadlakonda Maruthi,<br><br>
+            S/o V Gangaram</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">614</td>
+            <td width="239">Dr. Md Burhanuddin,<br><br>
+            S/o Md Lqbaluddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">615</td>
+            <td width="239">Dr Shaik Khaleel Ahmed,<br><br>
+            S/o Shaik Hasan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">616</td>
+            <td width="239">Dr. Atiya Farzana Noorani,<br><br>
+            D/o M A Khader Noorani</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">617</td>
+            <td width="239">Dr. Md Abdul Majid,<br><br>
+            S/o Dr. Abdul Basith</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">618</td>
+            <td width="239">Dr. Asma Afrooz,<br><br>
+            D/o Md Ammeruddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">619</td>
+            <td width="239">Dr. M&nbsp; L Vasundhara,<br><br>
+            D/o M Gopalaiah</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">620</td>
+            <td width="239">Dr. M Sunitha,<br><br>
+            D/o M Visunadhan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">621</td>
+            <td width="239">Dr. Fatima Asra,<br><br>
+            D/o Md Rafiuddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">622</td>
+            <td width="239">Dr. Asima Asra,<br><br>
+            D/o Md Rafiuddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">623</td>
+            <td width="239">Dr. Shabana Aziz,<br><br>
+            D/o M A Aziz</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">624</td>
+            <td width="239">Dr. Aishia Khatoon,<br><br>
+            D/o Md Ali</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">625</td>
+            <td width="239">Dr Azamath Unnisa,<br><br>
+            D/o Shaik Md. Aziz</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">626</td>
+            <td width="239">Dr. Mateen&nbsp; Shabana,<br><br>
+            D/o Yawar Ali</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">627</td>
+            <td width="239">Dr.Ikaramullaha,<br><br>
+            S/o Md. Ahmed Moinuddin</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">628</td>
+            <td width="239">Dr. Younus Nazarul Haq,<br><br>
+            S/o M A Quayum</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">629</td>
+            <td width="239">Dr. Poorachandra Rao Pathudir,<br><br>
+            S/o&nbsp; Narasimha Roa</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">630</td>
+            <td width="239">Dr. Md Aqeel Ahmed,<br><br>
+            S/o Md&nbsp; Khaleel Ahmed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">631</td>
+            <td width="239">Dr. Md Imtiza Ahmed,<br><br>
+            S/o Md osman Ahmed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">632</td>
+            <td width="239">Dr Waheeda Begum,<br><br>
+            D/o Fakir Mohammad</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">633</td>
+            <td width="239">Dr. Suhasimi,<br><br>
+            D/o D Styanarayana</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">634</td>
+            <td width="239">Dr. Sayada&nbsp; Rashida&nbsp; Begum,<br><br>
+            D/o late S A&nbsp; Wahab</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">635</td>
+            <td width="239">Dr. Atiya Jabeen,<br><br>
+            D/o Gulam&nbsp; Hyder Khan</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">636</td>
+            <td width="239">Dr. Umme-Kulsum,<br><br>
+            D/o Mohd Ghori</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">637</td>
+            <td width="239">Dr. Md Jamaduddin,<br><br>
+            S/o Shafiuddin Ahmed</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">638</td>
+            <td width="239">Dr. Khairunnisa,<br><br>
+            D/o Md Abdul Sattar</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">639</td>
+            <td width="239">Dr. Karchakatla Lalitha Bai,<br><br>
+            D/o Rama Murti</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">640</td>
+            <td width="239">Dr. Abdul Wajid Hajari,<br><br>
+            S/o Mohd Abdul Aleem Hajari</td>
+            <td width="209">1997</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">642</td>
+            <td width="239">Dr. Mohd Faizuddin Ahmed,<br><br>
+            S/o M A Mohiuddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">643</td>
+            <td width="239">Dr. Shahoor,<br><br>
+            D/o M Moinuddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">644</td>
+            <td width="239">Dr. Nussath Yasmun,<br><br>
+            D/o Iqbal Moinuddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">645</td>
+            <td width="239">Dr. Ather&nbsp; Main Rashida,<br><br>
+            S/o Mohd Khaja Moinuddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">646</td>
+            <td width="239">Dr. Tahmiyath Habibi,<br><br>
+            D/o Sam&nbsp; Habibi</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">647</td>
+            <td width="239">Dr. Zubeda Naseem,<br><br>
+            D/o MKH Shamsuddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">648</td>
+            <td width="239">Dr. Rafeeq Banu,<br><br>
+            D/o Md Habeeb-ur-Rahaman</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">649</td>
+            <td width="239">Dr. Fatima Siddiqua,<br><br>
+            D/o Md Asfaq Ahmed uddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">650</td>
+            <td width="239">Dr. Syed Amanullla Hussain,<br><br>
+            S/o Syed Noorulla Hussain</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">651</td>
+            <td width="239">Dr. Amtul Naseer,<br><br>
+            D/o Aftab Ahmed</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">652</td>
+            <td width="239">Dr. Asim Md Abdul Rafee,<br><br>
+            S/o Abdul Azeem Qureshi</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">653</td>
+            <td width="239">Dr. Sajeed Unnisa,<br><br>
+            D/o Syed Mujeeebullah Shah</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">654</td>
+            <td width="239">Dr. Gulam Mustafa Qureshi,<br><br>
+            S/o Gulam Murtuza Qureshi</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">655</td>
+            <td width="239">Dr. Mohd Karrar Hussain Khan,<br><br>
+            S/o Shouleath Hussain Khan</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">656</td>
+            <td width="239">Dr. Zainab Lateef,<br><br>
+            D/o Mohd Abdul Lateef</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">657</td>
+            <td width="239">Dr. Nazneen&nbsp; Banu,<br><br>
+            D/o&nbsp; Syed Noorulla</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">658</td>
+            <td width="239">Dr. Shila Tarannum,<br><br>
+            D/o Md Abdul Mateen</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">659</td>
+            <td width="239">Dr.Seema Begum,<br><br>
+            D/o Syed Vazeer uddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">660</td>
+            <td width="239">Dr. Esra Unnisa,<br><br>
+            D/o Fasiuddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">661</td>
+            <td width="239">Dr. Syed Ghouse Sardari,<br><br>
+            S/o Syed Ghouse Sardari</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">662</td>
+            <td width="239">Dr. Syed Zakiuddin,<br><br>
+            S/o Syed Basheruddin</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">663</td>
+            <td width="239">Dr. Umme Amara Begum,<br><br>
+            D/o Md obedullah</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">664</td>
+            <td width="239">Dr. Amlhus Subor Shadam,<br><br>
+            D/o Md Sana-ul-Haq</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">665</td>
+            <td width="239">Dr Rehana Sultana,<br><br>
+            D/o Abdul Nabi</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">666</td>
+            <td width="239">Dr. Ahmed Abdul Qadeer Jabeer,<br><br>
+            S/o Md Abdul Waheed</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">667</td>
+            <td width="239">Dr. Sharieff Afzal,<br><br>
+            S/o Shaik Kalesha</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">668</td>
+            <td width="239">Dr. Mohammed Murtuza,<br><br>
+            S/o Nabi Shareefi</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">669</td>
+            <td width="239">Dr. Ehetesham Junaidi,<br><br>
+            S/o Jaher Hussain Junaidi</td>
+            <td width="209">1998</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">670</td>
+            <td width="239">Dr. Luft Ali Siddiqui,<br><br>
+            S/o Gulam&nbsp; Mahabood Siddiqui</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">671</td>
+            <td width="239">Dr.Farmeda Kauser,<br><br>
+            D/o Mohd Abdul Jabbar</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">672</td>
+            <td width="239">Dr Ziaunissa Firdose,<br><br>
+            D/o Syed Wahed Mohiuddin</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">673</td>
+            <td width="239">Dr Bushra Fatima,<br><br>
+            D/o Mohd Moizuddin Ahmed Khan</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">674</td>
+            <td width="239">Dr Zohra Jabeen,<br><br>
+            D/o Md Ibrahim Ali</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">675</td>
+            <td width="239">Dr Sadeqa Begum,<br><br>
+            D/o Gulam Quarim</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">676</td>
+            <td width="239">Dr Ayesha Fatima,<br><br>
+            D/o,Shaik osman Ali</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">677</td>
+            <td width="239">Dr Atif Tarjum Yousufi,<br><br>
+            D/o Md Ali Yousufi</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">678</td>
+            <td width="239">Dr Dawarunissa,<br><br>
+            D/o Mir Mohd Azam Ali</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">679</td>
+            <td width="239">Dr Fatima Zohra,<br><br>
+            D/o Syed Yaqoob,</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">680</td>
+            <td width="239">Dr Mohd Khalid Saifullah,<br><br>
+            S/o Mohd Waseem</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">681</td>
+            <td width="239">Dr Muzzamil Affat,<br><br>
+            D/o M.A Mannan</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">690</td>
+            <td width="239">Dr. Abdul Kaliq,<br><br>
+            S/o Abdul Jabbar</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">691</td>
+            <td width="239">Dr. Joher Jahan,<br><br>
+            D/osyed khaleeluddin</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">692</td>
+            <td width="239">Dr. Gazzi Venkatesher,<br><br>
+            S/o G Laxminarasaiah</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">693</td>
+            <td width="239">Dr. Md Yaseen Ahmed,<br><br>
+            S/o Gulam Ahmed</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">694</td>
+            <td width="239">Dr. Ummul Khair Bushra,<br><br>
+            D/o Md Mahaboob Shareef</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">695</td>
+            <td width="239">Dr. Syeda Safia&nbsp; Nikhat,<br><br>
+            D/o S Mahmood Moizuddin</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">696</td>
+            <td width="239">Dr. Mohd Shakeel Ahmed,<br><br>
+            S/o Mhod Abdul Waheed</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">697</td>
+            <td width="239">Dr. Ayesha Sultana,<br><br>
+            D/o Mohd Abbas</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">698</td>
+            <td width="239">Dr. Naoshaba Anjkum,<br><br>
+            S/o S Ali Amjad</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">699</td>
+            <td width="239">Dr. Syeda Sohaila,<br><br>
+            D/o Syed Zahenuddin</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">700</td>
+            <td width="239">Dr. Mohd Amjad Ali,<br><br>
+            S/o Mohd Hasham Ali</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">701</td>
+            <td width="239" height="37">Dr. Syed Khaiser Pasha,<br><br>
+            S/o Syed Anwar Pasha</td>
+            <td width="209" height="37">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="41">702</td>
+            <td width="239" height="41">Dr. Mohd Samiullah Khan,<br><br>
+            S/o Asadulla Khan</td>
+            <td width="209" height="41">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="33">703</td>
+            <td width="239" height="33">Dr. Mohd Like Ali Khan,<br><br>
+            S/o Waris Ali Khan</td>
+            <td width="209" height="33">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="41">704</td>
+            <td width="239" height="41">Dr. Arshia Nishath,<br><br>
+            D/o Maqsood Ali Qureshi</td>
+            <td width="209" height="41">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">705</td>
+            <td width="239">Dr. Nikhat Sultana,<br><br>
+            D/o Md Abdul Raheem</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="33">706</td>
+            <td width="239" height="33">Dr. Asfia Tarannum,<br><br>
+            D/o Shaik Chand</td>
+            <td width="209" height="33">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="33">707</td>
+            <td width="239" height="33">Dr. Arshi Sultana,<br><br>
+            D/o Mohd Sarwar</td>
+            <td width="209" height="33">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="41">708</td>
+            <td width="239" height="41">Dr. Syeda Shabana Mehar,<br><br>
+            D/o Syed Moosa Kazim</td>
+            <td width="209" height="41">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">709</td>
+            <td width="239" height="37">Dr. Najeeb Jahan,<br><br>
+            D/o Md&nbsp; Iqbaluddin</td>
+            <td width="209" height="37">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="33">710</td>
+            <td width="239" height="33">Dr. Qusheedunnissa,<br><br>
+            D/o Mohd Zainuddin</td>
+            <td width="209" height="33">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="39">711</td>
+            <td width="239" height="39">Dr. Anees Fatima,<br><br>
+            D/o Md Kaleemuddin</td>
+            <td width="209" height="39">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">712</td>
+            <td width="239" height="37">Dr. Nazeem Bano,<br><br>
+            D/o Syed Jalal</td>
+            <td width="209" height="37">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">713</td>
+            <td width="239" height="37">Dr. Masarath Sultana,<br><br>
+            D/o Mohd Saber Ali</td>
+            <td width="209" height="37">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="40">714</td>
+            <td width="239" height="40">Dr. Mhod&nbsp; ozair Ali,<br><br>
+            S/o Mohd. Khaja Ali</td>
+            <td width="209" height="40">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">715</td>
+            <td width="239" height="35">Dr. Shameem Sultana,<br><br>
+            D/o Faqeen Mohd</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">716</td>
+            <td width="239" height="35">Dr Asra Mohammadi,<br><br>
+            D/o Md. Saleemuddin</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">717</td>
+            <td width="239">Dr. kulsum peer mohd,</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="36">718</td>
+            <td width="239" height="36">Dr. mohd Abdul Gani,<br><br>
+            S/o Md. Abdul Haq</td>
+            <td width="209" height="36">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="34">719</td>
+            <td width="239" height="34">Dr. Javeria Iqbal,<br><br>
+            D/o Md. Naimuddin</td>
+            <td width="209" height="34">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">720</td>
+            <td width="239" height="35">Dr. M A Aziz,<br><br>
+            S/o&nbsp; M A Rahim</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="39">721</td>
+            <td width="239" height="39">Dr. Mohd Shafeeq,<br><br>
+            S/o Mohd Siddiqui</td>
+            <td width="209" height="39">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">722</td>
+            <td width="239" height="37">Dr. Firdose Jabeen,<br><br>
+            D/o M A Mubeen</td>
+            <td width="209" height="37">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="36">723</td>
+            <td width="239" height="36">Dr. Zubair Hussain,<br><br>
+            S/o Akthar Hussain</td>
+            <td width="209" height="36">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="40">724</td>
+            <td width="239" height="40">Dr. Shahava Begum,<br><br>
+            Sri Mohd Azam</td>
+            <td width="209" height="40">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="42">725</td>
+            <td width="239" height="42">Dr. Rafia Sultana,<br><br>
+            D/o MKB Navaz</td>
+            <td width="209" height="42">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="36">726</td>
+            <td width="239" height="36">Dr. Mohd. Naveed Ahmed Khan,<br><br>
+            S/o Mohd Hussain Khan</td>
+            <td width="209" height="36">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="36">727</td>
+            <td width="239" height="36">Dr. Talat Sultana,<br><br>
+            D/o Mhod&nbsp; Basheeruddin</td>
+            <td width="209" height="36">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">728</td>
+            <td width="239" height="35">Dr Mohd&nbsp; Adeeel Ab Khan,<br><br>
+            S/o Aqueel Ab Khan</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">729</td>
+            <td width="239" height="35">Dr. Mohd Abdul Samad,<br><br>
+            S/o Abdul Waheed</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">730</td>
+            <td width="239" height="35">Dr. Shajahar Begum,<br><br>
+            D/o Mohd Safi</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="31">731</td>
+            <td width="239" height="31">Dr. Amera Begum,<br><br>
+            D/o M A Waheed</td>
+            <td width="209" height="31">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="36">732</td>
+            <td width="239" height="36">Dr Mohd Ikram Ahmed,<br><br>
+            S/o Mohd Iqbal Ahmed</td>
+            <td width="209" height="36">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="36">733</td>
+            <td width="239" height="36">Dr Husna Sultana,<br><br>
+            D/o Ahmedullah Khan</td>
+            <td width="209" height="36">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="37">734</td>
+            <td width="239" height="37">Dr Syed Basheeruddin,<br><br>
+            S/o Syed Hassainmiah</td>
+            <td width="209" height="37">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164" height="35">735</td>
+            <td width="239" height="35">Dr Nasreen Sultana,<br><br>
+            D/o Ahmed Mohiuddin</td>
+            <td width="209" height="35">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">736</td>
+            <td width="239">Dr Syeda Sameena Nehri,<br><br>
+            D/o Syed Badruddin Nehri</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">737</td>
+            <td width="239">Dr Mohd Sadat Rasool,<br><br>
+            S/o Mohd Amanath Rasool</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">738</td>
+            <td width="239">Dr Farozan Iqbal,<br><br>
+            D/o Faizuddin Iqbal Khan</td>
+            <td width="209">1999</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">750</td>
+            <td width="239">Dr Fatima Nishat,<br><br>
+            D/o Mohd Ali</td>
+            <td width="209">2000</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">764</td>
+            <td width="239">Dr Asif Masood Abdul Mujeeb,<br><br>
+            S/o Abdul Mujeeb</td>
+            <td width="209">2000</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">765</td>
+            <td width="239">Dr Habeebunnisa Begum,<br><br>
+            D/o&nbsp; Md Abdul Kareem</td>
+            <td width="209">2000</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">811</td>
+            <td width="239">Dr Ahsanullah,<br><br>
+            S/o&nbsp; Sardar jaleel Ahmed</td>
+            <td width="209">2001</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">812</td>
+            <td width="239">Dr Rubina Begum,<br><br>
+            D/o&nbsp; Mohd Moinuddin</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">813</td>
+            <td width="239">Dr S.M Mohiuddin Quadri,<br><br>
+            S/o Syed Qamarpeer Quadri</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">814</td>
+            <td width="239">Dr Khadija Rumana,<br><br>
+            D/o Syed Lateef Hussain</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">819</td>
+            <td width="239">Dr Syed Sadiq Mohiuddin Ahmed,<br><br>
+            S/o&nbsp; Syed Ghouse Ali</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">843</td>
+            <td width="239">Dr Razia Sultana,<br><br>
+            D/o Haroon Rashid</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">844</td>
+            <td width="239">Dr Mohd Khayamuddin</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">875</td>
+            <td width="239">Dr Syed Laiq quadri,<br><br>
+            S/o Syed Quddoos&nbsp; Mohiuddin</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">903</td>
+            <td width="239">Dr Sabina Fatima,<br><br>
+            D/o&nbsp; S. Basharat Ali</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">905</td>
+            <td width="239">Dr Meraj ul haq soharwardi,<br><br>
+            S/o Abdul haq&nbsp; soharwardi</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">907</td>
+            <td width="239">Dr Mohd Barkatullah,<br><br>
+            S/o Mohd Nazoorullah</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">908</td>
+            <td width="239">Dr Syed Abdul Rehman,<br><br>
+            S/o&nbsp; Syed Abdul Majeed</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">909</td>
+            <td width="239">Dr Syed Nazeeruddin,<br><br>
+            S/o&nbsp; Syed sirajuddin</td>
+            <td width="209">2002</td>
+          </tr>
+          <tr align="center" valign="top">
+            <td width="164">918</td>
+            <td width="239">Dr Abdul Hakeem Mohd,<br><br>
+            S/o Mohd Abdul Hameed</td>
+            <td width="209">
+            <p>2002</p>
+            <p>&nbsp;</p>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
 </html>
-					<div class="span">

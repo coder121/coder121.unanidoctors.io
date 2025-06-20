@@ -1,1042 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gallery | Unanidoctors.com</title>
-        <link rel="shortcut icon" href="dummies/favicon.png">
-		<meta name="description" content="Gallery Of Unanidoctors.com contains detailed gallery of unani treated patients">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:type" content="article">
-		<meta property="og:title" content="Home | Unanidoctors.com">
-		<meta property="og:description" content="Gallery Of Unanidoctors.com contains detailed gallery of unani treated patients">
-		<meta property="og:url" content="/gallery.html">
-		<meta property="og:site_name" content="Unanidoctors.com">
-
-        <!-- STYLESHEETS : begin -->
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/skin.default.css" id="css-skin">
-        <!--[if lte IE 8]>
-            <script src="assets/js/html5.js" type="text/javascript"></script>
-            <link rel="stylesheet" type="text/css" href="assets/css/oldie.css">
-        <![endif]-->
-        <!-- STYLESHEETS : end -->
-
+        <meta name="description" content="Gallery Of Unanidoctors.com contains detailed gallery of unani treated patients.">
+        <meta property="og:title" content="Gallery | Unanidoctors.com">
+        <meta property="og:description" content="Gallery Of Unanidoctors.com contains detailed gallery of unani treated patients.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="/gallery.html">
+        <meta property="og:site_name" content="Unanidoctors.com">
+        <link rel="icon" href="dummies/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+            :root {
+                --primary: #1976d2;
+                --secondary: #43a047;
+                --background: #f8fafc;
+                --surface: #fff;
+                --text: #222;
+                --text-light: #666;
+                --accent: #e3f2fd;
+                --border: #e0e0e0;
+                --radius: 10px;
+                --shadow: 0 2px 8px rgba(0,0,0,0.06);
+            }
+            * { box-sizing: border-box; }
+            body {
+                margin: 0;
+                font-family: 'Inter', Arial, sans-serif;
+                background: var(--background);
+                color: var(--text);
+                line-height: 1.6;
+            }
+            a { color: var(--primary); text-decoration: none; }
+            .button {
+                display: inline-block;
+                background: var(--primary);
+                color: #fff;
+                padding: 0.75em 1.5em;
+                border-radius: var(--radius);
+                font-weight: 600;
+                transition: background 0.2s;
+                margin-top: 0.5em;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+                font-family: inherit;
+                font-size: 1em;
+            }
+            .button:hover, .button:focus {
+                background: var(--secondary);
+                outline: none;
+            }
+            header {
+                background: var(--surface);
+                box-shadow: var(--shadow);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1em 2em;
+            }
+            .navbar-logo img {
+                height: 48px;
+                vertical-align: middle;
+            }
+            nav ul {
+                display: flex;
+                gap: 2em;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav li {
+                position: relative;
+            }
+            nav a {
+                font-weight: 600;
+                color: var(--text);
+                padding: 0.5em 0;
+                transition: color 0.2s;
+            }
+            nav a:hover, nav .active > a { color: var(--primary); }
+            .nav-toggle { display: none; }
+            @media (max-width: 900px) {
+                .navbar { flex-direction: column; align-items: flex-start; padding: 1em; }
+                nav ul { flex-direction: column; width: 100%; display: none; gap: 0; }
+                nav ul.open { display: flex; }
+                .nav-toggle {
+                    display: block;
+                    background: none;
+                    border: none;
+                    font-size: 2em;
+                    margin-left: auto;
+                    color: var(--primary);
+                }
+                nav ul li { margin-bottom: 0.5em; }
+            }
+            .section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 3em 2em;
+            }
+            .section-title {
+                text-align: center;
+                font-size: 2em;
+                margin-bottom: 1.5em;
+                color: var(--primary);
+                font-weight: 700;
+            }
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 2em;
+                margin-top: 2em;
+            }
+            .gallery-card {
+                background: var(--surface);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1em 1em 1.5em 1em;
+                text-align: center;
+            }
+            .gallery-card img {
+                width: 100%;
+                max-width: 220px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: var(--radius);
+                margin-bottom: 1em;
+                background: #fff;
+                border: 3px solid var(--accent);
+            }
+            .gallery-card h3 {
+                margin: 0.5em 0 0 0;
+                font-size: 1.1em;
+                color: var(--secondary);
+            }
+            .gallery-category {
+                margin-top: 2em;
+                margin-bottom: 0.5em;
+                font-size: 1.3em;
+                color: var(--primary);
+                font-weight: 600;
+                text-align: left;
+            }
+            footer {
+                background: var(--primary);
+                color: #fff;
+                text-align: center;
+                padding: 1.5em 2em;
+                margin-top: 3em;
+            }
+            footer a { color: #fff; text-decoration: underline; }
+            @media (max-width: 700px) {
+                .navbar { padding: 1em; }
+                .section { padding: 2em 1em; }
+                .gallery-grid { gap: 1em; }
+            }
+        </style>
     </head>
-    <body id="top">
-
-        <!-- HEADER : begin -->
+    <body>
+        <!-- Header & Navigation -->
         <header>
-
-            <!-- TOPBAR : begin -->
-            <div id="topbar">
-                <div class="container">
-                    <div class="topbar-inner clearfix">
-
-                        <!-- RESPONSIVE CONTROLS : begin -->
-                        <div class="responsive-controls clearfix">
-                            <button class="social"><i class="icon-link"></i></button>
-                            <button class="search"><i class="icon-search"></i></button>
-                        </div>
-                        <!-- RESPONSIVE CONTROLS : end -->
-
-                        <!-- SOCIAL ICONS : begin -->
-                        <div class="social-icons">
-                            <ul class="clearfix">
-                                <li class="twitter"><a href="http://twitter.com/unanidoctors/"><i></i></a></li>
-                                <li class="facebook"><a href="http://www.facebook.com/pages/unanidoctorscom/118956844786091"><i></i></a></li>
-                                <li class="googleplus"><a href="https://plus.google.com/107102985828094417583/posts"><i></i></a></li>
-                                <li class="linkedin"><a href="http://www.linkedin.com/groups/unanidoctors-group-4658666"><i></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- SOCIAL ICONS : end -->
-
-                        <!-- SEARCH FORM : begin -->
-                        <div class="search-form">
-                            <form action="search_results.html">
-                                <div class="input">
-                                    <button class="close"><i class="icon-remove"></i></button>
-                                    <input value="What are you looking for? You can search it here" data-placeholder="What are you looking for? You can search it here">
-                                </div>
-                                <button class="submit"><i class="icon-search"></i></button>
-                            </form>
-                        </div>
-                        <!-- SEARCH FORM : end -->
-
-                    </div>
-                </div>
+            <div class="navbar">
+                <a href="index.html" class="navbar-logo" aria-label="Unanidoctors Home">
+                    <img src="dummies/logo.png" alt="Unanidoctors.com Logo">
+                </a>
+                <button class="nav-toggle" aria-label="Open navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about-drasad.html">Dr. Asaduddin Ahmed</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="unani-doctors.html">Unani Doctors</a></li>
+                        <li><a href="unani-hakims.html">Unani Hakims</a></li>
+                        <li class="active"><a href="gallery.html">Gallery</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                    </ul>
+                </nav>
             </div>
-            <!-- TOPBAR : end -->
-
-            <!-- NAVBAR : begin -->
-            <div id="navbar">
-                <div class="container">
-                    <div class="navbar-inner clearfix">
-
-                        <!-- BRANDING : begin -->
-                        <a href="index.html" id="branding"><img src="dummies/logo.png" 	alt="Unanidoctors.Com"></a>
-                        <!-- BRANDING : end -->
-
-                        <!-- MAIN NAV : begin -->
-                        <nav class="main">
-                            <button><i class="icon-reorder"></i></button>
-                            <ul>
-                                <li class="active">
-                                    <a href="index.html"><strong>Home</strong><span>Unani Medicine</span></a>
-                                    <span class="arrow"><i></i></span>
-									<ul>
-                                    <li><a href="about.html">All About Unani</a></li>
-                                    </ul>									
-                                 </li>
-                                <li>
-                                    <a href="#"><strong>Unani Doctors</strong><span>Specialized Doctors</span></a>
-                                    <span class="arrow"><i></i></span>
-                                    <ul>
-                                        <li><a href="unani-doctors.html">List Of Unani Doctors</a></li>
-                                        <li><a href="unani-hakims.html">List Of Unani Hakims</a></li>
-                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="contact.html"><strong>Contact</strong><span>Get in touch</span></a>
-									<span class="arrow"><i></i></span>
-                                    <ul>
-									    <li><a href="online-treatment.html">Patient Online Registration</a></li>
-                                        <li><a href="practitioner-registration.html">Practitioner Registration</a></li>                                        
-                                     </ul>
-                                </li>                                
-								<li class="last">
-								    <a href="gallery.html"><strong>Gallery</strong><span>Satisfied Patients</span></a>
-									<span class="arrow"><i></i></span>
-                                    <ul>
-                                        <li><a href="videos.html">Videos</a></li>
-                                    </ul>										
-                                </li>
-                            </ul>
-                            <span class="indicator"></span>
-                        </nav>
-                        <!-- MAIN NAV : end -->
-
-
-                    </div>
-                </div>
-            </div>
-            <!-- NAVBAR : begin -->
-
         </header>
-        <!-- HEADER : end -->
 
-        <!-- Gallery PAGE : begin -->
-        <div class="portfolio-page">
+        <!-- Gallery Section -->
+        <section class="section">
+            <div class="section-title">Satisfied Patients from All Over the Globe</div>
 
-            <!-- PAGE TITLE : begin -->
-            <div id="page-title">
-                <div class="container">
-                    <div class="page-title-inner">
-                        <h1>SATISFIED PATIENTS FROM ALL OVER THE GLOBE</h1>
-                    </div>
-                </div>
+            <div class="gallery-category">Arabic Patients</div>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/Arabic%20Patients/Ahmad%20yasin%20al%20mahmood%20al%20mukdat.jpg" alt="Ahmad Yasin Al Mahmood Al Mukdat"><h3>Ahmad Yasin Al Mahmood Al Mukdat</h3></div>
+                <div class="gallery-card"><img src="images/Arabic%20Patients/Arabic%20Actor.jpg" alt="Arabic Actor"><h3>Arabic Actor</h3></div>
+                <div class="gallery-card"><img src="images/Arabic%20Patients/khalifa%20Obaid.jpg" alt="Khalifa Obaid"><h3>Khalifa Obaid</h3></div>
+                <div class="gallery-card"><img src="images/Arabic%20Patients/Saeedi%20Sulaiman%20Baalawi.jpg" alt="Saeedi Sulaiman Baalawi"><h3>Saeedi Sulaiman Baalawi</h3></div>
             </div>
-            <!-- PAGE TITLE : end -->
 
-            <!-- PAGE CORE : begin -->
-            <div id="page-core">
-                <div class="container">
-
-                    <!-- PROJECTS : begin -->
-                    <div class="projects">
-
-                        <!-- PROJECTS INNER : begin -->
-                        <div class="projects-inner">
-						
-						<!-- ROW 1: begin -->
-						<!--<h1>Achievements & Awards</h1>
-						<ul class="row">
-							  <li>
-                                    <!-- PROJECT 1 : begin -->
-                                   <!-- <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/8.jpg" class="lightbox" title="Syed Asaduddin Ahmed Receiving Best Unani Physician 2012 Award In Burjal Arab, Dubai"><i class="icon-search"></i></a>                                                    
-                                                </div>
-                                            </div>
-                                            <img src="images/8.jpg" alt="Best Unani Physian 2012">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Best Unani Physian 2012</h3>                                            
-                                        </div>
-
-                                    </div>-->
-                                    <!-- PROJECT 1 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 2 : begin -->
-                                 <!--   <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/11.jpg" class="lightbox" title="Dr Syed Asaduddin Ahmed With Gulam Nabi Azad, Union Health & Family Welfare Minister Of India"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/11.jpg" alt="Gulam Nabi Azad">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Gulam Nabi Azad</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 2 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 3 : begin -->
-                                   <!-- <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/12.jpg" class="lightbox" title="Dr Syed Asaduddin Ahmed Receiving Best Unani Physician 2005 Award From Dr.Ambumani Ramdoss"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/12.jpg" alt="Dr.Ambumani Ramdoss">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Dr.Ambumani Ramdoss</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 3 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 4 : begin -->
-                                 <!--   <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/6.jpg" class="lightbox" title="Appreciation certificate , Dubai Health Authority"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/6.jpg" alt="Appreciation certificate">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Appreciation certificate</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 4 : end -->
-
-                                </li>
-                            </ul>
-                            <!-- ROW 1 : end -->
-	
-					<!-- ROW 2: begin -->						
-					<!--	<ul class="row">
-							  <li>
-                                    <!-- PROJECT 1 : begin -->
-                                 <!--   <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/4.jpg" class="lightbox" title="Certificate Of Advances In Complementary And Alternative Medicine"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/4.jpg" alt="Certificate Of Alternative Medicine">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Certificate Of Alternative Medicine</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 1 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 2 : begin -->
-                                   <!-- <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/8.jpg" class="lightbox" title="Certificate Of Participation In The Medical Continuing Education Program"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/8.jpg" alt="Medical Continuing Education Certificate">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Medical Continuing Education Certificate</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    
-                                    <!-- PROJECT 2 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 3 : begin -->
-                                  <!--  <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/7.jpg" class="lightbox" title="CME Certificate"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/7.jpg" alt="CME Certificate">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>CME Certificate</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 3 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 4 : begin -->
-                                  <!--  <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/1.jpg" class="lightbox" title="Article 1"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/1.jpg" alt="Article 1">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Article 1</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 4 : end -->
-
-                                </li>
-                            </ul>
-                            <!-- ROW 2 : end -->	
-							
-							<!-- ROW 3: begin -->						
-						<!--<ul class="row">
-							  <li>
-                                    <!-- PROJECT 1 : begin -->
-                            <!--        <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/2.jpg" class="lightbox" title="Article 2"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/2.jpg" alt="Article 2">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Article 2</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 1 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 2 : begin -->
-                                  <!--  <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/3.jpg" class="lightbox" title="Article 3"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/3.jpg" alt="Article 3">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Article 3</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    
-                                    <!-- PROJECT 2 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 3 : begin -->
-                                  <!--  <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/5.jpg" class="lightbox" title="Article 4"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/5.jpg" alt="Article 4">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Article 4</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 3 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 4 : begin -->
-                                 <!--   <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/11.jpg" class="lightbox" title="All About Unani"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/11.jpg" alt="All About Unani">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>All About Unani</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 4 : end -->
-
-                                </li>
-                            </ul>
-                            <!-- ROW 3 : end -->					
-						
-                        <!-- ROW 1: begin -->
-						<br><h1>Arabic Patients</h1>
-                            <ul class="row">
-							  <li>
-
-                                    <!-- PROJECT 1 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Arabic%20Patients/Ahmad%20yasin%20al%20mahmood%20al%20mukdat.jpg" class="lightbox" title="Ahmad Yasin Al Mahmood Al Mukdat"><i class="icon-search"></i></a>                                                    
-                                                </div>
-                                            </div>
-                                            <img src="images/Arabic%20Patients/Ahmad%20yasin%20al%20mahmood%20al%20mukdat.jpg" alt="Ahmad Yasin Al Mahmood Al Mukdat">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Ahmad Yasin Al Mahmood Al Mukdat</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 1 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 2 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Arabic%20Patients/Arabic%20Actor.jpg" class="lightbox" title="Arabic Actor"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Arabic%20Patients/Arabic%20Actor.jpg" alt="Arabic Actor">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Arabic Actor</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 2 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 3 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Arabic%20Patients/khalifa%20Obaid.jpg" class="lightbox" title="Khalifa Obaid"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Arabic%20Patients/khalifa%20Obaid.jpg" alt="Khalifa Obaid">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Khalifa Obaid</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 3 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 4 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Arabic%20Patients/Saeedi%20Sulaiman%20Baalawi.jpg" class="lightbox" title="Saeedi Sulaiman Baalawi"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Arabic%20Patients/Saeedi%20Sulaiman%20Baalawi.jpg" alt="Saeedi Sulaiman Baalawi">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Saeedi Sulaiman Baalawi</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 4 : end -->
-
-                                </li>
-                            </ul>
-                            <!-- ROW 1 : end -->
-
-                            <!-- ROW 2 : begin -->
-							<br><br>
-							<h1>French Patients</h1>
-                            <ul class="row">
-                                <li>
-
-                                    <!-- PROJECT 5 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/French%20Patients/french%202.jpg" class="lightbox" title="French 1"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/French%20Patients/french%202.jpg" alt="French 1">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>French 1</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 5 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 6 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/French%20Patients/French.jpg" class="lightbox" title="French 2"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/French%20Patients/French.jpg" alt="French 2">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>French 2</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 6 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 7 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/French%20Patients/Sahli%20,%20france.jpg" class="lightbox" title="Sahli, France"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/French%20Patients/Sahli%20,%20france.jpg" alt="Sahli, France">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Sahli, France</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 7 : end -->
-
-                                </li>                              
-                            </ul>
-                            <!-- ROW 2 : end -->
-							
-							<!-- ROW 3 : begin -->
-							<br><br>
-							<h1>U.S.A Patients</h1>
-                            <ul class="row">
-                                <li>
-
-                                    <!-- PROJECT 8 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/U.S.A%20Patients/Pts%20from%20U.S.A.jpg" class="lightbox" title="Pts from U.S.A"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/U.S.A%20Patients/Pts%20from%20U.S.A.jpg" alt="Pts from U.S.A">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Pts from U.S.A</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 8 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 9 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/U.S.A%20Patients/U.S.A.jpg" class="lightbox" title="U.S.A"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/U.S.A%20Patients/U.S.A.jpg" alt="U.S.A">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>U.S.A</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 9 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 10 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/U.S.A%20Patients/USA.jpg" class="lightbox" title="USA 2"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/U.S.A%20Patients/USA.jpg" alt="USA 2">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>USA 2</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 10 : end -->
-
-                                </li>                              
-                            </ul>
-                            <!-- ROW 3 : end -->
-							
-							<!-- ROW 4 : begin -->
-							<br><br>
-							<ul class="row">
-                                <li>
-
-                                    <!-- PROJECT 11 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Pakistan%20Hakim/Hakim%20pak.jpg" class="lightbox"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Pakistan%20Hakim/Hakim%20pak.jpg">
-                                        </div>
-                                    </div>
-                                    <!-- PROJECT 11 : end -->
-
-                                </li>  
-                                <li>
-
-                                    <!-- PROJECT 3 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/9.jpg" class="lightbox" title="In Auguration of Unani Medical Center in Sharjah"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/9.jpg" alt="In Auguration">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>In Auguration</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 3 : end -->
-
-                                </li>
-                                <li>
-
-                                    <!-- PROJECT 4 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/Awards/10.jpg" class="lightbox" title="UAE cricket Player, Qasim Zubair"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/Awards/10.jpg" alt="UAE cricket Player, Qasim Zubair">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Qasim Zubair</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 4 : end -->
-
-                                </li>
-								
-                            </ul>
-                            <!-- ROW 4 : end -->
-							<!-- ROW 5 : begin -->
-							<br><br>
-							<h1>Global</h1>
-                            <ul class="row">
-                                <li>
-
-                                    <!-- PROJECT 12 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/1.jpg" class="lightbox" title="Menope 2012"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/1.jpg" alt="Menope 2012">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Menope 2012</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 12 : end -->
-									<!-- PROJECT 13 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/2.jpg" class="lightbox" title="Somalia Ex President Daughter & MP"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/2.jpg" alt="Somalia Ex President Daughter & MP">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Somalia Ex President Daughter & MP</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 13 : end -->
-									<!-- PROJECT 14 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/3.jpg" class="lightbox" title="Harib Bilal Al Abdulla"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/3.jpg" alt="Harib Bilal Al Abdulla">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Harib Bilal Al Abdulla</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 14 : end -->
-									<!-- PROJECT 15 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/4.jpg" class="lightbox" title="Souaibou Soumare, Mali"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/4.jpg" alt="Souaibou Soumare, Mali">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Souaibou Soumare, Mali</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 15 : end -->									
-                                </li>                                                        
-                            </ul>
-                            <!-- ROW 5 : end -->
-							
-							<!-- ROW 6 : begin -->							
-                            <ul class="row">
-                                <li>
-
-                                    <!-- PROJECT 16 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/5.jpg" class="lightbox" title="Iran Patients"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/5.jpg" alt="Iran Patients">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Iran Patients</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 16 : end -->
-									 <!-- PROJECT 17 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/6.jpg" class="lightbox" title="International Conference"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/8.jpg" alt="International Conference">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>International Conference</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 17 : end -->
-									<!-- PROJECT 18 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="images/9.jpg" class="lightbox"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="images/9.jpg">
-                                        </div>
-                                    </div>
-                                    <!-- PROJECT 18 : end -->
-									<!-- PROJECT 19 : begin -->
-                                    <div class="span3 project-preview">
-
-                                        <div class="thumb">
-                                            <div class="overlay">
-                                                <div class="overlay-inner">
-                                                    <a href="dummies/unani-malayalam-1.jpg" class="lightbox" title="Unani Medicine (Malayalam)"><i class="icon-search"></i></a>
-                                                </div>
-                                            </div>
-                                            <img src="dummies/unani-malayalam-1.jpg" alt="Unani Medicine (Malayalam)">
-                                        </div>
-
-                                        <div class="title">
-                                            <h3>Unani Medicine (Malayalam)</h3>                                            
-                                        </div>
-
-                                    </div>
-                                    <!-- PROJECT 19 : end -->								
-                                </li>                                                        
-                            </ul>
-                            <!-- ROW 6 : end -->																	
-                        </div>
-                        <!-- PROJECTS INNER : end -->                      
-
-                    </div>
-                    <!-- PROJECTS: end -->
-
-                </div>
+            <div class="gallery-category">French Patients</div>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/French%20Patients/french%202.jpg" alt="French 1"><h3>French 1</h3></div>
+                <div class="gallery-card"><img src="images/French%20Patients/French.jpg" alt="French 2"><h3>French 2</h3></div>
+                <div class="gallery-card"><img src="images/French%20Patients/Sahli%20,%20france.jpg" alt="Sahli, France"><h3>Sahli, France</h3></div>
             </div>
-            <!-- PAGE CORE : end -->
 
-        </div>
-        <!-- Gallery PAGE : end -->
-
-        <!-- BOTTOM : begin -->
-        <div id="bottom">
-            <div class="container">
-                <div class="bottom-inner">
-
-                    <div class="row">
-                        <div class="span3">
-
-                            <!-- TEXT WIDGET : begin -->
-                            <div class="widget text">
-                             <!--   <h3>ABOUT Website<i></i></h3>
-                                <div class="widget-content">
-                                    <p>The website unanidoctors.com  is the brain child of  DR. SYED ASADUDDIN AHMED  s/o Syed Nehaluddin Ahmed. He completed unani medicine from Govt.Nizamia Tibbi College, Charminar, Hyderabad, India in the year 1997. He is the first unani doctor from Hyderabad to pass ministry of Health, U.A.E exam to practice unani medicine in U.A.E apart from India.</p>   -->                                 
-                                </div>
-                            </div>
-                            <!-- TEXT WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- ARTICLES WIDGET : begin -->
-                            <div class="widget articles">
-                                <h3>Follow Us<i></i></h3>
-                                <div class="widget-content">
-                                 <!-- AddThis Follow BEGIN -->
-<div class="addthis_toolbox addthis_32x32_style addthis_vertical_style">
-<a class="addthis_button_facebook_follow" addthis:userid="pages/unanidoctorscom/118956844786091"></a>
-<a class="addthis_button_twitter_follow" addthis:userid="unanidoctors"></a>
-<a class="addthis_button_youtube_follow" addthis:userid="unanidoctor"></a>
-</div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51a737b4776a2575"></script>
-<!-- AddThis Follow END -->   
-                                </div>
-                            </div>
-                            <!-- ARTICLES WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- TAGS WIDGET : begin -->
-                            <div class="widget tags">
-                                <h3>Our Address<i></i></h3>
-                                <div class="widget-content">
-                                       <h2>U.A.E</h2>
-									<!--<p>Derma Health International Medical Centre,<br>Naif Road, Deira, DUBAI.</p>
-									<h3>Phone: 009714-2243786<br>Mobile: 0097150-7243620<br>Fax: 009714-2237717</h3>-->
-									<p><a href="contact.html" class="button color1">Click Here</a></p>
-							</div>
-                            </div>
-                            <!-- TAGS WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- DRIBBBLE WIDGET : begin -->
-                            <div class="widget images dribbble loading" data-id="BillSKenney" data-limit="8">
-                                <h3>Like Us<i></i></h3>
-                                <div class="widget-content">
-                                    <div id="fb-root"></div>
-										<script>(function(d, s, id) {
-										  var js, fjs = d.getElementsByTagName(s)[0];
-										  if (d.getElementById(id)) return;
-										  js = d.createElement(s); js.id = id;
-										  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-										  fjs.parentNode.insertBefore(js, fjs);
-										}(document, 'script', 'facebook-jssdk'));</script>
-										<div class="fb-like-box" data-href="https://www.facebook.com/pages/unanidoctorscom/118956844786091" style="background-color:#ffffff" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>
-                                </div>
-                            </div>
-                            <!-- DRIBBBLE WIDGET : end -->
-
-                        </div>
-                    </div>
-
-                </div>
+            <div class="gallery-category">U.S.A Patients</div>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/U.S.A%20Patients/Pts%20from%20U.S.A.jpg" alt="Pts from U.S.A"><h3>Pts from U.S.A</h3></div>
+                <div class="gallery-card"><img src="images/U.S.A%20Patients/U.S.A.jpg" alt="U.S.A"><h3>U.S.A</h3></div>
+                <div class="gallery-card"><img src="images/U.S.A%20Patients/USA.jpg" alt="USA 2"><h3>USA 2</h3></div>
             </div>
-        </div>
-        <!-- BOTTOM : end -->
 
-        <!-- FOOTER : begin -->
+            <div class="gallery-category">Pakistan Hakim</div>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/Pakistan%20Hakim/Hakim%20pak.jpg" alt="Hakim Pakistan"><h3>Hakim Pakistan</h3></div>
+            </div>
+
+            <div class="gallery-category">Awards & Articles</div>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/Awards/4.jpg" alt="Certificate Of Alternative Medicine"><h3>Certificate Of Alternative Medicine</h3></div>
+                <div class="gallery-card"><img src="images/Awards/8.jpg" alt="Medical Continuing Education Certificate"><h3>Medical Continuing Education Certificate</h3></div>
+                <div class="gallery-card"><img src="images/Awards/7.jpg" alt="CME Certificate"><h3>CME Certificate</h3></div>
+                <div class="gallery-card"><img src="images/Awards/1.jpg" alt="Article 1"><h3>Article 1</h3></div>
+                <div class="gallery-card"><img src="images/Awards/2.jpg" alt="Article 2"><h3>Article 2</h3></div>
+                <div class="gallery-card"><img src="images/Awards/3.jpg" alt="Article 3"><h3>Article 3</h3></div>
+                <div class="gallery-card"><img src="images/Awards/5.jpg" alt="Article 4"><h3>Article 4</h3></div>
+                <div class="gallery-card"><img src="images/Awards/11.jpg" alt="All About Unani"><h3>All About Unani</h3></div>
+                <div class="gallery-card"><img src="images/Awards/9.jpg" alt="In Auguration"><h3>In Auguration</h3></div>
+                <div class="gallery-card"><img src="images/Awards/10.jpg" alt="Qasim Zubair"><h3>Qasim Zubair</h3></div>
+            </div>
+
+            <div class="gallery-category">Global</div>
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="images/1.jpg" alt="Menope 2012"><h3>Menope 2012</h3></div>
+                <div class="gallery-card"><img src="images/2.jpg" alt="Somalia Ex President Daughter & MP"><h3>Somalia Ex President Daughter & MP</h3></div>
+                <div class="gallery-card"><img src="images/3.jpg" alt="Harib Bilal Al Abdulla"><h3>Harib Bilal Al Abdulla</h3></div>
+                <div class="gallery-card"><img src="images/4.jpg" alt="Souaibou Soumare, Mali"><h3>Souaibou Soumare, Mali</h3></div>
+                <div class="gallery-card"><img src="images/5.jpg" alt="Iran Patients"><h3>Iran Patients</h3></div>
+                <div class="gallery-card"><img src="images/8.jpg" alt="International Conference"><h3>International Conference</h3></div>
+                <div class="gallery-card"><img src="images/9.jpg" alt="Gallery Image"><h3>Gallery Image</h3></div>
+                <div class="gallery-card"><img src="dummies/unani-malayalam-1.jpg" alt="Unani Medicine (Malayalam)"><h3>Unani Medicine (Malayalam)</h3></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer>
-            <div class="container">
-                <div class="footer-inner clearfix">
-
-                    <!-- COPYRIGHT : begin -->
-                    <p class="copyright">&copy; Copyright 2013 <strong><a href="index.html">Unani Doctors</a></strong>. All Right Reserved. </p>
-                    <!-- COPYRIGHT : end -->
-               </div>
-            </div>
+            &copy; 2013-2024 <strong><a href="index.html">Unani Doctors</a></strong>. All Rights Reserved.
         </footer>
-        <!-- FOOTER : end -->
 
-        <!-- SCREEN WIDTH : begin -->
-        <var id="screen-width"><span></span></var>
-        <!-- SCREEN WIDTH : end -->
+        <!-- Simple Lightbox Modal -->
+        <div id="lightbox-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+            <div id="lightbox-content" style="position:relative;max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;">
+                <button id="lightbox-close" aria-label="Close" style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.5);color:#fff;border:none;font-size:2em;border-radius:50%;width:40px;height:40px;cursor:pointer;z-index:2;">&times;</button>
+                <button id="lightbox-prev" aria-label="Previous" style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;font-size:2em;border-radius:50%;width:40px;height:40px;cursor:pointer;z-index:2;display:none;">&#8592;</button>
+                <img id="lightbox-img" src="" alt="" style="max-width:80vw;max-height:70vh;border-radius:var(--radius);box-shadow:var(--shadow);background:#fff;">
+                <button id="lightbox-next" aria-label="Next" style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;font-size:2em;border-radius:50%;width:40px;height:40px;cursor:pointer;z-index:2;display:none;">&#8594;</button>
+                <div id="lightbox-caption" style="color:#fff;margin-top:1em;font-size:1.2em;text-align:center;"></div>
+            </div>
+        </div>
 
-        <!-- SCRIPTS : begin -->
-        <script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="assets/js/modernizr.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- INSTAGRAM FEED SCRIPT : begin -->
-        <!-- if you are not using Instagram feed, delete this script -->
-        <script src="assets/js/jquery.embedagram.js" type="text/javascript"></script>
-        <!-- INSTAGRAM FEED SCRIPT : end -->
-        <!-- DRIBBBLE FEED SCRIPT : begin -->
-        <!-- if you are not using Dribbble feed, delete this script -->
-        <script src="assets/js/jquery.jribbble-1.0.1.min.js" type="text/javascript"></script>
-        <!-- DRIBBBLE FEED SCRIPT : end -->
-        <!-- LIGHTBOX SCRIPT : begin -->
-        <!-- this script needs to be loaded on all pages where the lightbox is present -->
-        <script src="assets/js/jquery.magnific-popup.js" type="text/javascript"></script>
-        <!-- LIGHTBOX SCRIPT : end -->
-        <!--[if lte IE 8]>
-            <script src="assets/js/css3pie.js" type="text/javascript"></script>
-            <script src="assets/js/css3pie_oldie.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="assets/js/scripts.js" type="text/javascript"></script>
-        <!-- SCRIPTS : end -->
-
-        <!-- DISQUS : begin -->
-        <!-- add this script to all pages where the Disqus functionality is present (e.g. article list and article detail) -->
-        <!-- replace "#DisqusShortname#" with your Disqus shortname -->
-        <script type="text/javascript">
-            var disqus_shortname = '#DisqusShortname#';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
+        <script>
+        // Enhanced Lightbox modal logic with next/prev
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-card img'));
+        let currentIndex = -1;
+        function showLightbox(index) {
+            if (index < 0 || index >= galleryImages.length) return;
+            currentIndex = index;
+            const img = galleryImages[index];
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox-caption').textContent = img.nextElementSibling ? img.nextElementSibling.textContent : '';
+            document.getElementById('lightbox-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('lightbox-close').focus();
+            // Show/hide prev/next
+            document.getElementById('lightbox-prev').style.display = (index > 0) ? 'block' : 'none';
+            document.getElementById('lightbox-next').style.display = (index < galleryImages.length - 1) ? 'block' : 'none';
+        }
+        galleryImages.forEach((img, idx) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                showLightbox(idx);
+            });
+        });
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        document.getElementById('lightbox-close').onclick = closeLightbox;
+        document.getElementById('lightbox-modal').onclick = function(e) {
+            if (e.target === this) closeLightbox();
+        };
+        document.getElementById('lightbox-prev').onclick = function(e) {
+            e.stopPropagation();
+            if (currentIndex > 0) showLightbox(currentIndex - 1);
+        };
+        document.getElementById('lightbox-next').onclick = function(e) {
+            e.stopPropagation();
+            if (currentIndex < galleryImages.length - 1) showLightbox(currentIndex + 1);
+        };
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox-modal').style.display === 'flex') {
+                if (e.key === 'Escape' || e.key === 'Esc') closeLightbox();
+                if (e.key === 'ArrowLeft' && currentIndex > 0) showLightbox(currentIndex - 1);
+                if (e.key === 'ArrowRight' && currentIndex < galleryImages.length - 1) showLightbox(currentIndex + 1);
+            }
+        });
         </script>
-        <!-- DISQUS : end -->
-
     </body>
 </html>

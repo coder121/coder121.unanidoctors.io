@@ -1,456 +1,406 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | Unanidoctors.com</title>
-        <link rel="shortcut icon" href="dummies/favicon.png">
-		<meta name="description" content="Unani medicine as the name suggests, originated in greece or unan. It was the greek philosopher-physician Hippocrates (460-377BC) who freed medicine ......">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:type" content="article">
-		<meta property="og:title" content="Home | Unanidoctors.com">
-		<meta property="og:description" content="Unani medicine as the name suggests, originated in greece or unan. It was the greek philosopher-physician Hippocrates (460-377BC) who freed medicine ......">
-		<meta property="og:url" content="/">
-		<meta property="og:site_name" content="Unanidoctors.com">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Unanidoctors.com</title>
+  <meta name="description" content="Unani medicine as the name suggests, originated in Greece or Unan. It was the Greek philosopher-physician Hippocrates (460-377BC) who freed medicine ...">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Home | Unanidoctors.com">
+  <meta property="og:description" content="Unani medicine as the name suggests, originated in Greece or Unan. It was the Greek philosopher-physician Hippocrates (460-377BC) who freed medicine ...">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:site_name" content="Unanidoctors.com">
+  
+  <link rel="icon" href="dummies/favicon.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1976d2;
+      --secondary: #43a047;
+      --background: #f8fafc;
+      --surface: #fff;
+      --text: #222;
+      --text-light: #666;
+      --accent: #e3f2fd;
+      --border: #e0e0e0;
+      --radius: 10px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a.button {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75em 1.5em;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+      margin-top: 0.5em;
+    }
+    a.button:hover { background: var(--secondary); }
+    header {
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1em 2em;
+    }
+    .navbar-logo img {
+      height: 48px;
+      vertical-align: middle;
+    }
+    nav ul {
+      display: flex;
+      gap: 2em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      font-weight: 600;
+      color: var(--text);
+      padding: 0.5em 0;
+      transition: color 0.2s;
+    }
+    nav a:hover, nav .active > a { color: var(--primary); }
+    /* Responsive Nav */
+    .nav-toggle { display: none; }
+    @media (max-width: 900px) {
+      .navbar { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; width: 100%; display: none; }
+      nav ul.open { display: flex; }
+      .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2em;
+        margin-left: auto;
+        color: var(--primary);
+      }
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+      color: #fff;
+      padding: 4em 2em 3em 2em;
+      text-align: center;
+      position: relative;
+    }
+    .hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.25em;
+      margin-bottom: 1.5em;
+      color: #e3f2fd;
+    }
+    .hero .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    /* Services Section */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3em 2em;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1.5em;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .services {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      flex: 1 1 260px;
+      max-width: 340px;
+      min-width: 220px;
+      padding: 2em 1.5em;
+      text-align: center;
+      margin-bottom: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .service-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1em;
+      border: 3px solid var(--accent);
+      background: #fff;
+    }
+    .service-card h3 {
+      margin: 0.5em 0 0.5em 0;
+      font-size: 1.2em;
+      color: var(--secondary);
+    }
+    .service-card p {
+      color: var(--text-light);
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-img {
+      flex: 1 1 300px;
+      max-width: 320px;
+      min-width: 200px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .about-img img {
+      width: 100%;
+      display: block;
+    }
+    .about-content {
+      flex: 2 1 400px;
+      min-width: 250px;
+    }
+    .about-content h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+    /* Contact Section */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .contact-info, .contact-form {
+      flex: 1 1 300px;
+      min-width: 250px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2em 1.5em;
+    }
+    .contact-info h3, .contact-form h3 {
+      color: var(--secondary);
+      margin-top: 0;
+    }
+    .contact-info p, .contact-info a {
+      color: var(--text-light);
+      font-size: 1em;
+    }
+    .contact-info .socials {
+      margin-top: 1em;
+      display: flex;
+      gap: 1em;
+    }
+    .contact-info .socials a {
+      color: var(--primary);
+      font-size: 1.5em;
+      transition: color 0.2s;
+    }
+    .contact-info .socials a:hover { color: var(--secondary); }
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5em 2em;
+      margin-top: 3em;
+    }
+    footer a { color: #fff; text-decoration: underline; }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .services, .about, .contact { flex-direction: column; }
+      .navbar { padding: 1em; }
+      .section { padding: 2em 1em; }
+      .hero { padding: 3em 1em 2em 1em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="navbar-logo" aria-label="Unanidoctors Home">
+        <img src="dummies/logo.png" alt="Unanidoctors.com Logo">
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- STYLESHEETS : begin -->
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/skin.default.css" id="css-skin">
-        <!--[if lte IE 8]>
-            <script src="assets/js/html5.js" type="text/javascript"></script>
-            <link rel="stylesheet" type="text/css" href="assets/css/oldie.css">
-        <![endif]-->
-        <!-- STYLESHEETS : end -->
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Unanidoctors.com</h1>
+      <p>World's First Website Bringing Unani Professionals Under One Umbrella.<br>
+        Unani medicine as the name suggests, originated in Greece or Unan. It was the Greek philosopher-physician Hippocrates (460-377BC) who freed medicine from superstition and gave it the status of science.</p>
+      <div class="cta-group">
+        <a href="#services" class="button">Our Services</a>
+        <a href="#contact" class="button" style="background: var(--secondary);">Contact Us</a>
+      </div>
+    </div>
+  </section>
 
-    </head>
-    <body id="top">
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="section-title">Our Services</div>
+    <div class="services">
+      <div class="service-card">
+        <img src="dummies/patients.jpg" alt="International Patients">
+        <h3>International Patients</h3>
+        <p>Satisfied patients from all around the globe.</p>
+        <a href="gallery.html" class="button">Find Them Out</a>
+      </div>
+      <div class="service-card">
+        <img src="dummies/postula-small.jpg" alt="All About Unani">
+        <h3>All About Unani</h3>
+        <p>Unani medicine as the name suggests, originated in Greece or Unan.</p>
+        <a href="about.html" class="button">Read More</a>
+      </div>
+      <div class="service-card">
+        <img src="dummies/video.png" alt="Videos">
+        <h3>Videos</h3>
+        <p>Get the latest YouTube videos of interviews, sessions, and treatments.</p>
+        <a href="videos.html" class="button">View</a>
+      </div>
+      <div class="service-card">
+        <img src="dummies/doctors.png" alt="List Of Unani Doctors">
+        <h3>List Of Unani Doctors</h3>
+        <p>This list comprises all the qualified Unani doctors with a minimum qualification of B.U.M.S.</p>
+        <a href="unani-doctors.html" class="button">Check It Out</a>
+      </div>
+      <div class="service-card">
+        <img src="dummies/contact.png" alt="Ask Unani Expert">
+        <h3>Ask Unani Expert</h3>
+        <p>Contact Unanidoctors.com and get a quick and reliable response.</p>
+        <a href="contact.html" class="button">Contact Us</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- HEADER : begin -->
-        <header>
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="section-title">About Dr Syed Asaduddin Ahmed</div>
+    <div class="about">
+      <div class="about-img">
+        <img src="images/drasad-small.jpg" alt="Dr Syed Asaduddin Ahmed">
+      </div>
+      <div class="about-content">
+        <h2>Dr Syed Asaduddin Ahmed</h2>
+        <p>
+          Dr Syed Asaduddin Ahmed is a world-renowned Unani Doctor. He completed his graduation in 1997 from Govt. Nizamia Tibbi College, Charminar, Hyderabad, India. He is the first Unani doctor from Hyderabad to pass the Ministry of Health, U.A.E exam to practice Unani medicine in U.A.E apart from India.
+        </p>
+        <a href="about-drasad.html" class="button">Read More</a>
+      </div>
+    </div>
+  </section>
 
-            <!-- TOPBAR : begin -->
-            <div id="topbar">
-                <div class="container">
-                    <div class="topbar-inner clearfix">
-
-                        <!-- RESPONSIVE CONTROLS : begin -->
-                        <div class="responsive-controls clearfix">
-                            <button class="social"><i class="icon-link"></i></button>
-                            <button class="search"><i class="icon-search"></i></button>
-                        </div>
-                        <!-- RESPONSIVE CONTROLS : end -->
-
-                        <!-- SOCIAL ICONS : begin -->
-                        <div class="social-icons">
-                            <ul class="clearfix">
-                                <li class="twitter"><a href="http://twitter.com/unanidoctors/"><i></i></a></li>
-                                <li class="facebook"><a href="http://www.facebook.com/pages/unanidoctorscom/118956844786091"><i></i></a></li>
-                                <li class="googleplus"><a href="https://plus.google.com/107102985828094417583/posts"><i></i></a></li>
-                                <li class="linkedin"><a href="http://www.linkedin.com/groups/unanidoctors-group-4658666"><i></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- SOCIAL ICONS : end -->
-
-                        <!-- SEARCH FORM : begin -->
-                        <div class="search-form">
-                            <form action="search_results.html">
-                                <div class="input">
-                                    <button class="close"><i class="icon-remove"></i></button>
-                                    <input value="What are you looking for? You can search it here" data-placeholder="What are you looking for? You can search it here">
-                                </div>
-                                <button class="submit"><i class="icon-search"></i></button>
-                            </form>
-                        </div>
-                        <!-- SEARCH FORM : end -->
-
-                    </div>
-                </div>
-            </div>
-            <!-- TOPBAR : end -->
-
-            <!-- NAVBAR : begin -->
-            <div id="navbar">
-                <div class="container">
-                    <div class="navbar-inner clearfix">
-
-                        <!-- BRANDING : begin -->
-                        <a href="index.html" id="branding"><img src="dummies/logo.png" 	alt="Unanidoctors.Com"></a>
-                        <!-- BRANDING : end -->
-
-                        <!-- MAIN NAV : begin -->
-                        <nav class="main">
-                            <button><i class="icon-reorder"></i></button>
-                            <ul>
-                                <li class="active">
-                                    <a href="index.html"><strong>Home</strong><span>Unani Medicine</span></a>
-                                    <span class="arrow"><i></i></span>
-									<ul>
-                                    <li><a href="about.html">All About Unani</a></li>
-                                    </ul>
-                                 </li>
-                                <li>
-                                    <a href="#"><strong>Unani Doctors</strong><span>Specialized Doctors</span></a>
-                                    <span class="arrow"><i></i></span>
-                                    <ul>
-                                        <li><a href="unani-doctors.html">List Of Unani Doctors</a></li>
-                                        <li><a href="unani-hakims.html">List Of Unani Hakims</a></li>
-                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="contact.html"><strong>Contact</strong><span>Get in touch</span></a>
-									<span class="arrow"><i></i></span>
-                                    <ul>
-									    <li><a href="online-treatment.html">Patient Online Registration</a></li>
-                                        <li><a href="practitioner-registration.html">Practitioner Registration</a></li>
-                                     </ul>
-                                </li>
-								<li class="last">
-								    <a href="gallery.html"><strong>Gallery</strong><span>Satisfied Patients</span></a>
-									<span class="arrow"><i></i></span>
-                                    <ul>
-                                        <li><a href="videos.html">Videos</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <span class="indicator"></span>
-                        </nav>
-                        <!-- MAIN NAV : end -->
-
-                    </div>
-                </div>
-            </div>
-            <!-- NAVBAR : begin -->
-
-        </header>
-        <!-- HEADER : end -->
-
-        <!-- SLIDER & Facebook Begin :-->
-		<br>
-		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="0">
-		<tbody>
-        <tr align="center" valign="top">
-		<td width="100%">
-        <!-- SLIDER : begin -->
-        <div id="slider" data-interval="5000">
-            <div class="slider-inner">
-
-                <!-- SLIDER ITEMS : begin -->
-                <div id="main-carousel" class="carousel slide">
-                    <ul class="carousel-inner">
-
-                        <!-- SLIDE 1 : begin -->
-						<li class="item slide2" style="background-image: url('images/8.jpg');">
-                            <div class="item-inner">
-                                <div class="item-content centered">
-                                    <h3 style="color: white;"><font size=5>Dr Syed Asaduddin Ahmed Receiving Best Unani Physician 2012 Award In Burjal Arab, Dubai</font></h3>
-                                 </div>
-                            </div>
-                        </li>
-                        <!-- SLIDE 1 : end -->
-                        <!-- SLIDE 2 : begin -->
-                        <li class="item slide2" style="background-image: url('images/11.jpg');">
-                            <div class="item-inner">
-                                <div class="item-content centered">
-                                    <h3 style="color: white;"><font size=5>Dr Syed Asaduddin Ahmed With Gulam Nabi Azad, Union Health & Family Welfare Minister Of India</font></h3>
-                                 </div>
-                            </div>
-                        </li>
-                        <!-- SLIDE 2 : end -->
-                        <!-- SLIDE 3 : begin -->
-                        <li class="item slide3" style="background-image: url('images/12.jpg');">
-                            <div class="item-inner">
-                                <div class="item-content centered">
-                                    <h3 style="color: white;"><font size=5>Dr Syed Asaduddin Ahmed Receiving Best Unani Physician 2005 Award From Dr.Ambumani Ramdoss</font></h3>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- SLIDE 3 : end -->
-                    </ul>
-                </div>
-                <!-- SLIDER ITEMS : end -->
-
-                <!-- SLIDER CONTROLS : begin -->
-                <div class="nav prev"><button><i></i></button></div>
-                <div class="nav next"><button><i></i></button></div>
-                <button class="pause"><i class="icon-pause"></i></button>
-                <!-- SLIDER CONTROLS : end -->
-
-                <!-- SLIDER INDICATOR : begin -->
-                <div class="indicator"><div class="progressbar"></div></div>
-                <!-- SLIDER INDICATOR : end -->
-
-                <!-- LOADING ANIM : begin -->
-                <div class="loading-anim"><span><i></i></span></div>
-                <!-- LOADING ANIM : end -->
-            </div>
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="section-title">Contact & Location</div>
+    <div class="contact">
+      <div class="contact-info">
+        <h3>Our Address</h3>
+        <p>
+          <strong>U.A.E</strong><br>
+          <a href="contact.html" class="button" style="background: var(--secondary);">Click Here</a>
+        </p>
+        <h3 style="margin-top:2em;">Follow Us</h3>
+        <div class="socials" aria-label="Social Media Links">
+          <a href="http://twitter.com/unanidoctors/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="http://www.facebook.com/pages/unanidoctorscom/118956844786091" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://plus.google.com/107102985828094417583/posts" aria-label="Google Plus"><i class="fab fa-google-plus"></i></a>
+          <a href="http://www.linkedin.com/groups/unanidoctors-group-4658666" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/user/unanidoctor" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
-		</td>
+      </div>
+      <div class="contact-form">
+        <h3>Contact Us</h3>
+        <form action="contact.html" method="get" autocomplete="on">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name" required style="width:100%;padding:0.5em;margin-bottom:1em;border-radius:var(--radius);border:1px solid var(--border);"><br>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" required style="width:100%;padding:0.5em;margin-bottom:1em;border-radius:var(--radius);border:1px solid var(--border);"><br>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="4" required style="width:100%;padding:0.5em;border-radius:var(--radius);border:1px solid var(--border);"></textarea><br>
+          <button type="submit" class="button" style="width:100%;margin-top:1em;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-        <!-- SLIDER : end -->
-		<!-- Facebook Start-->
-		<td width="100%">
-		<div class="span6">
-		<h2 style="text-align: left; color: white;">Updates</h2><br>
-		<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-			<div class="fb-like-box" data-href="http://www.facebook.com/unaniexperts" data-width="550" data-height="340" style="background:#ffffff" data-show-faces="false" data-stream="true" data-show-border="true" data-header="false"></div>
-		</div>
-		<!-- Facebook End -->
-		</td>
-		</tr>
-		</tbody>
-		</table>
-		<!-- SLIDER & Facebook End :-->
+  <!-- Footer -->
+  <footer>
+    &copy; 2013-2024 <strong><a href="index.html">Unani Doctors</a></strong>. All Rights Reserved.
+  </footer>
 
-        <!-- HOME PAGE : begin -->
-        <div class="home-page">
-
-            <!-- WELCOME : begin -->
-            <div id="welcome">
-                <div class="container">
-                    <div class="welcome-inner centered">
-                        <h1><span>Welcome!</span> This is <span>Unanidoctors.com</span>, World's First Website Bringing <br>Unani Professionals Under One Umbrella</h1>
-                    </div>
-                </div>
-            </div>
-            <!-- WELCOME : end -->
-
-            <!-- HOME SERVICES : begin -->
-            <div id="home-services">
-                <div class="container">
-                    <div class="home-services-inner">
-
-                        <div class="row">
-                            <div class="span4">
-
-                                <!-- SERVICE 1 : begin -->
-                                <div class="service">
-                                    <a href="gallery.html"><img src="dummies/patients.jpg" alt="Patients"></a>
-                                    <h2>International Patients</h2>
-                                    <p>Satified Patients From All Around The Globe</p>
-                                    <p><a href="gallery.html" class="button color1">FIND THEM OUT</a></p>
-                                </div>
-                                <!-- SERVICE 1 : end -->
-
-                            </div>
-                            <div class="span4">
-
-                                <!-- SERVICE 2 : begin -->
-                                <div class="service">
-                                    <a href="about.html"><img src="dummies/postula-small.jpg" alt="Postula"></a>
-                                    <h2>All About Unani</h2>
-                                    <p>Unani medicine as the name suggests, originated in greece or unan.</p>
-                                    <p><a href="about.html" class="button color1">Read More</a></p>
-                                </div>
-                                <!-- SERVICE 2 : end -->
-
-                            </div>
-                            <div class="span4">
-
-                                <!-- SERVICE 3 : begin -->
-                                <div class="service">
-                                    <a href="videos.html"><img src="dummies/video.png" alt="Video"></a>
-                                    <h2>Videos</h2>
-									<p>Get latest youtube videos of interviews, sessions and treatments.</p>
-                                   <p><a href="videos.html" class="button color1">View</a></p>
-                                </div>
-                                <!-- SERVICE 3 : end -->
-
-                            </div>
-                      </div>
-                </div>
-            </div>
-            <!-- SERVICES : end -->
-
-			<!-- HOME SERVICES 2: begin -->
-            <div id="home-services">
-                <div class="container">
-                    <div class="home-services-inner">
-
-                        <div class="row">
-                            <div class="span4">
-                                <!-- SERVICE 2 : begin -->
-                                <div class="service">
-                                    <a href="contact.html"><img src="dummies/contact.png" alt="Doctors"></a>
-                                    <h2>Ask Unani Expert</h2>
-                                    <p>Contact Unanidoctors.com And Get Quick And Reliable Response.</p>
-                                    <p><a href="contact.html" class="button color1">Contact us</a></p>
-                                </div>
-                                <!-- SERVICE 2 : end -->
-                            </div>
-
-							<div class="span4">
-                                <!-- SERVICE 2 : begin -->
-                                <div class="service">
-                                    <a href="unani-doctors.html"><img src="dummies/doctors.png" alt="Doctors"></a>
-                                    <h2>List Of Unani Doctors</h2>
-                                    <p>This list comprise of all the qualified unani doctors with a minimum qualification of Bachelors in unani medicine and surgery (B.U.M.S).</p>
-                                    <p><a href="unani-doctors.html" class="button color1">Check It Out</a></p>
-                                </div>
-                                <!-- SERVICE 2 : end -->
-                            </div>
-
-							<div class="span4">
-                                <!-- SERVICE 3 : begin -->
-                                <div class="service">
-                                    <a href="about-drasad.html"><img src="images/drasad-small.jpg" alt="Doctors"></a>
-                                    <h2>About Dr Syed Asaduddin Ahmed</h2>
-                                    <p>Dr Syed Asaduddin Ahmed is world renowned Unani Doctor. He has completed his graduation  in 1997 from Govt.</p>
-                                    <p><a href="about-drasad.html" class="button color1">Read More</a></p>
-                                </div>
-                                <!-- SERVICE 3 : end -->
-                            </div>
-                          </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- SERVICES 2: end -->
-
-        </div>
-        <!-- HOME PAGE : end -->
-
-        <!-- BOTTOM : begin -->
-        <div id="bottom">
-            <div class="container">
-                <div class="bottom-inner">
-
-                    <div class="row">
-                        <div class="span3">
-
-                            <!-- TEXT WIDGET : begin -->
-                            <div class="widget text">
-                               <!-- <h3>ABOUT Website<i></i></h3>
-                                <div class="widget-content">
-                                    <p>The website unanidoctors.com  is the brain child of  DR. SYED ASADUDDIN AHMED  s/o Syed Nehaluddin Ahmed. He completed unani medicine from Govt.Nizamia Tibbi College, Charminar, Hyderabad, India in the year 1997. He is the first unani doctor from Hyderabad to pass ministry of Health, U.A.E exam to practice unani medicine in U.A.E apart from India.</p>-->
-                                </div>
-                            </div>
-                            <!-- TEXT WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- ARTICLES WIDGET : begin -->
-                            <div class="widget articles">
-                                <h3>Follow Us<i></i></h3>
-                                <div class="widget-content">
-                                 <!-- AddThis Follow BEGIN -->
-<div class="addthis_toolbox addthis_32x32_style addthis_vertical_style">
-<a class="addthis_button_facebook_follow" addthis:userid="pages/unanidoctorscom/118956844786091"></a>
-<a class="addthis_button_twitter_follow" addthis:userid="unanidoctors"></a>
-<a class="addthis_button_youtube_follow" addthis:userid="unanidoctor"></a>
-</div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51a737b4776a2575"></script>
-<!-- AddThis Follow END -->
-                                </div>
-                            </div>
-                            <!-- ARTICLES WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- TAGS WIDGET : begin -->
-                            <div class="widget tags">
-                                <h3>Our Address<i></i></h3>
-                                <div class="widget-content">
-                                       <h2>U.A.E</h2>
-									<!--<p>Derma Health International Medical Centre,<br>Naif Road, Deira, DUBAI.</p>
-									<h3>Phone: 009714-2243786<br>Mobile: 0097150-7243620<br>Fax: 009714-2237717</h3>-->
-									<p><a href="contact.html" class="button color1">Click Here</a></p>
-							</div>
-                            </div>
-                            <!-- TAGS WIDGET : end -->
-
-                        </div>
-                        <div class="span3">
-
-                            <!-- DRIBBBLE WIDGET : begin -->
-                            <div class="widget images dribbble loading" data-id="BillSKenney" data-limit="8">
-                                <h3>Like Us<i></i></h3>
-                                <div class="widget-content">
-                                    <div id="fb-root"></div>
-										<script>(function(d, s, id) {
-										  var js, fjs = d.getElementsByTagName(s)[0];
-										  if (d.getElementById(id)) return;
-										  js = d.createElement(s); js.id = id;
-										  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-										  fjs.parentNode.insertBefore(js, fjs);
-										}(document, 'script', 'facebook-jssdk'));</script>
-										<div class="fb-like-box" data-href="https://www.facebook.com/pages/unanidoctorscom/118956844786091" style="background-color:#ffffff" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>
-                                </div>
-                            </div>
-                            <!-- DRIBBBLE WIDGET : end -->
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- BOTTOM : end -->
-
-        <!-- FOOTER : begin -->
-        <footer>
-            <div class="container">
-                <div class="footer-inner clearfix">
-
-                    <!-- COPYRIGHT : begin -->
-                    <p class="copyright">&copy; Copyright 2013 <strong><a href="index.html">Unani Doctors</a></strong>. All Right Reserved.</p>
-                    <!-- COPYRIGHT : end -->
-               </div>
-            </div>
-        </footer>
-        <!-- FOOTER : end -->
-
-        <!-- SCREEN WIDTH : begin -->
-        <var id="screen-width"><span></span></var>
-        <!-- SCREEN WIDTH : end -->
-
-        <!-- SCRIPTS : begin -->
-        <script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="assets/js/modernizr.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- INSTAGRAM FEED SCRIPT : begin -->
-        <!-- if you are not using Instagram feed, delete this script -->
-        <script src="assets/js/jquery.embedagram.js" type="text/javascript"></script>
-        <!-- INSTAGRAM FEED SCRIPT : end -->
-        <!-- DRIBBBLE FEED SCRIPT : begin -->
-        <!-- if you are not using Dribbble feed, delete this script -->
-        <script src="assets/js/jquery.jribbble-1.0.1.min.js" type="text/javascript"></script>
-        <!-- DRIBBBLE FEED SCRIPT : end -->
-        <!-- LIGHTBOX SCRIPT : begin -->
-        <!-- this script needs to be loaded on all pages where the lightbox is present -->
-        <script src="assets/js/jquery.magnific-popup.js" type="text/javascript"></script>
-        <!-- LIGHTBOX SCRIPT : end -->
-        <!--[if lte IE 8]>
-            <script src="assets/js/css3pie.js" type="text/javascript"></script>
-            <script src="assets/js/css3pie_oldie.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="assets/js/scripts.js" type="text/javascript"></script>
-        <!-- SCRIPTS : end -->
-
-        <!-- DISQUS : begin -->
-        <!-- add this script to all pages where the Disqus functionality is present (e.g. article list and article detail) -->
-        <!-- replace "#DisqusShortname#" with your Disqus shortname -->
-        <script type="text/javascript">
-            var disqus_shortname = '#DisqusShortname#';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <!-- DISQUS : end -->
-
-    </body>
+  <!-- Smooth Scroll JS -->
+  <script>
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        if(window.innerWidth < 900) document.querySelector('nav ul').classList.remove('open');
+      });
+    });
+  </script>
+</body>
 </html>
